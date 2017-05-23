@@ -6,11 +6,15 @@ import styles from './styles';
 class RenderCounter extends React.Component {
   constructor(props) {
     super(props);
-    this.count = 0;
+    this.count = 1;
   }
+
+  componentWillReceiveProps() {
+    this.count += 1;
+  }
+
   render() {
-    // eslint-disable-next-line no-plusplus
-    return <div style={styles.counter}>{++this.count}</div>;
+    return <div style={styles.counter}>{this.count}</div>;
   }
 }
 

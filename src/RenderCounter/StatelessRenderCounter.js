@@ -3,22 +3,27 @@ import T from 'prop-types';
 
 import compose from 'recompose/compose';
 import withState from 'recompose/withState';
+import lifecycle from 'recompose/lifecycle';
 import setDisplayName from 'recompose/setDisplayName';
+import flattenProp from 'recompose/flattenProp';
 
 import styles from './styles';
 
-const RenderCounter = ({ state }) => (
-  // eslint-disable-next-line no-plusplus,no-param-reassign
-  <div style={styles.counter}>{++state.count}</div>
+const RenderCounter = ({ count }) => (
+  <div style={styles.counter}>{count}</div>
 );
 
 RenderCounter.propTypes = {
-  state: T.shape({
-    count: T.number.isRequired,
-  }).isRequired,
+  count: T.number.isRequired,
+};
+
+const componentWillUpdate = ({ state }) => {
+  state.count += 1; // eslint-disable-line no-param-reassign
 };
 
 export default compose(
   setDisplayName(RenderCounter.name),
-  withState('state', 'setState', () => ({ count: 0 })),
+  withState('state', 'setState', () => ({ count: 1 })),
+  lifecycle({ componentWillUpdate }),
+  flattenProp('state'),
 )(RenderCounter);
