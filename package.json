@@ -137,7 +137,8 @@
     "moduleDirectories": [
       "node_modules",
       "packages"
-    ]
+    ],
+    "testMatch": [ "**/__tests__/**/(!\\.)*.js?(x)", "**/?(*.)(spec|test).js?(x)" ]
   },
   "keywords": [
     "react",

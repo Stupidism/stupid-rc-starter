@@ -1,3 +1,3 @@
-import RenderCounter from './RenderCounter_composed';
+import RenderCounter from './StatefulRenderCounter';
 
 export default RenderCounter;
