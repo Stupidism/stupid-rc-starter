@@ -30,7 +30,7 @@ exports[`Storyshots RenderCounter multi-level 1`] = `
         }
       }
     >
-      0
+      1
     </div>
   </button>
   <div
@@ -62,7 +62,7 @@ exports[`Storyshots RenderCounter multi-level 1`] = `
           }
         }
       >
-        0
+        1
       </div>
     </button>
     <div
@@ -94,7 +94,7 @@ exports[`Storyshots RenderCounter multi-level 1`] = `
             }
           }
         >
-          0
+          1
         </div>
       </button>
     </div>
@@ -133,7 +133,7 @@ exports[`Storyshots RenderCounter nested 1`] = `
           }
         }
       >
-        0
+        1
       </div>
     </button>
     <div
@@ -165,7 +165,7 @@ exports[`Storyshots RenderCounter nested 1`] = `
             }
           }
         >
-          0
+          1
         </div>
       </button>
       <div
@@ -197,7 +197,7 @@ exports[`Storyshots RenderCounter nested 1`] = `
               }
             }
           >
-            0
+            1
           </div>
         </button>
       </div>
@@ -233,7 +233,7 @@ exports[`Storyshots RenderCounter nested 1`] = `
           }
         }
       >
-        0
+        1
       </div>
     </button>
     <div
@@ -265,7 +265,7 @@ exports[`Storyshots RenderCounter nested 1`] = `
             }
           }
         >
-          0
+          1
         </div>
       </button>
       <div
@@ -297,7 +297,7 @@ exports[`Storyshots RenderCounter nested 1`] = `
               }
             }
           >
-            0
+            1
           </div>
         </button>
       </div>
@@ -333,7 +333,7 @@ exports[`Storyshots RenderCounter nested 1`] = `
           }
         }
       >
-        0
+        1
       </div>
     </button>
     <div
@@ -365,7 +365,7 @@ exports[`Storyshots RenderCounter nested 1`] = `
             }
           }
         >
-          0
+          1
         </div>
       </button>
       <div
@@ -397,7 +397,7 @@ exports[`Storyshots RenderCounter nested 1`] = `
               }
             }
           >
-            0
+            1
           </div>
         </button>
       </div>
@@ -437,7 +437,7 @@ exports[`Storyshots RenderCounter single-level 1`] = `
           }
         }
       >
-        0
+        1
       </div>
     </button>
   </div>
@@ -471,7 +471,7 @@ exports[`Storyshots RenderCounter single-level 1`] = `
           }
         }
       >
-        0
+        1
       </div>
     </button>
   </div>
@@ -505,7 +505,7 @@ exports[`Storyshots RenderCounter single-level 1`] = `
           }
         }
       >
-        0
+        1
       </div>
     </button>
   </div>
