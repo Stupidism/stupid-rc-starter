@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './styles';
+import Counter from './Counter';
 
 // Example From http://airbnb.io/enzyme/docs/api/ShallowWrapper/update.html
 class RenderCounter extends React.Component {
@@ -14,7 +14,7 @@ class RenderCounter extends React.Component {
   }
 
   render() {
-    return <div style={styles.counter}>{this.count}</div>;
+    return <Counter count={this.count} />;
   }
 }
 

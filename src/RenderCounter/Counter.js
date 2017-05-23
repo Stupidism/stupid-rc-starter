@@ -1,4 +1,7 @@
-export default {
+import React from 'react';
+import T from 'prop-types';
+
+const styles = {
   counter: {
     display: 'inline-block',
     float: 'right',
@@ -12,3 +15,13 @@ export default {
     top: '2px',
   },
 };
+
+const Counter = ({ count }) => (
+  <div style={styles.counter}>{count}</div>
+);
+
+Counter.propTypes = {
+  count: T.number.isRequired,
+};
+
+export default Counter;
