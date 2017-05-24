@@ -1,17 +1,12 @@
-[![Build Status](https://travis-ci.org/Stupidism/stupid-rc-starter.svg?branch=master)](https://travis-ci.org/Stupidism/stupid-rc-starter)
-[![bitHound Score](https://www.bithound.io/github/Stupidism/stupid-rc-starter/badges/score.svg)](https://www.bithound.io/github/Stupidism/stupid-rc-starter)
-[![codecov](https://codecov.io/gh/Stupidism/stupid-rc-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/Stupidism/stupid-rc-starter)
-[![Greenkeeper badge](https://badges.greenkeeper.io/stupidism/stupid-rc-starter.svg)](https://greenkeeper.io/)
-[![Dependency Status](https://david-dm.org/Stupidism/stupid-rc-starter.svg)](https://david-dm.org/Stupidism/stupid-rc-starter)
-[![devDependencies Status](https://david-dm.org/Stupidism/stupid-rc-starter/dev-status.svg)](https://david-dm.org/Stupidism/stupid-rc-starter?type=dev)
+[![Build Status](https://travis-ci.org/Stupidism/stupid-rc-starter.svg?branch=master)](https://travis-ci.org/Stupidism/stupid-rc-starter) [![bitHound Score](https://www.bithound.io/github/Stupidism/stupid-rc-starter/badges/score.svg)](https://www.bithound.io/github/Stupidism/stupid-rc-starter) [![codecov](https://codecov.io/gh/Stupidism/stupid-rc-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/Stupidism/stupid-rc-starter) [![Greenkeeper badge](https://badges.greenkeeper.io/stupidism/stupid-rc-starter.svg)](https://greenkeeper.io/) [![Dependency Status](https://david-dm.org/Stupidism/stupid-rc-starter.svg)](https://david-dm.org/Stupidism/stupid-rc-starter) [![devDependencies Status](https://david-dm.org/Stupidism/stupid-rc-starter/dev-status.svg)](https://david-dm.org/Stupidism/stupid-rc-starter?type=dev)
 
 # stupid-rc-starter - Starter for React.js components
+> This is forked from [react-component-boilerplate](https://github.com/survivejs/react-component-boilerplate)
 
-This is a simple boilerplate that has been developed to make it easier to develop React components and small projects.
+This is a stupid starter makes it stupid enough to develop and test React components and small projects.
+With [storybook](https://github.com/storybooks/storybook) integrated, components can be tested on [gh-pages](https://stupidism.github.io/stupid-rc-starter/storybook) by non-developers directly.
 
-> Check out [SurviveJS - Webpack and React](http://survivejs.com/) to dig deeper into the topic.
-
-## Basic Usage
+## Get Started
 
 Clone the repo : `git clone https://github.com/Stupidism/stupid-rc-starter my-component`.
 
@@ -24,8 +19,6 @@ To get started with fresh history, do this:
 5. `git commit -am "Initial commit"` - Commit the files
 
 After this you should push the project to some remote.
-
-If you want to replace project meta information (author etc.), consider using a tool like [replace-project-meta](https://www.npmjs.com/package/replace-project-meta).
 
 ### Common Tasks
 
@@ -54,8 +47,8 @@ The test setup is based on Jest. Code coverage report is generated to `coverage/
 The starter includes a [GitHub Pages](https://pages.github.com/) specific portion for setting up a documentation site for the component. The main commands handle with the details for you. Sometimes you might want to generate and deploy it by hand, or just investigate the generated bundle.
 
 * Building - **npm run gh-pages** - Builds the documentation into `./gh-pages` directory.
-* Deploying - **npm run deploy-gh-pages** - Deploys the contents of `./gh-pages` to the `gh-pages` branch. GitHub will pick this up automatically. Your site will be available through *<user name>.github.io/<project name>`.
-* Generating stats - **npm run stats** - Generates stats that can be passed to [webpack analyse tool](https://webpack.github.io/analyse/). This is useful for investigating what the build consists of.
+* Deploying - **npm run gh-pages:deploy** - Deploys the contents of `./gh-pages` to the `gh-pages` branch. GitHub will pick this up automatically. Your site will be available through *<user name>.github.io/<project name>`.
+* Generating stats - **npm run gh-pages:stats** - Generates stats that can be passed to [webpack analyse tool](https://webpack.github.io/analyse/). This is useful for investigating what the build consists of.
 
 ## Highlighting Demo for the Site
 

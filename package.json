@@ -3,7 +3,7 @@
   "description": "Boilerplate for React.js components with storybook",
   "author": "Stupid Sun",
   "user": "stupidism",
-  "version": "5.0.0",
+  "version": "0.0.2",
   "scripts": {
     "start": "webpack-dev-server --env dev",
     "test": "jest",
@@ -120,7 +120,7 @@
     "type": "git",
     "url": "https://github.com/Stupidism/stupid-rc-starter.git"
   },
-  "homepage": "https://survivejs.github.io/react-component-boilerplate/",
+  "homepage": "https://stupidism.github.io/stupid-rc-starter/",
   "bugs": {
     "url": "https://github.com/Stupidism/stupid-rc-starter/issues"
   },
