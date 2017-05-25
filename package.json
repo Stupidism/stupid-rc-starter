@@ -3,7 +3,7 @@
   "description": "Boilerplate for React.js components with storybook",
   "author": "Stupid Sun",
   "user": "stupidism",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "start": "webpack-dev-server --env dev",
     "test": "jest",
@@ -23,6 +23,7 @@
     "dist:min": "webpack --env distMin",
     "dist:meta": "babel-node ./scripts/copy-files",
     "dist:modules": "rimraf dist-modules && babel src -d dist-modules && npm run dist:meta dist-modules",
+    "publish:modules": "npm run dist:modules && (cd dist-modules && npm publish)",
     "prepublish": "npm run dist:modules",
     "postpublish": "npm run gh-pages && npm run gh-pages:deploy",
     "postinstall": "node lib/post_install.js",

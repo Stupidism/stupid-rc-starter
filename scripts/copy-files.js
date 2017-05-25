@@ -61,6 +61,7 @@ function createPackageFile() {
       } = packageData;
 
       const minimalPackage = {
+        name: 'react-render-counter',
         author,
         version,
         description,
