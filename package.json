@@ -21,8 +21,8 @@
     "gh-pages:stats": "webpack --env ghPages --profile --json > stats.json",
     "dist": "webpack --env dist",
     "dist:min": "webpack --env distMin",
-    "dist:modules": "rimraf ./dist-modules && babel ./src --out-dir ./dist-modules",
-    "preversion": "npm run test && npm run dist && npm run dist:min && git commit --allow-empty -am \"Update dist\"",
+    "dist:meta": "babel-node ./scripts/copy-files",
+    "dist:modules": "rimraf dist-modules && babel src -d dist-modules && npm run dist:meta dist-modules",
     "prepublish": "npm run dist:modules",
     "postpublish": "npm run gh-pages && npm run gh-pages:deploy",
     "postinstall": "node lib/post_install.js",
@@ -88,6 +88,7 @@
     "eslint-plugin-react": "^6.9.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
+    "fs-extra": "^3.0.1",
     "gh-pages": "^0.12.0",
     "git-prepush-hook": "^1.0.2",
     "html-webpack-plugin": "^2.28.0",
@@ -113,9 +114,6 @@
     "webpack-dev-server": "^2.4.5",
     "webpack-merge": "^4.1.0"
   },
-  "peerDependencies": {
-    "react": ">= 0.11.2 < 16.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Stupidism/stupid-rc-starter.git"
@@ -138,7 +136,10 @@
       "node_modules",
       "packages"
     ],
-    "testMatch": [ "**/__tests__/**/(!\\.)*.js?(x)", "**/?(*.)(spec|test).js?(x)" ]
+    "testMatch": [
+      "**/__tests__/**/(!\\.)*.js?(x)",
+      "**/?(*.)(spec|test).js?(x)"
+    ]
   },
   "keywords": [
     "react",
