@@ -62,5 +62,4 @@ console.log(a + b);
 
 ## License
 
-*stupid-rc-starter* is available under MIT. See LICENSE for more details.
-
+Copyright © 2017, [Stupidism](https://github.com/stupidism). Released under the [MIT license](LICENSE).
