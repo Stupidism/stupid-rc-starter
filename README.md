@@ -57,8 +57,10 @@ npm install --save-dev react-render-counter
   </div>
   ```
 
-## Documentation
+## [Documentation](https://stupidism.github.io/stupid-rc-starter/)
 
-- [documentations](https://stupidism.github.io/stupid-rc-starter/)
-- [online demo](https://stupidism.github.io/stupid-rc-starter/storybook)
-- [code examples](https://github.com/stupidism/stupid-rc-starter/blob/master/stories/Image/Image.story.js)
+With [storybook](https://storybooks.js.org), things below are included in the site:
+- online demo
+- TODO: [prop types](src/RenderCounter/Counter.js)
+- TODO: [code examples](stories/RenderCounter/RenderCounter.story.js)
+- TODO: [comments](https://github.com/storybooks/storybook/blob/master/addons/comments)
