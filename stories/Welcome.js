@@ -1,15 +1,22 @@
 import React from 'react';
 import T from 'prop-types';
-
 import { storiesOf } from '@storybook/react';
 import { linkTo } from '@storybook/addon-links';
 
+import Markdown from './Markdown';
+
 /* eslint-disable max-len */
+
+/* eslint-disable import/no-unresolved,import/first,import/no-webpack-loader-syntax,import/no-extraneous-dependencies */
+// TODO(contributor): configure it with webpack, help needed
+// https://storybooks.js.org/docs/react-storybook/configurations/custom-webpack-config/
+import readme from 'raw-loader!../README.md';
+import starter from 'raw-loader!../docs/starter.md';
+/* eslint-enable import/no-unresolved,import/first,import/no-webpack-loader-syntax,import/no-extraneous-dependencies */
 
 const styles = {
   main: {
     margin: 15,
-    maxWidth: 600,
     lineHeight: 1.4,
     fontFamily: '"Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif',
   },
@@ -83,6 +90,8 @@ Welcome.propTypes = {
 };
 
 storiesOf('Welcome', module)
+  .add('to stupid-rc-starter', () => Markdown(starter))
+  .add('to react-render-counter', () => Markdown(readme))
   .add('to Storybook', () => (
     <Welcome showApp={linkTo('RenderCounter')} />
   ));
