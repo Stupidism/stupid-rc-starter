@@ -5,7 +5,9 @@
   "user": "stupidism",
   "version": "0.1.1",
   "scripts": {
-    "start": "webpack-dev-server --env dev",
+    "start": "npm run storybook",
+    "start:docs": "webpack-dev-server --env dev",
+    "start:storybook": "start-storybook -p 6006 && opn localhost:6006",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
@@ -21,10 +23,14 @@
     "gh-pages:stats": "webpack --env ghPages --profile --json > stats.json",
     "dist": "webpack --env dist",
     "dist:min": "webpack --env distMin",
+    "dist:modules": "babel src -d dist-modules",
     "dist:meta": "babel-node ./scripts/copy-files",
-    "dist:modules": "rimraf dist-modules && babel src -d dist-modules && npm run dist:meta dist-modules",
-    "publish:modules": "npm run dist:modules && (cd dist-modules && npm publish)",
-    "prepublish": "npm run dist:modules",
+    "build": "npm run build:modules",
+    "build:single": "rimraf dist && npm run dist && npm run dist:min && npm run dist:meta dist",
+    "build:modules": "rimraf dist-modules && npm run dist:modules && npm run dist:meta dist-modules",
+    "publish:single": "npm run dist && (cd dist && npm publish) && npm run postpublish",
+    "publish:modules": "npm run dist:modules && (cd dist-modules && npm publish) && npm run postpublish",
+    "prepublish": "npm run dist && npm run dist:min && npm run dist:modules",
     "postpublish": "npm run gh-pages && npm run gh-pages:deploy",
     "postinstall": "node lib/post_install.js",
     "git:commitable": "git status | grep 'Changes to be committed:'",
@@ -36,8 +42,7 @@
     "pre-commit:stash-linted": "git stash save 'linted-stash' >> /dev/null",
     "pre-commit:pop-unstaged": "git stash pop stash@{1}",
     "pre-commit:rebase-linted": "npm run git:stash-rebase",
-    "pre-commit:clean": "(lint-staged >> /dev/null) || exit 0",
-    "storybook": "start-storybook -p 6006 && opn localhost:6006"
+    "pre-commit:clean": "(lint-staged >> /dev/null) || exit 0"
   },
   "lint-staged": {
     "*.{cmd,html,json,md,sh,txt,xml,yml}": [
