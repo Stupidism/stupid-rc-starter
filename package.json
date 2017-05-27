@@ -7,6 +7,7 @@
   "scripts": {
     "start": "start-storybook -p 6006 && opn localhost:6006",
     "test": "jest",
+    "test:update": "npm run test -- -u",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "lint:js": "eslint . --ignore-path .gitignore --ignore-pattern dist --cache",
