@@ -1,0 +1,15 @@
+exclude:
+- .eslintrc.js
+- /.storybook/.*
+- /.stylelintrc.js
+- /webpack.config.babel.js
+
+production:
+  exclude:
+  - /stories/.*
+test:
+  include:
+  - /stories/.*
+component_depth: 1
+languages:
+- javascript
