@@ -67,7 +67,7 @@ With [storybook](https://github.com/storybooks/storybook) integrated, components
 ## Get Started
 
 ### Quick start
-```shell
+```
 $ git clone -o starter -b master --single-branch \
       https://github.com/Stupidism/stupid-rc-starter.git my-component
 $ cd my-component
