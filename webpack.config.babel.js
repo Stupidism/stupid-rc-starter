@@ -17,7 +17,7 @@ const config = {
     docs: path.join(ROOT_PATH, 'docs'),
     ghPages: path.join(ROOT_PATH, 'gh-pages'),
   },
-  filename: 'boilerplate',
+  filename: 'index',
   library: 'Boilerplate',
 };
 
