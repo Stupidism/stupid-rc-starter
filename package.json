@@ -5,7 +5,7 @@
   "user": "stupidism",
   "version": "0.1.2",
   "scripts": {
-    "start": "npm run storybook",
+    "start": "npm run start:storybook",
     "start:docs": "webpack-dev-server --env dev",
     "start:storybook": "start-storybook -p 6006 && opn localhost:6006",
     "test": "jest",
