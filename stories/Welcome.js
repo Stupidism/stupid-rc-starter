@@ -85,8 +85,9 @@ Welcome.propTypes = {
 };
 
 storiesOf('Welcome', module)
-  .add('to stupid-rc-starter', () => Markdown(starter))
-  .add('to react-render-counter', () => Markdown(readme))
+  .add('to stupid-rc-starter', () => <Markdown source={starter} />)
+  // Set skipHtml to hide the link to starter.md in docs
+  .add('to react-render-counter', () => <Markdown source={readme} skipHtml />)
   .add('to Storybook', () => (
     <Welcome showApp={linkTo('RenderCounter')} />
   ));

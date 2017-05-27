@@ -1,5 +1,6 @@
-[README of starter](docs/starter.md)
----
+<blockquote>
+  <a href="./docs/starter.md">README of starter</a>
+</blockquote>
 
 # Example component: react-render-counter
 > RenderCounter is a tool component can be used in dev environment. It can tell you how many times each part of your component has been rendered.  

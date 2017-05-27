@@ -7,4 +7,4 @@ const renderers = {
   CodeBlock,
 };
 
-export default source => <Markdown source={source} renderers={renderers} />;
+export default props => <Markdown {...props} renderers={renderers} />;
