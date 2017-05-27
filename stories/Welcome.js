@@ -5,15 +5,10 @@ import { linkTo } from '@storybook/addon-links';
 
 import Markdown from './Markdown';
 
+import readme from '../README.md';
+import starter from '../docs/starter.md';
+
 /* eslint-disable max-len */
-
-/* eslint-disable import/no-unresolved,import/first,import/no-webpack-loader-syntax,import/no-extraneous-dependencies */
-// TODO(contributor): configure it with webpack, help needed
-// https://storybooks.js.org/docs/react-storybook/configurations/custom-webpack-config/
-import readme from 'raw-loader!../README.md';
-import starter from 'raw-loader!../docs/starter.md';
-/* eslint-enable import/no-unresolved,import/first,import/no-webpack-loader-syntax,import/no-extraneous-dependencies */
-
 const styles = {
   main: {
     margin: 15,
