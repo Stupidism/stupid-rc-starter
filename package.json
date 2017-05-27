@@ -133,6 +133,10 @@
       "node_modules",
       "packages"
     ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif)$": "<rootDir>/__tests__/__mocks__/fileMock.js",
+      "\\.md$": "<rootDir>/__tests__/__mocks__/mdMock.js"
+    },
     "testMatch": [
       "**/__tests__/**/(!\\.)*.js?(x)",
       "**/?(*.)(spec|test).js?(x)"
