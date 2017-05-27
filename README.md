@@ -1,8 +1,18 @@
 <blockquote>
-  <a href="./docs/starter.md">README of starter</a>
+  <!-- This <blockquote> will be hidden in gh-pages, because it's no gonna work there and there's better menue -->
+  <a href="./docs/starter.md">README of starter</a> 
+  <p>
+    If you are here for the <strong>starter</strong> click above link</br>
+    If you are here for the <strong>react-render-counter</strong>, this is it</br>
+  </p>
+  <!-- 
+    You can remove this after you started.  
+    For the convenience of merging, README.md below is all yours, I will try my best not to change them.
+    Also, you should change docs/starter.md as little as you can to avoid conflicts.
+   -->
 </blockquote>
 
-# Example component: react-render-counter
+# Example Component: react-render-counter
 > RenderCounter is a tool component can be used in dev environment. It can tell you how many times each part of your component has been rendered.  
 > This is composed with a HOC and a pure component to count render times  
 > HOC is also useful when you want to track render times for your component.
