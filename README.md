@@ -1,3 +1,60 @@
+# react-render-counter
+> RenderCounter is a tool component can be used in dev environment. It can tell you how many times each part of your component has been rendered.  
+> This is composed with a HOC and a pure component to count render times  
+> HOC is also useful when you want to track render times for your component.
+
+## Installation
+```
+yarn add --dev react-render-counter
+```
+or
+```
+npm install --save-dev react-render-counter
+```
+
+## Usage
+1. `RenderCounter` - withRenderCount(Counter)
+
+  ```js
+  import RenderCounter from 'react-render-counter';
+  
+  <AnyComponent>
+    <RenderCounter />
+  </AnyComponent>
+  ```
+
+2. `withRenderCount` - High order component to provide data and logic
+
+  ```js
+  import { withRenderCount } from 'react-render-counter';
+  
+  const MyCounter = ({ count }) => <div>{count + 1}</div>;
+  
+  export default withRenderCount(MyCounter);
+  ```
+  
+3. `Counter` - Pure component to render count
+
+  ```js
+  import { Counter } from 'react-render-counter';
+  
+  <div>
+    <Counter count={1} /> 
+  </div>
+  ```
+
+## Documentation
+
+- [documentations](https://stupidism.github.io/clarity-components/)
+- [online demo](https://stupidism.github.io/clarity-components/storybook)
+- [code examples](https://github.com/stupidism/clarity-components/blob/master/stories/Image/Image.story.js)
+
+## Starter
+
+Below is the content of the starter, delete them or try not to change them for convenience of merge.
+
+---
+
 [![Build Status](https://travis-ci.org/Stupidism/stupid-rc-starter.svg?branch=master)](https://travis-ci.org/Stupidism/stupid-rc-starter) [![bitHound Score](https://www.bithound.io/github/Stupidism/stupid-rc-starter/badges/score.svg)](https://www.bithound.io/github/Stupidism/stupid-rc-starter) [![codecov](https://codecov.io/gh/Stupidism/stupid-rc-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/Stupidism/stupid-rc-starter) [![Greenkeeper badge](https://badges.greenkeeper.io/stupidism/stupid-rc-starter.svg)](https://greenkeeper.io/) [![Dependency Status](https://david-dm.org/Stupidism/stupid-rc-starter.svg)](https://david-dm.org/Stupidism/stupid-rc-starter) [![devDependencies Status](https://david-dm.org/Stupidism/stupid-rc-starter/dev-status.svg)](https://david-dm.org/Stupidism/stupid-rc-starter?type=dev)
 
 # stupid-rc-starter - Starter for React.js components
@@ -49,16 +106,6 @@ The starter includes a [GitHub Pages](https://pages.github.com/) specific portio
 * Building - **npm run gh-pages** - Builds the documentation into `./gh-pages` directory.
 * Deploying - **npm run gh-pages:deploy** - Deploys the contents of `./gh-pages` to the `gh-pages` branch. GitHub will pick this up automatically. Your site will be available through *<user name>.github.io/<project name>`.
 * Generating stats - **npm run gh-pages:stats** - Generates stats that can be passed to [webpack analyse tool](https://webpack.github.io/analyse/). This is useful for investigating what the build consists of.
-
-## Highlighting Demo for the Site
-
-```js
-var a = 5;
-var b = 10;
-
-// just trying out code highlighting feature here
-console.log(a + b);
-```
 
 ## License
 
