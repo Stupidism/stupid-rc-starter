@@ -48,6 +48,7 @@ function createPackageFile() {
     .then(data => JSON.parse(data))
     .then((packageData) => {
       const {
+        name,
         author,
         version,
         description,
@@ -61,7 +62,7 @@ function createPackageFile() {
       } = packageData;
 
       const minimalPackage = {
-        name: 'react-render-counter',
+        name: name === 'stupid-rc-starter' ? 'react-render-counter' : name,
         author,
         version,
         description,
