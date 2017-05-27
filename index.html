@@ -1,63 +1,45 @@
 
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="storybook-version" content="3.0.0-rc.0">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+        <title>Storybook</title>
+        <style>
+          /*
+            When resizing panels, the drag event breaks if the cursor
+            moves over the iframe. Add the 'dragging' class to the body
+            at drag start and remove it when the drag ends.
+           */
+          .dragging iframe {
+            pointer-events: none;
+          }
 
+          /* Styling the fuzzy search box placeholders */
+          .searchBox::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #ddd;
+            font-size: 16px;
+          }
 
+          .searchBox::-moz-placeholder { /* Firefox 19+ */
+            color: #ddd;
+            font-size: 16px;
+          }
 
+          .searchBox:focus{
+            border-color: #EEE !important;
+          }
 
-
-
-<!DOCTYPE html>
-<!--[if lt IE 7 ]>             <html class="ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>                <html class="ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>                <html class="ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]>                <html class="ie9" lang="en"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta content="ie=edge" http-equiv="x-ua-compatible">
-
-    
-
-    
-      
-    
-
-    <title>stupid-rc-starter</title>
-
-    
-
-    
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    
-
-    
-
-    
-    <link href="app.4b0aa3350e552fd75d37.css" rel="stylesheet">
-    
-
-  </head>
-  <body>
-    
-
-    
-    <div id="app"></div>
-    
-    
-
-    
-
-    
-
-    
-
-    
-    <script src="vendor.2fe57e1427f0f202e8ec.js" type="text/javascript"></script>
-    
-    <script src="app.4b0aa3350e552fd75d37.js" type="text/javascript"></script>
-    
-
-    
-
-    
-  </body>
-</html>
+          .btn:hover{
+            background-color: #eee
+          }
+        </style>
+      </head>
+      <body style="margin: 0;">
+        <div id="root"></div>
+        <script src="static/manager.b95c31a4d7936bc3d37b.bundle.js"></script>
+      </body>
+    </html>
+  
