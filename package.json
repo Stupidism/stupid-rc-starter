@@ -108,6 +108,8 @@
     "raw-loader": "^0.5.1",
     "react-addons-test-utils": "^15.5.1",
     "react-github-corner": "^0.3.0",
+    "react-markdown": "^2.5.0",
+    "react-syntax-highlighter": "^5.6.1",
     "react-test-renderer": "^15.5.4",
     "rimraf": "^2.6.1",
     "style-loader": "^0.18.1",
