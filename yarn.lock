@@ -3333,10 +3333,6 @@ html-tags@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-1.1.1.tgz#869f43859f12d9bdc3892419e494a628aa1b204e"
 
-html-webpack-template@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/html-webpack-template/-/html-webpack-template-6.0.1.tgz#d510e9d3174adfefb83cc81c48623ba62b803321"
-
 htmlparser2@^3.9.1:
   version "3.9.2"
   resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-3.9.2.tgz#1bdf87acca0f3f9e53fa4fcceb0f4b4cbb00b338"
