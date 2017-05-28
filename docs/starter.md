@@ -12,8 +12,8 @@
 > Starter for React.js components  
 > This is forked from [react-component-boilerplate](https://github.com/survivejs/react-component-boilerplate)
 
-This is a stupid starter makes it stupid enough to develop and test React components and small projects.
-With [storybook](https://github.com/storybooks/storybook) integrated, components can be tested on [gh-pages](https://stupidism.github.io/stupid-rc-starter/storybook) by non-developers directly.
+This is a stupid starter makes it stupid enough to develop and test React components and small projects.  
+With [storybook](https://github.com/storybooks/storybook) integrated, components can be tested on [gh-pages](https://stupidism.github.io/stupid-rc-starter) by non-developers directly.
 
 ## Get Started
 
