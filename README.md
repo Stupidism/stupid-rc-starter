@@ -33,7 +33,7 @@ npm install --save-dev react-render-counter
   import RenderCounter from 'react-render-counter';
   
   <AnyComponent>
-    <RenderCounter />
+    <RenderCounter initialCount={0} />
   </AnyComponent>
   ```
 
