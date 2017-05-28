@@ -1,4 +1,5 @@
 import React from 'react';
+import T from 'prop-types';
 
 import Counter from './Counter';
 
@@ -6,7 +7,7 @@ import Counter from './Counter';
 class RenderCounter extends React.Component {
   constructor(props) {
     super(props);
-    this.count = 1;
+    this.count = props.initialCount;
   }
 
   componentWillReceiveProps() {
@@ -17,5 +18,13 @@ class RenderCounter extends React.Component {
     return <Counter count={this.count} />;
   }
 }
+
+RenderCounter.propTypes = {
+  initialCount: T.number,
+};
+
+RenderCounter.defaultProps = {
+  initialCount: 1,
+};
 
 export default RenderCounter;
