@@ -538,7 +538,7 @@ exports[`Storyshots RenderCounter Counter 1`] = `
                   default
                 </th>
                 <th>
-                  description&gt;
+                  description
                 </th>
               </tr>
             </thead>
@@ -1086,7 +1086,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
                   default
                 </th>
                 <th>
-                  description&gt;
+                  description
                 </th>
               </tr>
             </thead>
@@ -1601,7 +1601,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
                   default
                 </th>
                 <th>
-                  description&gt;
+                  description
                 </th>
               </tr>
             </thead>
@@ -2555,7 +2555,7 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                   default
                 </th>
                 <th>
-                  description&gt;
+                  description
                 </th>
               </tr>
             </thead>
