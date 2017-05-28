@@ -1,68 +1,73 @@
 import React from 'react';
-import withState from 'recompose/withState';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import RenderCounter from '../../src/RenderCounter';
+import RenderCounter, { Counter, StatelessRenderCounter } from '../../src/RenderCounter';
+import DivRefreshable from './DivRefreshable';
 
-const rerender = action('rerender');
-
-const DivWithRenderCounter = withState('state', 'setState', 0)(
-  ({ state, setState, onClick, label, children, cloneChild, ...props }) => (
-    <div {...props}>
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          setState(state + 1, () => rerender(label, state));
-        }}
-      >
-        {label}
-        <RenderCounter />
-      </button>
-      {children && (cloneChild ? React.cloneElement(children) : children)}
-    </div>
-  ),
-);
-
-DivWithRenderCounter.defaultProps = {
-  style: {
-    display: 'inline-block',
-    border: 'solid 1px grey',
-    padding: 5,
-  },
+const onRefresh = (context, ...args) => {
+  if (Math.random() < 0.5) {
+    context.next();
+  }
+  action('onRefresh')(context, ...args);
 };
 
-storiesOf('RenderCounter', module)
-  .add('single-level', () => (
-    <div>
-      <DivWithRenderCounter label="btn1" /><br />
-      <DivWithRenderCounter label="btn2" /><br />
-      <DivWithRenderCounter label="btn3" />
+const stories = storiesOf('RenderCounter', module);
+
+stories.addWithInfo(
+  'RenderCounter',
+  `
+    This is the basic usage inside any component.\n
+    NOTICE: You may see them render an extra time. That's a bug of storybook when you enter this page directly.
+  `,
+  () => (
+    <div style={{ width: 600, height: 400, border: 'solid 1px grey', padding: 10 }}>
+      <RenderCounter />
+      <RenderCounter initialCount={1} />
+      <RenderCounter initialCount={2} />
     </div>
-  ))
-  .add('multi-level', () => (
-    <DivWithRenderCounter label="btn1">
-      <DivWithRenderCounter label="btn2">
-        <DivWithRenderCounter label="btn3" />
-      </DivWithRenderCounter>
-    </DivWithRenderCounter>
-  ))
-  .add('nested', () => (
-    <div>
-      <DivWithRenderCounter cloneChild label="clone-child-btn1">
-        <DivWithRenderCounter label="btn2">
-          <DivWithRenderCounter label="btn3" />
-        </DivWithRenderCounter>
-      </DivWithRenderCounter><br />
-      <DivWithRenderCounter label="btn1">
-        <DivWithRenderCounter cloneChild label="clone-child-btn2">
-          <DivWithRenderCounter label="btn3" />
-        </DivWithRenderCounter>
-      </DivWithRenderCounter><br />
-      <DivWithRenderCounter cloneChild label="clone-child-btn1">
-        <DivWithRenderCounter cloneChild label="clone-child-btn2">
-          <DivWithRenderCounter label="btn3" />
-        </DivWithRenderCounter>
-      </DivWithRenderCounter>
+  ),
+  { inline: true },
+);
+
+stories.addWithInfo('inside DivRefreshable', () => (
+  <div style={{ width: 600 }}>
+    <h4>{"Normal Counter won't re-render unless it's updated, e.g. hot module reload"}</h4>
+    <DivRefreshable>
+      <RenderCounter />
+    </DivRefreshable>
+    <h4>This div will update its child</h4>
+    <DivRefreshable label="Refresh and Clone Child" cloneChild>
+      <RenderCounter />
+    </DivRefreshable>
+    <h4>onRefresh can be decide to trigger or not</h4>
+    <DivRefreshable
+      label="Refresh in 50% possibility and Clone Child"
+      cloneChild
+      onRefresh={onRefresh}
+    >
+      <RenderCounter />
+    </DivRefreshable>
+  </div>
+), { inline: true, propTablesExclude: [RenderCounter] });
+
+stories.addWithInfo('Counter', () => (
+  <div style={{ width: 600, height: 400, border: 'solid 1px grey', padding: 10 }}>
+    <Counter count={1} />
+    <Counter count={2} />
+    <Counter count={3} />
+  </div>
+), { inline: true });
+
+stories.addWithInfo(
+  'StatelessRenderCounter',
+  'This is another implement of RenderCounter',
+  () => (
+    <div style={{ width: 600, height: 400, border: 'solid 1px grey', padding: 10 }}>
+      <StatelessRenderCounter />
+      <StatelessRenderCounter />
+      <StatelessRenderCounter />
     </div>
-  ));
+  ),
+  { inline: true },
+);

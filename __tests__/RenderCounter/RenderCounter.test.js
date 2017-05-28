@@ -5,7 +5,6 @@ import StatelessRenderCounter from '../../src/RenderCounter/StatelessRenderCount
 
 const testWrapper = (RenderCounter, name = 'RenderCounter') => describe(name, () => {
   it('should change the text after update', () => {
-    // Render a checkbox with label in the document
     const wrapper = mount(<RenderCounter />);
 
     expect(wrapper.text()).toEqual('1');
@@ -13,8 +12,15 @@ const testWrapper = (RenderCounter, name = 'RenderCounter') => describe(name, ()
     expect(wrapper.text()).toEqual('2');
   });
 
+  it('should accept a prop initialCount as the initial value of count', () => {
+    const wrapper = mount(<RenderCounter initialCount={2} />);
+
+    expect(wrapper.text()).toEqual('2');
+    wrapper.update();
+    expect(wrapper.text()).toEqual('3');
+  });
+
   it('should not change the text after another RenderCounter\'s update', () => {
-    // Render a checkbox with label in the document
     const wrapper1 = mount(<RenderCounter />);
     const wrapper2 = mount(<RenderCounter />);
 

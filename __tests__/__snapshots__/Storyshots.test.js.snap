@@ -1,83 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots RenderCounter multi-level 1`] = `
-<div
-  style={
-    Object {
-      "border": "solid 1px grey",
-      "display": "inline-block",
-      "padding": 5,
-    }
-  }
->
-  <button
-    onClick={[Function]}
+exports[`Storyshots RenderCounter Counter 1`] = `
+<div>
+  <div
+    style={undefined}
   >
-    btn1
     <div
       style={
         Object {
-          "backgroundColor": "#f95",
-          "borderRadius": "8px",
-          "color": "white",
-          "display": "inline-block",
-          "float": "right",
-          "fontSize": "8pt",
-          "fontWeight": "bold",
-          "padding": "1px 5px",
-          "textAlign": "center",
-          "top": "2px",
+          "WebkitFontSmoothing": "antialiased",
+          "color": "#444",
+          "fontFamily": "
+            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+          ",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
         }
       }
     >
-      1
-    </div>
-  </button>
-  <div
-    style={
-      Object {
-        "border": "solid 1px grey",
-        "display": "inline-block",
-        "padding": 5,
-      }
-    }
-  >
-    <button
-      onClick={[Function]}
-    >
-      btn2
       <div
         style={
           Object {
-            "backgroundColor": "#f95",
-            "borderRadius": "8px",
-            "color": "white",
-            "display": "inline-block",
-            "float": "right",
-            "fontSize": "8pt",
-            "fontWeight": "bold",
-            "padding": "1px 5px",
-            "textAlign": "center",
-            "top": "2px",
+            "borderBottom": "1px solid #eee",
+            "marginBottom": 10,
+            "paddingTop": 10,
           }
         }
       >
-        1
+        <h1
+          style={
+            Object {
+              "fontSize": "35px",
+              "margin": 0,
+              "padding": 0,
+            }
+          }
+        >
+          RenderCounter
+        </h1>
+        <h2
+          style={
+            Object {
+              "fontSize": "22px",
+              "fontWeight": 400,
+              "margin": "0 0 10px 0",
+              "padding": 0,
+            }
+          }
+        >
+          Counter
+        </h2>
       </div>
-    </button>
-    <div
-      style={
-        Object {
-          "border": "solid 1px grey",
-          "display": "inline-block",
-          "padding": 5,
+    </div>
+  </div>
+  <div>
+    <div>
+      <div
+        style={
+          Object {
+            "border": "solid 1px grey",
+            "height": 400,
+            "padding": 10,
+            "width": 600,
+          }
         }
-      }
-    >
-      <button
-        onClick={[Function]}
       >
-        btn3
         <div
           style={
             Object {
@@ -96,159 +85,555 @@ exports[`Storyshots RenderCounter multi-level 1`] = `
         >
           1
         </div>
-      </button>
+        <div
+          style={
+            Object {
+              "backgroundColor": "#f95",
+              "borderRadius": "8px",
+              "color": "white",
+              "display": "inline-block",
+              "float": "right",
+              "fontSize": "8pt",
+              "fontWeight": "bold",
+              "padding": "1px 5px",
+              "textAlign": "center",
+              "top": "2px",
+            }
+          }
+        >
+          2
+        </div>
+        <div
+          style={
+            Object {
+              "backgroundColor": "#f95",
+              "borderRadius": "8px",
+              "color": "white",
+              "display": "inline-block",
+              "float": "right",
+              "fontSize": "8pt",
+              "fontWeight": "bold",
+              "padding": "1px 5px",
+              "textAlign": "center",
+              "top": "2px",
+            }
+          }
+        >
+          3
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "color": "#444",
+          "fontFamily": "
+            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+          ",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+        }
+      }
+    >
+      
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Story Source
+        </h1>
+        <pre
+          style={
+            Object {
+              "backgroundColor": "#fafafa",
+              "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+              "fontSize": ".88em",
+              "lineHeight": 1.5,
+              "overflowX": "scroll",
+              "padding": ".5rem",
+            }
+          }
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                div
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    style
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        <span
+                          style={
+                            Object {
+                              "color": "#666",
+                            }
+                          }
+                        >
+                          {
+                          <span
+                            style={
+                              Object {
+                                "color": "#666",
+                              }
+                            }
+                          >
+                            width
+                          </span>
+                          : 
+                          <span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              600
+                            </span>
+                          </span>
+                          , 
+                          <span
+                            style={
+                              Object {
+                                "color": "#666",
+                              }
+                            }
+                          >
+                            height
+                          </span>
+                          : 
+                          <span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              400
+                            </span>
+                          </span>
+                          , 
+                          <span
+                            style={
+                              Object {
+                                "color": "#666",
+                              }
+                            }
+                          >
+                            border
+                          </span>
+                          : 
+                          <span
+                            style={
+                              Object {
+                                "color": "#22a",
+                                "wordBreak": "break-word",
+                              }
+                            }
+                          >
+                            "
+                            solid 1px grey
+                            "
+                          </span>
+                          , 
+                          …
+                          }
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &gt;
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 33,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                Counter
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    count
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        <span
+                          style={
+                            Object {
+                              "color": "#a11",
+                            }
+                          }
+                        >
+                          1
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 33,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                Counter
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    count
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        <span
+                          style={
+                            Object {
+                              "color": "#a11",
+                            }
+                          }
+                        >
+                          2
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 33,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                Counter
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    count
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        <span
+                          style={
+                            Object {
+                              "color": "#a11",
+                            }
+                          }
+                        >
+                          3
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;/
+                div
+                &gt;
+              </span>
+            </div>
+          </div>
+        </pre>
+      </div>
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Prop Types
+        </h1>
+        <div>
+          <h2
+            style={
+              Object {
+                "margin": "20px 0 0 0",
+              }
+            }
+          >
+            "
+            Counter
+            " Component
+          </h2>
+          <table
+            style={
+              Object {
+                "borderCollapse": "separate",
+                "borderSpacing": "10px 5px",
+                "marginLeft": -10,
+              }
+            }
+          >
+            <thead>
+              <tr>
+                <th>
+                  property
+                </th>
+                <th>
+                  propType
+                </th>
+                <th>
+                  required
+                </th>
+                <th>
+                  default
+                </th>
+                <th>
+                  description&gt;
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  count
+                </td>
+                <td>
+                  number
+                </td>
+                <td>
+                  yes
+                </td>
+                <td>
+                  -
+                </td>
+                <td />
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`Storyshots RenderCounter nested 1`] = `
+exports[`Storyshots RenderCounter RenderCounter 1`] = `
 <div>
   <div
-    style={
-      Object {
-        "border": "solid 1px grey",
-        "display": "inline-block",
-        "padding": 5,
-      }
-    }
+    style={undefined}
   >
-    <button
-      onClick={[Function]}
-    >
-      clone-child-btn1
-      <div
-        style={
-          Object {
-            "backgroundColor": "#f95",
-            "borderRadius": "8px",
-            "color": "white",
-            "display": "inline-block",
-            "float": "right",
-            "fontSize": "8pt",
-            "fontWeight": "bold",
-            "padding": "1px 5px",
-            "textAlign": "center",
-            "top": "2px",
-          }
-        }
-      >
-        1
-      </div>
-    </button>
     <div
       style={
         Object {
-          "border": "solid 1px grey",
-          "display": "inline-block",
-          "padding": 5,
+          "WebkitFontSmoothing": "antialiased",
+          "color": "#444",
+          "fontFamily": "
+            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+          ",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
         }
       }
     >
-      <button
-        onClick={[Function]}
-      >
-        btn2
-        <div
-          style={
-            Object {
-              "backgroundColor": "#f95",
-              "borderRadius": "8px",
-              "color": "white",
-              "display": "inline-block",
-              "float": "right",
-              "fontSize": "8pt",
-              "fontWeight": "bold",
-              "padding": "1px 5px",
-              "textAlign": "center",
-              "top": "2px",
-            }
-          }
-        >
-          1
-        </div>
-      </button>
       <div
         style={
           Object {
-            "border": "solid 1px grey",
-            "display": "inline-block",
-            "padding": 5,
+            "borderBottom": "1px solid #eee",
+            "marginBottom": 10,
+            "paddingTop": 10,
           }
         }
       >
-        <button
-          onClick={[Function]}
-        >
-          btn3
-          <div
-            style={
-              Object {
-                "backgroundColor": "#f95",
-                "borderRadius": "8px",
-                "color": "white",
-                "display": "inline-block",
-                "float": "right",
-                "fontSize": "8pt",
-                "fontWeight": "bold",
-                "padding": "1px 5px",
-                "textAlign": "center",
-                "top": "2px",
-              }
+        <h1
+          style={
+            Object {
+              "fontSize": "35px",
+              "margin": 0,
+              "padding": 0,
             }
-          >
-            1
-          </div>
-        </button>
+          }
+        >
+          RenderCounter
+        </h1>
+        <h2
+          style={
+            Object {
+              "fontSize": "22px",
+              "fontWeight": 400,
+              "margin": "0 0 10px 0",
+              "padding": 0,
+            }
+          }
+        >
+          RenderCounter
+        </h2>
       </div>
     </div>
   </div>
-  <br />
-  <div
-    style={
-      Object {
-        "border": "solid 1px grey",
-        "display": "inline-block",
-        "padding": 5,
-      }
-    }
-  >
-    <button
-      onClick={[Function]}
-    >
-      btn1
+  <div>
+    <div>
       <div
         style={
           Object {
-            "backgroundColor": "#f95",
-            "borderRadius": "8px",
-            "color": "white",
-            "display": "inline-block",
-            "float": "right",
-            "fontSize": "8pt",
-            "fontWeight": "bold",
-            "padding": "1px 5px",
-            "textAlign": "center",
-            "top": "2px",
+            "border": "solid 1px grey",
+            "height": 400,
+            "padding": 10,
+            "width": 600,
           }
         }
       >
-        1
-      </div>
-    </button>
-    <div
-      style={
-        Object {
-          "border": "solid 1px grey",
-          "display": "inline-block",
-          "padding": 5,
-        }
-      }
-    >
-      <button
-        onClick={[Function]}
-      >
-        clone-child-btn2
         <div
           style={
             Object {
@@ -267,247 +652,2000 @@ exports[`Storyshots RenderCounter nested 1`] = `
         >
           1
         </div>
-      </button>
-      <div
-        style={
-          Object {
-            "border": "solid 1px grey",
-            "display": "inline-block",
-            "padding": 5,
-          }
-        }
-      >
-        <button
-          onClick={[Function]}
-        >
-          btn3
-          <div
-            style={
-              Object {
-                "backgroundColor": "#f95",
-                "borderRadius": "8px",
-                "color": "white",
-                "display": "inline-block",
-                "float": "right",
-                "fontSize": "8pt",
-                "fontWeight": "bold",
-                "padding": "1px 5px",
-                "textAlign": "center",
-                "top": "2px",
-              }
+        <div
+          style={
+            Object {
+              "backgroundColor": "#f95",
+              "borderRadius": "8px",
+              "color": "white",
+              "display": "inline-block",
+              "float": "right",
+              "fontSize": "8pt",
+              "fontWeight": "bold",
+              "padding": "1px 5px",
+              "textAlign": "center",
+              "top": "2px",
             }
-          >
-            1
-          </div>
-        </button>
+          }
+        >
+          1
+        </div>
+        <div
+          style={
+            Object {
+              "backgroundColor": "#f95",
+              "borderRadius": "8px",
+              "color": "white",
+              "display": "inline-block",
+              "float": "right",
+              "fontSize": "8pt",
+              "fontWeight": "bold",
+              "padding": "1px 5px",
+              "textAlign": "center",
+              "top": "2px",
+            }
+          }
+        >
+          2
+        </div>
       </div>
     </div>
   </div>
-  <br />
   <div
-    style={
-      Object {
-        "border": "solid 1px grey",
-        "display": "inline-block",
-        "padding": 5,
-      }
-    }
+    style={undefined}
   >
-    <button
-      onClick={[Function]}
-    >
-      clone-child-btn1
-      <div
-        style={
-          Object {
-            "backgroundColor": "#f95",
-            "borderRadius": "8px",
-            "color": "white",
-            "display": "inline-block",
-            "float": "right",
-            "fontSize": "8pt",
-            "fontWeight": "bold",
-            "padding": "1px 5px",
-            "textAlign": "center",
-            "top": "2px",
-          }
-        }
-      >
-        1
-      </div>
-    </button>
     <div
       style={
         Object {
-          "border": "solid 1px grey",
-          "display": "inline-block",
-          "padding": 5,
+          "WebkitFontSmoothing": "antialiased",
+          "color": "#444",
+          "fontFamily": "
+            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+          ",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
         }
       }
     >
-      <button
-        onClick={[Function]}
-      >
-        clone-child-btn2
-        <div
-          style={
-            Object {
-              "backgroundColor": "#f95",
-              "borderRadius": "8px",
-              "color": "white",
-              "display": "inline-block",
-              "float": "right",
-              "fontSize": "8pt",
-              "fontWeight": "bold",
-              "padding": "1px 5px",
-              "textAlign": "center",
-              "top": "2px",
-            }
-          }
-        >
-          1
-        </div>
-      </button>
       <div
         style={
           Object {
-            "border": "solid 1px grey",
-            "display": "inline-block",
-            "padding": 5,
+            "marginBottom": 0,
           }
         }
       >
-        <button
-          onClick={[Function]}
+        <p
+          style={
+            Object {
+              "WebkitFontSmoothing": "antialiased",
+              "color": "#444",
+              "fontFamily": "
+                -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+                \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+              ",
+              "fontSize": "15px",
+            }
+          }
         >
-          btn3
-          <div
+          This is the basic usage inside any component.
+        </p>
+        <p
+          style={
+            Object {
+              "WebkitFontSmoothing": "antialiased",
+              "color": "#444",
+              "fontFamily": "
+                -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+                \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+              ",
+              "fontSize": "15px",
+            }
+          }
+        >
+          NOTICE: You may see them render an extra time. That’s a bug of storybook when you enter this page directly.
+        </p>
+      </div>
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Story Source
+        </h1>
+        <pre
+          style={
+            Object {
+              "backgroundColor": "#fafafa",
+              "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+              "fontSize": ".88em",
+              "lineHeight": 1.5,
+              "overflowX": "scroll",
+              "padding": ".5rem",
+            }
+          }
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                div
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    style
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        <span
+                          style={
+                            Object {
+                              "color": "#666",
+                            }
+                          }
+                        >
+                          {
+                          <span
+                            style={
+                              Object {
+                                "color": "#666",
+                              }
+                            }
+                          >
+                            width
+                          </span>
+                          : 
+                          <span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              600
+                            </span>
+                          </span>
+                          , 
+                          <span
+                            style={
+                              Object {
+                                "color": "#666",
+                              }
+                            }
+                          >
+                            height
+                          </span>
+                          : 
+                          <span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              400
+                            </span>
+                          </span>
+                          , 
+                          <span
+                            style={
+                              Object {
+                                "color": "#666",
+                              }
+                            }
+                          >
+                            border
+                          </span>
+                          : 
+                          <span
+                            style={
+                              Object {
+                                "color": "#22a",
+                                "wordBreak": "break-word",
+                              }
+                            }
+                          >
+                            "
+                            solid 1px grey
+                            "
+                          </span>
+                          , 
+                          …
+                          }
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &gt;
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 33,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                RenderCounter
+              </span>
+              <span />
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 33,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                RenderCounter
+              </span>
+              <span />
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 33,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                RenderCounter
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    initialCount
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        <span
+                          style={
+                            Object {
+                              "color": "#a11",
+                            }
+                          }
+                        >
+                          2
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;/
+                div
+                &gt;
+              </span>
+            </div>
+          </div>
+        </pre>
+      </div>
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Prop Types
+        </h1>
+        <div>
+          <h2
             style={
               Object {
-                "backgroundColor": "#f95",
-                "borderRadius": "8px",
-                "color": "white",
-                "display": "inline-block",
-                "float": "right",
-                "fontSize": "8pt",
-                "fontWeight": "bold",
-                "padding": "1px 5px",
-                "textAlign": "center",
-                "top": "2px",
+                "margin": "20px 0 0 0",
               }
             }
           >
-            1
-          </div>
-        </button>
+            "
+            RenderCounter
+            " Component
+          </h2>
+          <table
+            style={
+              Object {
+                "borderCollapse": "separate",
+                "borderSpacing": "10px 5px",
+                "marginLeft": -10,
+              }
+            }
+          >
+            <thead>
+              <tr>
+                <th>
+                  property
+                </th>
+                <th>
+                  propType
+                </th>
+                <th>
+                  required
+                </th>
+                <th>
+                  default
+                </th>
+                <th>
+                  description&gt;
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  initialCount
+                </td>
+                <td>
+                  number
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span>
+                    <span
+                      style={
+                        Object {
+                          "color": "#a11",
+                        }
+                      }
+                    >
+                      1
+                    </span>
+                  </span>
+                </td>
+                <td />
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`Storyshots RenderCounter single-level 1`] = `
+exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
 <div>
   <div
-    style={
-      Object {
-        "border": "solid 1px grey",
-        "display": "inline-block",
-        "padding": 5,
-      }
-    }
+    style={undefined}
   >
-    <button
-      onClick={[Function]}
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "color": "#444",
+          "fontFamily": "
+            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+          ",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+        }
+      }
     >
-      btn1
       <div
         style={
           Object {
-            "backgroundColor": "#f95",
-            "borderRadius": "8px",
-            "color": "white",
-            "display": "inline-block",
-            "float": "right",
-            "fontSize": "8pt",
-            "fontWeight": "bold",
-            "padding": "1px 5px",
-            "textAlign": "center",
-            "top": "2px",
+            "borderBottom": "1px solid #eee",
+            "marginBottom": 10,
+            "paddingTop": 10,
           }
         }
       >
-        1
+        <h1
+          style={
+            Object {
+              "fontSize": "35px",
+              "margin": 0,
+              "padding": 0,
+            }
+          }
+        >
+          RenderCounter
+        </h1>
+        <h2
+          style={
+            Object {
+              "fontSize": "22px",
+              "fontWeight": 400,
+              "margin": "0 0 10px 0",
+              "padding": 0,
+            }
+          }
+        >
+          StatelessRenderCounter
+        </h2>
       </div>
-    </button>
+    </div>
   </div>
-  <br />
-  <div
-    style={
-      Object {
-        "border": "solid 1px grey",
-        "display": "inline-block",
-        "padding": 5,
-      }
-    }
-  >
-    <button
-      onClick={[Function]}
-    >
-      btn2
+  <div>
+    <div>
       <div
         style={
           Object {
-            "backgroundColor": "#f95",
-            "borderRadius": "8px",
-            "color": "white",
-            "display": "inline-block",
-            "float": "right",
-            "fontSize": "8pt",
-            "fontWeight": "bold",
-            "padding": "1px 5px",
-            "textAlign": "center",
-            "top": "2px",
+            "border": "solid 1px grey",
+            "height": 400,
+            "padding": 10,
+            "width": 600,
           }
         }
       >
-        1
+        <div
+          style={
+            Object {
+              "backgroundColor": "#f95",
+              "borderRadius": "8px",
+              "color": "white",
+              "display": "inline-block",
+              "float": "right",
+              "fontSize": "8pt",
+              "fontWeight": "bold",
+              "padding": "1px 5px",
+              "textAlign": "center",
+              "top": "2px",
+            }
+          }
+        >
+          1
+        </div>
+        <div
+          style={
+            Object {
+              "backgroundColor": "#f95",
+              "borderRadius": "8px",
+              "color": "white",
+              "display": "inline-block",
+              "float": "right",
+              "fontSize": "8pt",
+              "fontWeight": "bold",
+              "padding": "1px 5px",
+              "textAlign": "center",
+              "top": "2px",
+            }
+          }
+        >
+          1
+        </div>
+        <div
+          style={
+            Object {
+              "backgroundColor": "#f95",
+              "borderRadius": "8px",
+              "color": "white",
+              "display": "inline-block",
+              "float": "right",
+              "fontSize": "8pt",
+              "fontWeight": "bold",
+              "padding": "1px 5px",
+              "textAlign": "center",
+              "top": "2px",
+            }
+          }
+        >
+          1
+        </div>
       </div>
-    </button>
+    </div>
   </div>
-  <br />
   <div
-    style={
-      Object {
-        "border": "solid 1px grey",
-        "display": "inline-block",
-        "padding": 5,
-      }
-    }
+    style={undefined}
   >
-    <button
-      onClick={[Function]}
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "color": "#444",
+          "fontFamily": "
+            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+          ",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+        }
+      }
     >
-      btn3
       <div
         style={
           Object {
-            "backgroundColor": "#f95",
-            "borderRadius": "8px",
-            "color": "white",
-            "display": "inline-block",
-            "float": "right",
-            "fontSize": "8pt",
-            "fontWeight": "bold",
-            "padding": "1px 5px",
-            "textAlign": "center",
-            "top": "2px",
+            "marginBottom": 0,
           }
         }
       >
-        1
+        <p
+          style={
+            Object {
+              "WebkitFontSmoothing": "antialiased",
+              "color": "#444",
+              "fontFamily": "
+                -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+                \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+              ",
+              "fontSize": "15px",
+            }
+          }
+        >
+          This is another implement of RenderCounter
+        </p>
       </div>
-    </button>
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Story Source
+        </h1>
+        <pre
+          style={
+            Object {
+              "backgroundColor": "#fafafa",
+              "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+              "fontSize": ".88em",
+              "lineHeight": 1.5,
+              "overflowX": "scroll",
+              "padding": ".5rem",
+            }
+          }
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                div
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    style
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        <span
+                          style={
+                            Object {
+                              "color": "#666",
+                            }
+                          }
+                        >
+                          {
+                          <span
+                            style={
+                              Object {
+                                "color": "#666",
+                              }
+                            }
+                          >
+                            width
+                          </span>
+                          : 
+                          <span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              600
+                            </span>
+                          </span>
+                          , 
+                          <span
+                            style={
+                              Object {
+                                "color": "#666",
+                              }
+                            }
+                          >
+                            height
+                          </span>
+                          : 
+                          <span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              400
+                            </span>
+                          </span>
+                          , 
+                          <span
+                            style={
+                              Object {
+                                "color": "#666",
+                              }
+                            }
+                          >
+                            border
+                          </span>
+                          : 
+                          <span
+                            style={
+                              Object {
+                                "color": "#22a",
+                                "wordBreak": "break-word",
+                              }
+                            }
+                          >
+                            "
+                            solid 1px grey
+                            "
+                          </span>
+                          , 
+                          …
+                          }
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &gt;
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 33,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                StatelessRenderCounter
+              </span>
+              <span />
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 33,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                StatelessRenderCounter
+              </span>
+              <span />
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 33,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                StatelessRenderCounter
+              </span>
+              <span />
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;/
+                div
+                &gt;
+              </span>
+            </div>
+          </div>
+        </pre>
+      </div>
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Prop Types
+        </h1>
+        <div>
+          <h2
+            style={
+              Object {
+                "margin": "20px 0 0 0",
+              }
+            }
+          >
+            "
+            StatelessRenderCounter
+            " Component
+          </h2>
+          <table
+            style={
+              Object {
+                "borderCollapse": "separate",
+                "borderSpacing": "10px 5px",
+                "marginLeft": -10,
+              }
+            }
+          >
+            <thead>
+              <tr>
+                <th>
+                  property
+                </th>
+                <th>
+                  propType
+                </th>
+                <th>
+                  required
+                </th>
+                <th>
+                  default
+                </th>
+                <th>
+                  description&gt;
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  initialCount
+                </td>
+                <td>
+                  number
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span>
+                    <span
+                      style={
+                        Object {
+                          "color": "#a11",
+                        }
+                      }
+                    >
+                      1
+                    </span>
+                  </span>
+                </td>
+                <td />
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
+<div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "color": "#444",
+          "fontFamily": "
+            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+          ",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "borderBottom": "1px solid #eee",
+            "marginBottom": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <h1
+          style={
+            Object {
+              "fontSize": "35px",
+              "margin": 0,
+              "padding": 0,
+            }
+          }
+        >
+          RenderCounter
+        </h1>
+        <h2
+          style={
+            Object {
+              "fontSize": "22px",
+              "fontWeight": 400,
+              "margin": "0 0 10px 0",
+              "padding": 0,
+            }
+          }
+        >
+          inside DivRefreshable
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div>
+      <div
+        style={
+          Object {
+            "width": 600,
+          }
+        }
+      >
+        <h4>
+          Normal Counter won't re-render unless it's updated, e.g. hot module reload
+        </h4>
+        <div
+          style={
+            Object {
+              "border": "1px solid black",
+              "padding": 10,
+            }
+          }
+        >
+          <button
+            onClick={[Function]}
+          >
+            Refresh
+          </button>
+          <div
+            style={
+              Object {
+                "backgroundColor": "#f95",
+                "borderRadius": "8px",
+                "color": "white",
+                "display": "inline-block",
+                "float": "right",
+                "fontSize": "8pt",
+                "fontWeight": "bold",
+                "padding": "1px 5px",
+                "textAlign": "center",
+                "top": "2px",
+              }
+            }
+          >
+            1
+          </div>
+        </div>
+        <h4>
+          This div will update its child
+        </h4>
+        <div
+          style={
+            Object {
+              "border": "1px solid black",
+              "padding": 10,
+            }
+          }
+        >
+          <button
+            onClick={[Function]}
+          >
+            Refresh and Clone Child
+          </button>
+          <div
+            style={
+              Object {
+                "backgroundColor": "#f95",
+                "borderRadius": "8px",
+                "color": "white",
+                "display": "inline-block",
+                "float": "right",
+                "fontSize": "8pt",
+                "fontWeight": "bold",
+                "padding": "1px 5px",
+                "textAlign": "center",
+                "top": "2px",
+              }
+            }
+          >
+            1
+          </div>
+        </div>
+        <h4>
+          onRefresh can be decide to trigger or not
+        </h4>
+        <div
+          style={
+            Object {
+              "border": "1px solid black",
+              "padding": 10,
+            }
+          }
+        >
+          <button
+            onClick={[Function]}
+          >
+            Refresh in 50% possibility and Clone Child
+          </button>
+          <div
+            style={
+              Object {
+                "backgroundColor": "#f95",
+                "borderRadius": "8px",
+                "color": "white",
+                "display": "inline-block",
+                "float": "right",
+                "fontSize": "8pt",
+                "fontWeight": "bold",
+                "padding": "1px 5px",
+                "textAlign": "center",
+                "top": "2px",
+              }
+            }
+          >
+            1
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "color": "#444",
+          "fontFamily": "
+            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+          ",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+        }
+      }
+    >
+      
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Story Source
+        </h1>
+        <pre
+          style={
+            Object {
+              "backgroundColor": "#fafafa",
+              "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+              "fontSize": ".88em",
+              "lineHeight": 1.5,
+              "overflowX": "scroll",
+              "padding": ".5rem",
+            }
+          }
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                div
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    style
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        <span
+                          style={
+                            Object {
+                              "color": "#666",
+                            }
+                          }
+                        >
+                          {
+                          <span
+                            style={
+                              Object {
+                                "color": "#666",
+                              }
+                            }
+                          >
+                            width
+                          </span>
+                          : 
+                          <span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              600
+                            </span>
+                          </span>
+                          }
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &gt;
+              </span>
+            </div>
+            <div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 33,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;
+                  h4
+                </span>
+                <span />
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &gt;
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 48,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  Normal Counter won't re-render unless it's updated, e.g. hot module reload
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 33,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;/
+                  h4
+                  &gt;
+                </span>
+              </div>
+            </div>
+            <div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 33,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;
+                  DivRefreshable
+                </span>
+                <span />
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &gt;
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 48,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;
+                  RenderCounter
+                </span>
+                <span />
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  /&gt;
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 33,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;/
+                  DivRefreshable
+                  &gt;
+                </span>
+              </div>
+            </div>
+            <div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 33,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;
+                  h4
+                </span>
+                <span />
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &gt;
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 48,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  This div will update its child
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 33,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;/
+                  h4
+                  &gt;
+                </span>
+              </div>
+            </div>
+            <div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 33,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;
+                  DivRefreshable
+                </span>
+                <span>
+                  <span>
+                     
+                    <span
+                      style={Object {}}
+                    >
+                      label
+                    </span>
+                    <span>
+                      =
+                      <span
+                        style={Object {}}
+                      >
+                        <span
+                          style={
+                            Object {
+                              "color": "#22a",
+                              "wordBreak": "break-word",
+                            }
+                          }
+                        >
+                          "
+                          Refresh and Clone Child
+                          "
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <span>
+                     
+                    <span
+                      style={Object {}}
+                    >
+                      cloneChild
+                    </span>
+                    
+                  </span>
+                </span>
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &gt;
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 48,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;
+                  RenderCounter
+                </span>
+                <span />
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  /&gt;
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 33,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;/
+                  DivRefreshable
+                  &gt;
+                </span>
+              </div>
+            </div>
+            <div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 33,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;
+                  h4
+                </span>
+                <span />
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &gt;
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 48,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  onRefresh can be decide to trigger or not
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 33,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;/
+                  h4
+                  &gt;
+                </span>
+              </div>
+            </div>
+            <div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 33,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;
+                  DivRefreshable
+                </span>
+                <span>
+                  <span>
+                     
+                    <span
+                      style={Object {}}
+                    >
+                      label
+                    </span>
+                    <span>
+                      =
+                      <span
+                        style={Object {}}
+                      >
+                        <span
+                          style={
+                            Object {
+                              "color": "#22a",
+                              "wordBreak": "break-word",
+                            }
+                          }
+                        >
+                          "
+                          Refresh in 50% possibility and Clone Child
+                          "
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <span>
+                     
+                    <span
+                      style={Object {}}
+                    >
+                      cloneChild
+                    </span>
+                  </span>
+                  <span>
+                     
+                    <span
+                      style={Object {}}
+                    >
+                      onRefresh
+                    </span>
+                    <span>
+                      =
+                      <span
+                        style={Object {}}
+                      >
+                        <span>
+                          <span
+                            style={
+                              Object {
+                                "color": "#170",
+                              }
+                            }
+                          >
+                            onRefresh()
+                          </span>
+                        </span>
+                      </span>
+                    </span>
+                    
+                  </span>
+                </span>
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &gt;
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 48,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;
+                  RenderCounter
+                </span>
+                <span />
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  /&gt;
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 33,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;/
+                  DivRefreshable
+                  &gt;
+                </span>
+              </div>
+            </div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;/
+                div
+                &gt;
+              </span>
+            </div>
+          </div>
+        </pre>
+      </div>
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Prop Types
+        </h1>
+        <div>
+          <h2
+            style={
+              Object {
+                "margin": "20px 0 0 0",
+              }
+            }
+          >
+            "
+            DivRefreshable
+            " Component
+          </h2>
+          <table
+            style={
+              Object {
+                "borderCollapse": "separate",
+                "borderSpacing": "10px 5px",
+                "marginLeft": -10,
+              }
+            }
+          >
+            <thead>
+              <tr>
+                <th>
+                  property
+                </th>
+                <th>
+                  propType
+                </th>
+                <th>
+                  required
+                </th>
+                <th>
+                  default
+                </th>
+                <th>
+                  description&gt;
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  children
+                </td>
+                <td>
+                  element
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  -
+                </td>
+                <td />
+              </tr>
+              <tr>
+                <td>
+                  cloneChild
+                </td>
+                <td>
+                  bool
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span>
+                    <span
+                      style={
+                        Object {
+                          "color": "#a11",
+                        }
+                      }
+                    >
+                      false
+                    </span>
+                  </span>
+                </td>
+                <td />
+              </tr>
+              <tr>
+                <td>
+                  label
+                </td>
+                <td>
+                  string
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    Refresh
+                    "
+                  </span>
+                </td>
+                <td />
+              </tr>
+              <tr>
+                <td>
+                  onRefresh
+                </td>
+                <td>
+                  func
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  -
+                </td>
+                <td />
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
