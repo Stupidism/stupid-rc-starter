@@ -61,6 +61,6 @@ npm install --save-dev react-render-counter
 
 With [storybook](https://storybooks.js.org), things below are included in the site:
 - online demo
-- TODO: [prop types](src/RenderCounter/Counter.js)
-- TODO: [code examples](stories/RenderCounter/RenderCounter.story.js)
+- prop tables
+- code examples
 - TODO: [comments](https://github.com/storybooks/storybook/blob/master/addons/comments)
