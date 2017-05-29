@@ -28,6 +28,10 @@
   dependencies:
     "@storybook/addons" "^3.0.0-rc.2"
 
+"@storybook/addon-options@^3.0.0-alpha.0":
+  version "3.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-3.0.0-alpha.0.tgz#ecf1d742e7699ace742e22fd4ace531333801930"
+
 "@storybook/addon-storyshots@^3.0.0-rc.2":
   version "3.0.0-rc.2"
   resolved "https://registry.yarnpkg.com/@storybook/addon-storyshots/-/addon-storyshots-3.0.0-rc.2.tgz#1e814d1263f80c9a385ac48185c50039de7efbeb"
