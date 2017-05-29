@@ -20,6 +20,9 @@ class RenderCounter extends React.Component {
 }
 
 RenderCounter.propTypes = {
+  /**
+   * Initial count for RenderCounter.
+   */
   initialCount: T.number,
 };
 
