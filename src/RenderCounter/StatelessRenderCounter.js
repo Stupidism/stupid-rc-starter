@@ -1,7 +1,13 @@
-import React from 'react';
 import withRenderCount from './withRenderCount';
 import Counter from './Counter';
 
-const RenderCounter = props => <Counter {...props} />;
+// Try to make react-docgen works on prop description
+Counter.propTypes = {
+  ...Counter.propTypes,
+  /**
+   * Initial count for RenderCounter.
+   */
+  count: Counter.propTypes.count,
+};
 
-export default withRenderCount(RenderCounter);
+export default withRenderCount(Counter);

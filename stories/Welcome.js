@@ -1,15 +1,17 @@
 import React from 'react';
 import T from 'prop-types';
-
 import { storiesOf } from '@storybook/react';
 import { linkTo } from '@storybook/addon-links';
 
-/* eslint-disable max-len */
+import Markdown from './Markdown';
 
+import readme from '../README.md';
+import starter from '../starter/README.md';
+
+/* eslint-disable max-len */
 const styles = {
   main: {
     margin: 15,
-    maxWidth: 600,
     lineHeight: 1.4,
     fontFamily: '"Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif',
   },
@@ -83,6 +85,9 @@ Welcome.propTypes = {
 };
 
 storiesOf('Welcome', module)
+  .add('to stupid-rc-starter', () => <Markdown source={starter} />)
+  // Set skipHtml to hide the link to starter/README.md in docs
+  .add('to react-render-counter', () => <Markdown source={readme} skipHtml />)
   .add('to Storybook', () => (
     <Welcome showApp={linkTo('RenderCounter')} />
   ));
