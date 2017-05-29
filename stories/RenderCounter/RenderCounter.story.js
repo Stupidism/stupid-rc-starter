@@ -30,7 +30,15 @@ stories.addWithInfo(
   { inline: true },
 );
 
-stories.addWithInfo('inside DivRefreshable', () => (
+const description = (
+  <div>
+    <h2>DivRefreshable</h2>
+    <p><strong>DivRefreshable</strong> is a div with a button that can refresh itself</p>
+    <p>It will update its only child if cloneChild prop is set to true</p>
+  </div>
+);
+
+stories.addWithInfo('inside DivRefreshable', description, () => (
   <div style={{ width: 600 }}>
     <h4>{"Normal Counter won't re-render unless it's updated, e.g. hot module reload"}</h4>
     <DivRefreshable>

@@ -1830,7 +1830,29 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
         }
       }
     >
-      
+      <div
+        style={
+          Object {
+            "borderTop": "1px solid #eee",
+            "margin": "20px 0 0 0",
+          }
+        }
+      >
+        <div>
+          <h2>
+            DivRefreshable
+          </h2>
+          <p>
+            <strong>
+              DivRefreshable
+            </strong>
+             is a div with a button that can refresh itself
+          </p>
+          <p>
+            It will update its only child if cloneChild prop is set to true
+          </p>
+        </div>
+      </div>
       <div>
         <h1
           style={
