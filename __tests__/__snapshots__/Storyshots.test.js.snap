@@ -1458,7 +1458,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
                 }
               >
                 &lt;
-                StatelessRenderCounter
+                withRenderCount(Counter)
               </span>
               <span />
               <span
@@ -1487,7 +1487,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
                 }
               >
                 &lt;
-                StatelessRenderCounter
+                withRenderCount(Counter)
               </span>
               <span />
               <span
@@ -1516,7 +1516,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
                 }
               >
                 &lt;
-                StatelessRenderCounter
+                withRenderCount(Counter)
               </span>
               <span />
               <span
@@ -1574,7 +1574,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
             }
           >
             "
-            StatelessRenderCounter
+            withRenderCount(Counter)
             " Component
           </h2>
           <table
