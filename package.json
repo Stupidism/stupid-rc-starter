@@ -20,7 +20,7 @@
     "dist": "webpack --env dist",
     "dist:min": "webpack --env distMin",
     "dist:modules": "babel src -d dist-modules",
-    "dist:meta": "babel-node ./scripts/copy-files",
+    "dist:meta": "babel-node ./starter/scripts/copy-files",
     "build": "npm run build:modules",
     "build:single": "rimraf dist && npm run dist && npm run dist:min && npm run dist:meta dist",
     "build:modules": "rimraf dist-modules && npm run dist:modules && npm run dist:meta dist-modules",
