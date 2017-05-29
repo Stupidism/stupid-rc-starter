@@ -44,9 +44,9 @@ const description = (
 const onRefreshInPossibitly = (possibility = 0.5, log = action('onRefresh')) => (context) => {
   if (Math.random() < possibility) {
     context.next();
-    log(context.props);
+    log('hit', context.props);
   } else {
-    log(context.props);
+    log('miss', context.props);
   }
 };
 
