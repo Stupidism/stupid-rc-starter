@@ -1,6 +1,6 @@
 <blockquote>
   <!-- This <blockquote> will be hidden in gh-pages, because it's no gonna work there and there's better menue -->
-  <a href="./starter/README.md">README of starter</a> 
+  <a href="https://github.com/Stupidism/stupid-rc-starter/tree/master/starter">README of starter</a> 
   <p>
     If you are here for the <strong>starter</strong> click above link</br>
     If you are here for the <strong>react-render-counter</strong>, this is it</br>
