@@ -20,7 +20,7 @@
     "dist": "webpack --env dist",
     "dist:min": "webpack --env distMin",
     "dist:modules": "babel src -d dist-modules",
-    "dist:meta": "babel-node ./scripts/copy-files",
+    "dist:meta": "babel-node ./starter/scripts/copy-files",
     "build": "npm run build:modules",
     "build:single": "rimraf dist && npm run dist && npm run dist:min && npm run dist:meta dist",
     "build:modules": "rimraf dist-modules && npm run dist:modules && npm run dist:meta dist-modules",
@@ -28,7 +28,7 @@
     "publish:modules": "npm run build:modules && (cd dist-modules && npm publish) && npm run postpublish",
     "prepublish": "npm run dist && npm run dist:min && npm run dist:modules",
     "postpublish": "npm run gh-pages && npm run gh-pages:deploy",
-    "postinstall": "node lib/post_install.js",
+    "postinstall": "node starter/scripts/post_install.js",
     "git:commitable": "git status | grep 'Changes to be committed:'",
     "git:stash-pop": "git stash pop >> /dev/null",
     "git:stash-rebase": "git read-tree stash && git stash drop",
@@ -66,6 +66,7 @@
     "@storybook/addon-actions": "^3.0.0-rc.2",
     "@storybook/addon-info": "^3.0.0-rc.2",
     "@storybook/addon-links": "^3.0.0-rc.2",
+    "@storybook/addon-options": "^3.0.0-alpha.0",
     "@storybook/addon-storyshots": "^3.0.0-rc.2",
     "@storybook/react": "^3.0.0-rc.2",
     "babel-cli": "^6.24.1",
@@ -116,7 +117,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Stupidism/stupid-rc-starter.git"
+    "url": "https://github.com/Stupidism/stupid-rc-starter"
   },
   "homepage": "https://stupidism.github.io/stupid-rc-starter/",
   "bugs": {
