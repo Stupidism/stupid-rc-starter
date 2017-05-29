@@ -2,6 +2,9 @@ import React from 'react';
 import T from 'prop-types';
 import { compose, withState } from 'recompose';
 
+import copyStatics from '../../src/hocs/copyStatics';
+import extendPropTypes from '../../src/hocs/extendPropTypes';
+
 import withNestHandlers from './withNestHandlers';
 
 const DivRefreshable = ({ label, onRefresh, children, cloneChild }) => (
@@ -10,8 +13,6 @@ const DivRefreshable = ({ label, onRefresh, children, cloneChild }) => (
     {children && (cloneChild ? React.cloneElement(children) : children)}
   </div>
 );
-
-const displayName = 'DivRefreshable';
 
 const propTypes = {
   children: T.element,
@@ -26,18 +27,14 @@ const defaultProps = {
   label: 'Refresh',
 };
 
-DivRefreshable.displayName = displayName;
 DivRefreshable.propTypes = propTypes;
 DivRefreshable.defaultProps = defaultProps;
 
-const hoc = compose(
+const hoc = Component => compose(
+  extendPropTypes({ onRefresh: T.func }),
+  copyStatics(Component),
   withState('state', '_onRefresh'),
   withNestHandlers({ onRefresh: '_onRefresh' }),
-);
+)(Component);
 
-export default Object.assign(hoc((DivRefreshable)), DivRefreshable, {
-  propTypes: {
-    ...propTypes,
-    onRefresh: T.func,
-  },
-});
+export default hoc(DivRefreshable);
