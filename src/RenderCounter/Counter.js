@@ -21,6 +21,9 @@ const Counter = ({ count }) => (
 );
 
 Counter.propTypes = {
+  /**
+   * Value for Counter to render.
+   */
   count: T.number.isRequired,
 };
 
