@@ -6,7 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 import Markdown from './Markdown';
 
 import readme from '../README.md';
-import starter from '../docs/starter.md';
+import starter from '../starter/README.md';
 
 /* eslint-disable max-len */
 const styles = {
@@ -86,7 +86,7 @@ Welcome.propTypes = {
 
 storiesOf('Welcome', module)
   .add('to stupid-rc-starter', () => <Markdown source={starter} />)
-  // Set skipHtml to hide the link to starter.md in docs
+  // Set skipHtml to hide the link to starter/README.md in docs
   .add('to react-render-counter', () => <Markdown source={readme} skipHtml />)
   .add('to Storybook', () => (
     <Welcome showApp={linkTo('RenderCounter')} />

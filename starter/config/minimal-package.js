@@ -18,6 +18,7 @@ const minPkg = _.pick(pkg, [
 /* Begin: starter code */
 if (minPkg.name === 'stupid-rc-starter') {
   minPkg.name = 'react-render-counter';
+  minPkg.repository.url = `${minPkg.repository.url}/tree/master/starter`;
 }
 /* End: starter code */
 
