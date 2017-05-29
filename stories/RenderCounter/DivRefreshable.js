@@ -1,5 +1,6 @@
 import React from 'react';
 import T from 'prop-types';
+import _ from 'lodash';
 import { compose, withState } from 'recompose';
 
 import copyStatics from '../../src/hocs/copyStatics';
@@ -7,8 +8,8 @@ import extendPropTypes from '../../src/hocs/extendPropTypes';
 
 import withNestHandlers from './withNestHandlers';
 
-const DivRefreshable = ({ label, onRefresh, children, cloneChild }) => (
-  <div style={{ padding: 10, border: '1px solid black' }}>
+const DivRefreshable = ({ label, onRefresh, children, cloneChild, ...rest }) => (
+  <div {..._.pick(rest, ['style'])}>
     <button onClick={() => onRefresh()}>{label}</button>
     {children && (cloneChild ? React.cloneElement(children) : children)}
   </div>
