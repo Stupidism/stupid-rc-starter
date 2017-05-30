@@ -58,10 +58,12 @@ $ yarn install
 
 The test setup is based on Jest. Code coverage report is generated to `coverage/`. The coverage information is also uploaded to codecov.io after a successful Travis build.
 
-* Once - **npm test**
-* Update snapshots - **npm test:update**
-* Continuously - **npm run test:watch**
+* All tests once - **npm test**
+* All tests continuously - **npm run test:watch**
 * Individual tests - **npm test -- <pattern>** - Works with `test:watch` too.
+* Unit tests once - **npm run unit** or **npm test src** - unit tests are written inside src
+* Unit tests continuously - **npm run unit:watch**
+* Update snapshots - **npm test:update**
 * Automatically - pre-push hook when **git push** is executed
 
 ### Linting

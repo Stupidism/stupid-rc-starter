@@ -10,6 +10,8 @@
     "test:update": "npm run test -- -u",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
+    "unit": "npm run test src",
+    "unit:watch": "npm run test:watch src",
     "lint:js": "eslint . --ignore-path .gitignore --ignore-pattern dist --cache",
     "lint:css": "stylelint \"src/**/*.{css,less,scss,sss}\" --allow-empty-input",
     "lint:staged": "lint-staged",
