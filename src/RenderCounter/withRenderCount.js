@@ -7,6 +7,7 @@ import flattenProp from 'recompose/flattenProp';
 import copyStatics from '../hocs/copyStatics';
 import extendStatics from '../hocs/extendStatics';
 import omitPropTypes from '../hocs/omitPropTypes';
+import omitProps from '../hocs/omitProps';
 
 const componentWillUpdate = ({ state }) => {
   state.count += 1; // eslint-disable-line no-param-reassign
@@ -25,4 +26,5 @@ export default Component => compose(
   withState('state', 'setState', getInitialState),
   lifecycle({ componentWillUpdate }),
   flattenProp('state'),
+  omitProps(['state', 'setState', 'initialCount']),
 )(Component);
