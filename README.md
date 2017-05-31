@@ -3,7 +3,7 @@
   <a href="https://github.com/Stupidism/stupid-rc-starter/tree/master/starter">README of starter</a> 
   <p>
     If you are here for the <strong>starter</strong> click above link</br>
-    If you are here for the <strong>react-render-counter</strong>, this is it</br>
+    If you are here for the component library, this is it</br>
   </p>
   <!-- 
     You can remove this after you started.  
@@ -64,3 +64,7 @@ With [storybook](https://storybooks.js.org), things below are included in the si
 - prop tables
 - code examples
 - TODO: [comments](https://github.com/storybooks/storybook/blob/master/addons/comments)
+
+## License
+
+Copyright © 2017, [Stupidism](https://github.com/stupidism). Released under the [MIT license](LICENSE).

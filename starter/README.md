@@ -109,4 +109,4 @@ The starter includes a [GitHub Pages](https://pages.github.com/) specific portio
 
 ## License
 
-Copyright © 2017, [Stupidism](https://github.com/stupidism). Released under the [MIT license](LICENSE).
+Copyright © 2017, [Stupidism](https://github.com/stupidism). Released under the [MIT license](../LICENSE).
