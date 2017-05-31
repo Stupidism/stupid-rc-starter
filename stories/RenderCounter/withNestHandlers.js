@@ -1,11 +1,17 @@
 import _ from 'lodash';
 import withHandlers from 'recompose/withHandlers';
 
-const createCallbackStyleHandler = ({ innerHandler, outerHandler, ...rest }) =>
-  (...args) => outerHandler({
-    ...rest,
-    next: () => innerHandler(...args),
-  }, ...args);
+const createCallbackStyleHandler = ({ innerHandler, outerHandler, props }) => (...args) => {
+  const next = () => innerHandler(...args);
+  let handler;
+  if (outerHandler.length > 1) {
+    handler = outerHandler(props, next);
+  } else {
+    next();
+    handler = outerHandler(props);
+  }
+  return handler(...args);
+};
 
 export const nestHandler = (innerName, outerName) => (props) => {
   let innerHandler;

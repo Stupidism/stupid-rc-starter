@@ -1620,14 +1620,14 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                             }
                           }
                         >
-                          function (context) {
-                              if (Math.random() &lt; possibility) {
-                                context.next();
-                                log('hit', context.props);
-                              } else {
-                                log('miss', context.props);
-                              }
-                            }()
+                          function (props, next) {return function (event) {
+                                  if (Math.random() &lt; possibility) {
+                                    next();
+                                    log('hit', props, event);
+                                  } else {
+                                    log('miss', props, event);
+                                  }
+                                };}()
                         </span>
                       </span>
                     </span>

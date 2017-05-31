@@ -41,14 +41,15 @@ const description = (
   </div>
 );
 
-const onRefreshInPossibitly = (possibility = 0.5, log = action('onRefresh')) => (context) => {
-  if (Math.random() < possibility) {
-    context.next();
-    log('hit', context.props);
-  } else {
-    log('miss', context.props);
-  }
-};
+const onRefreshInPossibitly = (possibility = 0.5, log = action('onRefresh')) =>
+  (props, next) => (event) => {
+    if (Math.random() < possibility) {
+      next();
+      log('hit', props, event);
+    } else {
+      log('miss', props, event);
+    }
+  };
 
 stories.addWithInfo('inside DivRefreshable', description, () => {
   const possibility = number('possibility', 0.5);

@@ -10,7 +10,7 @@ import withNestHandlers from './withNestHandlers';
 
 const DivRefreshable = ({ label, onRefresh, children, cloneChild, ...rest }) => (
   <div {..._.pick(rest, ['style'])}>
-    <button onClick={() => onRefresh()}>{label}</button>
+    <button onClick={onRefresh}>{label}</button>
     {children && (cloneChild ? React.cloneElement(children) : children)}
   </div>
 );
@@ -31,11 +31,13 @@ const defaultProps = {
 DivRefreshable.propTypes = propTypes;
 DivRefreshable.defaultProps = defaultProps;
 
+const onRefresh = ({ setState }) => (/* event */) => setState();
+
 const hoc = Component => compose(
   extendPropTypes({ onRefresh: T.func }),
   copyStatics(Component),
-  withState('state', '_onRefresh'),
-  withNestHandlers({ onRefresh: '_onRefresh' }),
+  withState('state', 'setState'),
+  withNestHandlers({ onRefresh }),
 )(Component);
 
 export default hoc(DivRefreshable);
