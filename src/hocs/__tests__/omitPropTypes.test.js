@@ -6,14 +6,22 @@ import omitPropTypes from '../omitPropTypes';
 test('omitPropTypes removes the propTypes of the base component', () => {
   const BaseComponent = () => <div />;
   BaseComponent.propTypes = {
-    foo: T.number.isRequired,
-    bar: T.number.isRequired,
+    foo: T.number,
+    bar: T.number,
+  };
+
+  BaseComponent.defaultProps = {
+    foo: 1,
+    bar: 2,
   };
 
   const NewComponent = omitPropTypes(['foo'])(BaseComponent);
 
   expect(NewComponent).toBe(BaseComponent);
   expect(NewComponent.propTypes).toEqual({
-    bar: T.number.isRequired,
+    bar: T.number,
+  });
+  expect(NewComponent.defaultProps).toEqual({
+    bar: 2,
   });
 });
