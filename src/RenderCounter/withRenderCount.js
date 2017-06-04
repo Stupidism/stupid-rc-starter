@@ -1,10 +1,10 @@
 import T from 'prop-types';
 import compose from 'recompose/compose';
-import withState from 'recompose/withState';
 import lifecycle from 'recompose/lifecycle';
 import flattenProp from 'recompose/flattenProp';
 import withHandlers from 'recompose/withHandlers';
 
+import withThis from '../hocs/withThis';
 import copyStatics from '../hocs/copyStatics';
 import extendStatics from '../hocs/extendStatics';
 import omitPropTypes from '../hocs/omitPropTypes';
@@ -26,9 +26,9 @@ export default Component => compose(
     defaultProps: { initialCount: 1 },
   }),
   copyStatics(Component),
-  withState('self', 'setSelf', getInitialSelf),
+  withThis(getInitialSelf),
   withHandlers({ onRerender }),
   lifecycle({ componentWillUpdate }),
   flattenProp('self'),
-  omitProps(['self', 'setSelf', 'onRerender', 'initialCount']),
+  omitProps(['self', 'onRerender', 'initialCount']),
 )(Component);
