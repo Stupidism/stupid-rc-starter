@@ -5,8 +5,7 @@ import { compose, withState } from 'recompose';
 
 import copyStatics from '../../src/hocs/copyStatics';
 import extendPropTypes from '../../src/hocs/extendPropTypes';
-
-import withNestHandlers from './withNestHandlers';
+import embedHandlers from '../../src/hocs/embedHandlers';
 
 const DivRefreshable = ({ label, onRefresh, children, cloneChild, ...rest }) => (
   <div {..._.pick(rest, ['style'])}>
@@ -37,7 +36,7 @@ const hoc = Component => compose(
   extendPropTypes({ onRefresh: T.func }),
   copyStatics(Component),
   withState('state', 'setState'),
-  withNestHandlers({ onRefresh }),
+  embedHandlers({ onRefresh }),
 )(Component);
 
 export default hoc(DivRefreshable);
