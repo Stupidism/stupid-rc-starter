@@ -1,30 +1,26 @@
 import React from 'react';
 import T from 'prop-types';
 import _ from 'lodash';
-import { compose, withState } from 'recompose';
+import { compose, withState, withHandlers } from 'recompose';
 
 import copyStatics from '../../src/hocs/copyStatics';
-import extendPropTypes from '../../src/hocs/extendPropTypes';
+import omitPropTypes from '../../src/hocs/omitPropTypes';
 
-import withNestHandlers from './withNestHandlers';
-
-const DivRefreshable = ({ label, onRefresh, children, cloneChild, ...rest }) => (
+const DivRefreshable = ({ label, onRefresh, children, ...rest }) => (
   <div {..._.pick(rest, ['style'])}>
     <button onClick={onRefresh}>{label}</button>
-    {children && (cloneChild ? React.cloneElement(children) : children)}
+    {children && React.cloneElement(children)}
   </div>
 );
 
 const propTypes = {
   children: T.element,
-  cloneChild: T.bool,
   label: T.string,
   onRefresh: T.func.isRequired,
 };
 
 const defaultProps = {
   children: undefined,
-  cloneChild: false,
   label: 'Refresh',
 };
 
@@ -34,10 +30,10 @@ DivRefreshable.defaultProps = defaultProps;
 const onRefresh = ({ setState }) => (/* event */) => setState();
 
 const hoc = Component => compose(
-  extendPropTypes({ onRefresh: T.func }),
+  omitPropTypes('onRefresh'),
   copyStatics(Component),
   withState('state', 'setState'),
-  withNestHandlers({ onRefresh }),
+  withHandlers({ onRefresh }),
 )(Component);
 
 export default hoc(DivRefreshable);

@@ -1,30 +1,39 @@
 import T from 'prop-types';
 import compose from 'recompose/compose';
-import withState from 'recompose/withState';
 import lifecycle from 'recompose/lifecycle';
 import flattenProp from 'recompose/flattenProp';
 
+import withThis from '../hocs/withThis';
 import copyStatics from '../hocs/copyStatics';
 import extendStatics from '../hocs/extendStatics';
 import omitPropTypes from '../hocs/omitPropTypes';
 import omitProps from '../hocs/omitProps';
+import embedHandlers from '../hocs/embedHandlers';
 
-const componentWillUpdate = ({ state }) => {
-  state.count += 1; // eslint-disable-line no-param-reassign
+const componentWillUpdate = ({ self, onRerender }) => onRerender(self.count + 1);
+
+const getInitialSelf = ({ initialCount }) => ({ count: initialCount });
+
+const onRerender = ({ self }) => (count) => {
+  self.count = count;// eslint-disable-line no-param-reassign
 };
 
-const getInitialState = ({ initialCount }) => ({ count: initialCount });
+export const propTypes = {
+  initialCount: T.number,
+  onRerender: T.func,
+};
 
 export default Component => compose(
   omitPropTypes('count'),
   extendStatics({
     displayName: 'withRenderCount',
-    propTypes: { initialCount: T.number },
+    propTypes,
     defaultProps: { initialCount: 1 },
   }),
   copyStatics(Component),
-  withState('state', 'setState', getInitialState),
+  withThis(getInitialSelf),
+  embedHandlers({ onRerender }),
   lifecycle({ componentWillUpdate }),
-  flattenProp('state'),
-  omitProps(['state', 'setState', 'initialCount']),
+  flattenProp('self'),
+  omitProps(['self', 'onRerender', 'initialCount']),
 )(Component);

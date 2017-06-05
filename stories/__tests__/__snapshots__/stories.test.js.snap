@@ -847,6 +847,21 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
                 </td>
                 <td />
               </tr>
+              <tr>
+                <td>
+                  onRerender
+                </td>
+                <td>
+                  func
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  -
+                </td>
+                <td />
+              </tr>
             </tbody>
           </table>
         </div>
@@ -1269,6 +1284,21 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
                 </td>
                 <td />
               </tr>
+              <tr>
+                <td>
+                  onRerender
+                </td>
+                <td>
+                  func
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  -
+                </td>
+                <td />
+              </tr>
             </tbody>
           </table>
         </div>
@@ -1348,7 +1378,7 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
         <button
           onClick={[Function]}
         >
-          Refresh in 50% possibility and Clone Child
+          Counter re-rendered in 50% possibility
         </button>
         <div
           style={
@@ -1458,10 +1488,34 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
               </span>
               <span>
                 <span>
-                  <span>
-                    <br />
-                      
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    label
                   </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#22a",
+                            "wordBreak": "break-word",
+                          }
+                        }
+                      >
+                        "
+                        Counter re-rendered in 50% possibility
+                        "
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span>
+                   
                   <span
                     style={Object {}}
                   >
@@ -1555,84 +1609,7 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                       </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                  <span>
-                    <br />
-                      
-                  </span>
-                  <span
-                    style={Object {}}
-                  >
-                    label
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span
-                        style={
-                          Object {
-                            "color": "#22a",
-                            "wordBreak": "break-word",
-                          }
-                        }
-                      >
-                        "
-                        Refresh in 50% possibility and Clone Child
-                        "
-                      </span>
-                    </span>
-                  </span>
-                </span>
-                <span>
-                  <span>
-                    <br />
-                      
-                  </span>
-                  <span
-                    style={Object {}}
-                  >
-                    cloneChild
-                  </span>
-                </span>
-                <span>
-                  <span>
-                    <br />
-                      
-                  </span>
-                  <span
-                    style={Object {}}
-                  >
-                    onRefresh
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span>
-                        <span
-                          style={
-                            Object {
-                              "color": "#170",
-                            }
-                          }
-                        >
-                          function (props, next) {return function (event) {
-                                  if (Math.random() &lt; possibility) {
-                                    next();
-                                    log('hit', props, event);
-                                  } else {
-                                    log('miss', props, event);
-                                  }
-                                };}()
-                        </span>
-                      </span>
-                    </span>
-                  </span>
-                  <br />
+                  
                 </span>
               </span>
               <span
@@ -1663,7 +1640,42 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                 &lt;
                 RenderCounter
               </span>
-              <span />
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    onRerender
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        <span
+                          style={
+                            Object {
+                              "color": "#170",
+                            }
+                          }
+                        >
+                          function handler(props, next) {return function (count) {
+                                if (Math.random() &lt; possibility) {
+                                  next();
+                                  log('hit', possibility, props, count);
+                                } else {
+                                  log('miss', possibility, props, count);
+                                }
+                              };}()
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
               <span
                 style={
                   Object {
@@ -1768,31 +1780,6 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
               </tr>
               <tr>
                 <td>
-                  cloneChild
-                </td>
-                <td>
-                  bool
-                </td>
-                <td>
-                  no
-                </td>
-                <td>
-                  <span>
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
-                      false
-                    </span>
-                  </span>
-                </td>
-                <td />
-              </tr>
-              <tr>
-                <td>
                   label
                 </td>
                 <td>
@@ -1814,21 +1801,6 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                     Refresh
                     "
                   </span>
-                </td>
-                <td />
-              </tr>
-              <tr>
-                <td>
-                  onRefresh
-                </td>
-                <td>
-                  func
-                </td>
-                <td>
-                  no
-                </td>
-                <td>
-                  -
                 </td>
                 <td />
               </tr>

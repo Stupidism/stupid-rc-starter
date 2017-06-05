@@ -2,7 +2,7 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { boolean, number } from '@storybook/addon-knobs';
+import { number } from '@storybook/addon-knobs';
 
 import RenderCounter, { Counter, StatelessRenderCounter } from '../../src/RenderCounter';
 import DivRefreshable from './DivRefreshable';
@@ -41,29 +41,29 @@ const description = (
   </div>
 );
 
-const onRefreshInPossibitly = (possibility = 0.5, log = action('onRefresh')) =>
-  (props, next) => (event) => {
+const createUnstableHandler = (possibility = 0.5, log = action('onRerender')) => {
+  const handler = (props, next) => (count) => {
     if (Math.random() < possibility) {
       next();
-      log('hit', props, event);
+      log('hit', possibility, props, count);
     } else {
-      log('miss', props, event);
+      log('miss', possibility, props, count);
     }
   };
 
+  Object.defineProperty(handler, 'name', { value: handler.toString() });
+  return handler;
+};
+
 stories.addWithInfo('inside DivRefreshable', description, () => {
   const possibility = number('possibility', 0.5);
-  const cloneChild = boolean('cloneChild', true);
-  const onRefresh = onRefreshInPossibitly(possibility);
-  Object.defineProperty(onRefresh, 'name', { value: onRefresh.toString() });
+  const onRerender = createUnstableHandler(possibility);
   return (
     <DivRefreshable
+      label={`Counter re-rendered in ${possibility * 100}% possibility`}
       style={styles.container}
-      label={`Refresh in ${possibility * 100}% possibility${cloneChild ? ' and Clone Child' : ''}`}
-      cloneChild={cloneChild}
-      onRefresh={onRefresh}
     >
-      <RenderCounter />
+      <RenderCounter onRerender={onRerender} />
     </DivRefreshable>
   );
 }, { inline: true, propTablesExclude: [RenderCounter] });
