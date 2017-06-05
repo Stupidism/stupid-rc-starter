@@ -1284,6 +1284,21 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
                 </td>
                 <td />
               </tr>
+              <tr>
+                <td>
+                  onRerender
+                </td>
+                <td>
+                  func
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  -
+                </td>
+                <td />
+              </tr>
             </tbody>
           </table>
         </div>

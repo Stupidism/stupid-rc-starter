@@ -3,7 +3,7 @@ import React from 'react';
 import T from 'prop-types';
 import { mount } from 'enzyme';
 import compose from 'recompose/compose';
-import { withRenderCount } from '../';
+import withRenderCount, { propTypes } from '../withRenderCount';
 import withPropsPeeker from '../../hocs/withPropsPeeker';
 
 describe('withRenderCount(BaseComponent): NewComponent', () => {
@@ -49,8 +49,8 @@ describe('withRenderCount(BaseComponent): NewComponent', () => {
     expect(NewComponent).not.toBe(BaseComponent);
     expect(NewComponent.displayName).toBe('withRenderCount(BaseComponent)');
     expect(NewComponent.propTypes).toEqual({
-      initialCount: T.number,
       foo: T.string,
+      ...propTypes,
     });
     expect(NewComponent.defaultProps.initialCount).toBe(1);
   });
