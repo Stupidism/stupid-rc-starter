@@ -531,34 +531,10 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
           }
         }
       >
-        <p
-          style={
-            Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "
-                -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-              ",
-              "fontSize": "15px",
-            }
-          }
-        >
+        <p>
           This is the basic usage inside any component.
         </p>
-        <p
-          style={
-            Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "
-                -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-              ",
-              "fontSize": "15px",
-            }
-          }
-        >
+        <p>
           NOTICE: You may see them render some extra times. That’s a bug of storybook when you enter this page directly.
           Click another menu and re-enter this page to see real render times.
         </p>
@@ -984,19 +960,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
           }
         }
       >
-        <p
-          style={
-            Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "
-                -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-              ",
-              "fontSize": "15px",
-            }
-          }
-        >
+        <p>
           This is another implement of RenderCounter
         </p>
       </div>
@@ -1982,11 +1946,13 @@ exports[`Storyshots Welcome to Storybook 1`] = `
 exports[`Storyshots Welcome to react-render-counter 1`] = `
 <div>
   <h1
+    className={undefined}
     data-sourcepos={undefined}
   >
     hhh
   </h1>
   <h2
+    className={undefined}
     data-sourcepos={undefined}
   >
     h2
@@ -1997,11 +1963,13 @@ exports[`Storyshots Welcome to react-render-counter 1`] = `
 exports[`Storyshots Welcome to stupid-rc-starter 1`] = `
 <div>
   <h1
+    className={undefined}
     data-sourcepos={undefined}
   >
     hhh
   </h1>
   <h2
+    className={undefined}
     data-sourcepos={undefined}
   >
     h2
