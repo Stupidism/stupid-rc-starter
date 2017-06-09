@@ -5688,13 +5688,6 @@ react-addons-create-fragment@^15.5.3:
     loose-envify "^1.3.1"
     object-assign "^4.1.0"
 
-react-addons-test-utils@^15.5.1:
-  version "15.5.1"
-  resolved "https://registry.yarnpkg.com/react-addons-test-utils/-/react-addons-test-utils-15.5.1.tgz#e0d258cda2a122ad0dff69f838260d0c3958f5f7"
-  dependencies:
-    fbjs "^0.8.4"
-    object-assign "^4.1.0"
-
 react-color@^2.11.4:
   version "2.12.0"
   resolved "https://registry.yarnpkg.com/react-color/-/react-color-2.12.0.tgz#54bf93e51bb8dc2c76282ac127f85b34b86cd734"
