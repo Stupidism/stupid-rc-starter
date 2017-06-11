@@ -21,7 +21,7 @@
     "gh-pages:deploy": "gh-pages -d gh-pages",
     "dist": "webpack --env dist",
     "dist:min": "webpack --env distMin",
-    "dist:modules": "babel src -d dist-modules",
+    "dist:modules": "babel src -d dist-modules --ignore spec.js,test.js",
     "dist:meta": "babel-node ./starter/scripts/copy-files",
     "build": "npm run build:modules",
     "build:single": "rimraf dist && npm run dist && npm run dist:min && npm run dist:meta dist",
