@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter({ count }): component deeply renders prop count=0 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#f95",
+      "borderRadius": "8px",
+      "color": "white",
+      "display": "inline-block",
+      "float": "right",
+      "fontSize": "8pt",
+      "fontWeight": "bold",
+      "padding": "1px 5px",
+      "textAlign": "center",
+      "top": "2px",
+    }
+  }
+>
+  0
+</div>
+`;
+
+exports[`Counter({ count }): component shallowly renders a long prop count 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#f95",
+      "borderRadius": "8px",
+      "color": "white",
+      "display": "inline-block",
+      "float": "right",
+      "fontSize": "8pt",
+      "fontWeight": "bold",
+      "padding": "1px 5px",
+      "textAlign": "center",
+      "top": "2px",
+    }
+  }
+>
+  30002
+</div>
+`;

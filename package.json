@@ -88,6 +88,7 @@
     "css-loader": "^0.28.1",
     "editorconfig-tools": "^0.1.1",
     "enzyme": "^2.8.2",
+    "enzyme-to-json": "^1.5.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-loader": "^1.7.1",
