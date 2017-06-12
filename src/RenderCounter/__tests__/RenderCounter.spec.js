@@ -1,23 +1,23 @@
+/* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
-import StatefulRenderCounter from '../../src/RenderCounter/StatefulRenderCounter';
-import StatelessRenderCounter from '../../src/RenderCounter/StatelessRenderCounter';
+import renderer from 'react-test-renderer';
+import StatefulRenderCounter from '../StatefulRenderCounter';
+import StatelessRenderCounter from '../StatelessRenderCounter';
 
 const testWrapper = (RenderCounter, name = 'RenderCounter') => describe(name, () => {
+  it('should accept a prop initialCount as the initial value of count', () => {
+    const tree = renderer.create(<RenderCounter initialCount={2} />);
+
+    expect(tree).toMatchSnapshot();
+  });
+
   it('should change the text after update', () => {
     const wrapper = mount(<RenderCounter />);
 
     expect(wrapper.text()).toEqual('1');
     wrapper.update();
     expect(wrapper.text()).toEqual('2');
-  });
-
-  it('should accept a prop initialCount as the initial value of count', () => {
-    const wrapper = mount(<RenderCounter initialCount={2} />);
-
-    expect(wrapper.text()).toEqual('2');
-    wrapper.update();
-    expect(wrapper.text()).toEqual('3');
   });
 
   it('should not change the text after another RenderCounter\'s update', () => {

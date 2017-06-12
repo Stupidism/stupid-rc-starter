@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComposedRenderCounter should accept a prop initialCount as the initial value of count 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#f95",
+      "borderRadius": "8px",
+      "color": "white",
+      "display": "inline-block",
+      "float": "right",
+      "fontSize": "8pt",
+      "fontWeight": "bold",
+      "padding": "1px 5px",
+      "textAlign": "center",
+      "top": "2px",
+    }
+  }
+>
+  2
+</div>
+`;
+
+exports[`StatefulRenderCounter should accept a prop initialCount as the initial value of count 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#f95",
+      "borderRadius": "8px",
+      "color": "white",
+      "display": "inline-block",
+      "float": "right",
+      "fontSize": "8pt",
+      "fontWeight": "bold",
+      "padding": "1px 5px",
+      "textAlign": "center",
+      "top": "2px",
+    }
+  }
+>
+  2
+</div>
+`;
