@@ -2,37 +2,32 @@
 import React from 'react';
 import T from 'prop-types';
 import { mount } from 'enzyme';
-import compose from 'recompose/compose';
-import withRenderCount, { propTypes } from '../withRenderCount';
-import withPropsPeeker from '../../hocs/withPropsPeeker';
+import renderer from 'react-test-renderer';
+import enzymeToJson from 'enzyme-to-json';
+
+import withRenderCount from '../withRenderCount';
 
 describe('withRenderCount(BaseComponent): NewComponent', () => {
   describe('modifies props', () => {
     let BaseComponent;
-    let props;
     let NewComponent;
 
     beforeEach(() => {
-      props = {};
-      BaseComponent = () => <div />;
+      BaseComponent = props => <div data-props={props} />;
 
-      NewComponent = compose(
-        withRenderCount,
-        withPropsPeeker(props),
-      )(BaseComponent);
+      NewComponent = withRenderCount(BaseComponent);
     });
 
     it('should transfer initialCount as initial value of prop count', () => {
-      mount(<NewComponent initialCount={2} />);
-      expect(props).toEqual({ count: 2 });
+      const instance = renderer.create(<NewComponent initialCount={2} />);
+      expect(instance).toMatchSnapshot();
     });
 
     it('should +1 count prop after component update', () => {
       const wrapper = mount(<NewComponent />);
-
-      expect(props).toEqual({ count: 1 });
+      expect(enzymeToJson(wrapper)).toMatchSnapshot();
       wrapper.update();
-      expect(props).toEqual({ count: 2 });
+      expect(enzymeToJson(wrapper)).toMatchSnapshot();
     });
   });
 
@@ -47,11 +42,6 @@ describe('withRenderCount(BaseComponent): NewComponent', () => {
     const NewComponent = withRenderCount(BaseComponent);
 
     expect(NewComponent).not.toBe(BaseComponent);
-    expect(NewComponent.displayName).toBe('withRenderCount(BaseComponent)');
-    expect(NewComponent.propTypes).toEqual({
-      foo: T.string,
-      ...propTypes,
-    });
-    expect(NewComponent.defaultProps.initialCount).toBe(1);
+    expect({ ...NewComponent }).toMatchSnapshot();
   });
 });
