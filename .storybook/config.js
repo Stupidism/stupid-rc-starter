@@ -1,12 +1,11 @@
 import { configure, setAddon, addDecorator } from '@storybook/react';
-import infoAddon from '@storybook/addon-info';
+import infoAddon, { setDefaults } from '@storybook/addon-info';
 import { setOptions } from '@storybook/addon-options';
 import { withKnobs } from '@storybook/addon-knobs';
 
 import pkg from '../starter/config/minimal-package';
 
 // addon-options
-setAddon(infoAddon);
 setOptions({
   name: pkg.name,
   url: pkg.repository.url,
@@ -17,6 +16,16 @@ setOptions({
   downPanelInRight: true,
   sortStoriesByKind: false,
 });
+
+// addon-info
+setDefaults({
+  inline: true,
+  maxPropsIntoLine: 1,
+  maxPropObjectKeys: 10,
+  maxPropArrayLength: 10,
+  maxPropStringLength: 100,
+});
+setAddon(infoAddon);
 
 // addon-knobs
 // Add the `withKnobs` decorator to add knobs support to your stories.

@@ -30,7 +30,6 @@ stories.addWithInfo(
       <RenderCounter initialCount={number('initialCount', 1)} />
     </div>
   ),
-  { inline: true },
 );
 
 const description = (
@@ -66,13 +65,13 @@ stories.addWithInfo('inside DivRefreshable', description, () => {
       <RenderCounter onRerender={onRerender} />
     </DivRefreshable>
   );
-}, { inline: true, propTablesExclude: [RenderCounter] });
+}, { propTablesExclude: [RenderCounter] });
 
 stories.addWithInfo('Counter', () => (
   <div style={styles.container}>
     <Counter count={number('count', 1)} />
   </div>
-), { inline: true });
+));
 
 stories.addWithInfo(
   'StatelessRenderCounter',
@@ -82,5 +81,4 @@ stories.addWithInfo(
       <StatelessRenderCounter initialCount={number('initialCount', 1)} />
     </div>
   ),
-  { inline: true },
 );

@@ -253,7 +253,27 @@ exports[`Storyshots RenderCounter Counter 1`] = `
                             "
                           </span>
                           , 
-                          …
+                          <span
+                            style={
+                              Object {
+                                "color": "#666",
+                              }
+                            }
+                          >
+                            padding
+                          </span>
+                          : 
+                          <span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              10
+                            </span>
+                          </span>
                           }
                         </span>
                       </span>
@@ -721,7 +741,27 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
                             "
                           </span>
                           , 
-                          …
+                          <span
+                            style={
+                              Object {
+                                "color": "#666",
+                              }
+                            }
+                          >
+                            padding
+                          </span>
+                          : 
+                          <span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              10
+                            </span>
+                          </span>
                           }
                         </span>
                       </span>
@@ -1170,7 +1210,27 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
                             "
                           </span>
                           , 
-                          …
+                          <span
+                            style={
+                              Object {
+                                "color": "#666",
+                              }
+                            }
+                          >
+                            padding
+                          </span>
+                          : 
+                          <span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              10
+                            </span>
+                          </span>
                           }
                         </span>
                       </span>
@@ -1536,7 +1596,10 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
               </span>
               <span>
                 <span>
-                   
+                  <span>
+                    <br />
+                      
+                  </span>
                   <span
                     style={Object {}}
                   >
@@ -1563,7 +1626,10 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                   </span>
                 </span>
                 <span>
-                   
+                  <span>
+                    <br />
+                      
+                  </span>
                   <span
                     style={Object {}}
                   >
@@ -1651,13 +1717,33 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                             "
                           </span>
                           , 
-                          …
+                          <span
+                            style={
+                              Object {
+                                "color": "#666",
+                              }
+                            }
+                          >
+                            padding
+                          </span>
+                          : 
+                          <span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              10
+                            </span>
+                          </span>
                           }
                         </span>
                       </span>
                     </span>
                   </span>
-                  
+                  <br />
                 </span>
               </span>
               <span
