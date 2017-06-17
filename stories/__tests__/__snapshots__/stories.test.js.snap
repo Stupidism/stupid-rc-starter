@@ -9,6 +9,10 @@ exports[`Storyshots RenderCounter Counter 1`] = `
       style={
         Object {
           "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
           "color": "#444",
           "fontFamily": "
             -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
@@ -17,6 +21,8 @@ exports[`Storyshots RenderCounter Counter 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
+          "marginTop": "50px",
+          "padding": "20px 40px 40px",
         }
       }
     >
@@ -95,6 +101,10 @@ exports[`Storyshots RenderCounter Counter 1`] = `
       style={
         Object {
           "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
           "color": "#444",
           "fontFamily": "
             -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
@@ -103,6 +113,8 @@ exports[`Storyshots RenderCounter Counter 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
+          "marginTop": "50px",
+          "padding": "20px 40px 40px",
         }
       }
     >
@@ -427,6 +439,10 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
       style={
         Object {
           "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
           "color": "#444",
           "fontFamily": "
             -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
@@ -435,6 +451,8 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
+          "marginTop": "50px",
+          "padding": "20px 40px 40px",
         }
       }
     >
@@ -513,6 +531,10 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
       style={
         Object {
           "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
           "color": "#444",
           "fontFamily": "
             -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
@@ -521,6 +543,8 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
+          "marginTop": "50px",
+          "padding": "20px 40px 40px",
         }
       }
     >
@@ -531,10 +555,34 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
           }
         }
       >
-        <p>
+        <p
+          style={
+            Object {
+              "WebkitFontSmoothing": "antialiased",
+              "color": "#444",
+              "fontFamily": "
+                -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+                \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+              ",
+              "fontSize": "15px",
+            }
+          }
+        >
           This is the basic usage inside any component.
         </p>
-        <p>
+        <p
+          style={
+            Object {
+              "WebkitFontSmoothing": "antialiased",
+              "color": "#444",
+              "fontFamily": "
+                -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+                \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+              ",
+              "fontSize": "15px",
+            }
+          }
+        >
           NOTICE: You may see them render some extra times. That’s a bug of storybook when you enter this page directly.
           Click another menu and re-enter this page to see real render times.
         </p>
@@ -856,6 +904,10 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
       style={
         Object {
           "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
           "color": "#444",
           "fontFamily": "
             -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
@@ -864,6 +916,8 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
+          "marginTop": "50px",
+          "padding": "20px 40px 40px",
         }
       }
     >
@@ -942,6 +996,10 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
       style={
         Object {
           "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
           "color": "#444",
           "fontFamily": "
             -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
@@ -950,6 +1008,8 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
+          "marginTop": "50px",
+          "padding": "20px 40px 40px",
         }
       }
     >
@@ -960,7 +1020,19 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
           }
         }
       >
-        <p>
+        <p
+          style={
+            Object {
+              "WebkitFontSmoothing": "antialiased",
+              "color": "#444",
+              "fontFamily": "
+                -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+                \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+              ",
+              "fontSize": "15px",
+            }
+          }
+        >
           This is another implement of RenderCounter
         </p>
       </div>
@@ -1281,6 +1353,10 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
       style={
         Object {
           "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
           "color": "#444",
           "fontFamily": "
             -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
@@ -1289,6 +1365,8 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
+          "marginTop": "50px",
+          "padding": "20px 40px 40px",
         }
       }
     >
@@ -1372,6 +1450,10 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
       style={
         Object {
           "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
           "color": "#444",
           "fontFamily": "
             -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
@@ -1380,6 +1462,8 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
+          "marginTop": "50px",
+          "padding": "20px 40px 40px",
         }
       }
     >
