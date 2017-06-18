@@ -13,7 +13,7 @@ const stories = storiesOf('RenderCounter', module)
   .addDecorator((getStory) => {
     const element = getStory();
     if (element.type === Story) {
-      return React.cloneElement(element, { className: 'story' });
+      return <div className="root">{element}</div>;
     }
     return element;
   });

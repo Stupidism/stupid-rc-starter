@@ -1,966 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots RenderCounter Counter 1`] = `
-<div>
-  <div
-    style={undefined}
-  >
-    <div
-      style={
-        Object {
-          "WebkitFontSmoothing": "antialiased",
-          "backgroundColor": "#fff",
-          "border": "1px solid #eee",
-          "borderRadius": "2px",
-          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-          "color": "#444",
-          "fontFamily": "
-            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-          ",
-          "fontSize": "15px",
-          "fontWeight": 300,
-          "lineHeight": 1.45,
-          "marginTop": "50px",
-          "padding": "20px 40px 40px",
-        }
-      }
-    >
-      <div
-        style={
-          Object {
-            "borderBottom": "1px solid #eee",
-            "marginBottom": 10,
-            "paddingTop": 10,
-          }
-        }
-      >
-        <h1
-          style={
-            Object {
-              "fontSize": "35px",
-              "margin": 0,
-              "padding": 0,
-            }
-          }
-        >
-          RenderCounter
-        </h1>
-        <h2
-          style={
-            Object {
-              "fontSize": "22px",
-              "fontWeight": 400,
-              "margin": "0 0 10px 0",
-              "padding": 0,
-            }
-          }
-        >
-          Counter
-        </h2>
-      </div>
-    </div>
-  </div>
+<div
+  className="root"
+>
   <div>
-    <div>
-      <div
-        style={
-          Object {
-            "backgroundColor": "#f95",
-            "borderRadius": "8px",
-            "color": "white",
-            "display": "inline-block",
-            "float": "right",
-            "fontSize": "8pt",
-            "fontWeight": "bold",
-            "padding": "1px 5px",
-            "textAlign": "center",
-            "top": "2px",
-          }
-        }
-      >
-        1
-      </div>
-    </div>
-  </div>
-  <div
-    style={undefined}
-  >
     <div
-      style={
-        Object {
-          "WebkitFontSmoothing": "antialiased",
-          "backgroundColor": "#fff",
-          "border": "1px solid #eee",
-          "borderRadius": "2px",
-          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-          "color": "#444",
-          "fontFamily": "
-            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-          ",
-          "fontSize": "15px",
-          "fontWeight": 300,
-          "lineHeight": 1.45,
-          "marginTop": "50px",
-          "padding": "20px 40px 40px",
-        }
-      }
-    >
-      
-      <div>
-        <h1
-          style={
-            Object {
-              "borderBottom": "1px solid #EEE",
-              "fontSize": "25px",
-              "margin": "20px 0 0 0",
-              "padding": "0 0 5px 0",
-            }
-          }
-        >
-          Story Source
-        </h1>
-        <pre
-          style={
-            Object {
-              "backgroundColor": "#fafafa",
-              "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
-              "fontSize": ".88em",
-              "lineHeight": 1.5,
-              "overflowX": "scroll",
-              "padding": ".5rem",
-            }
-          }
-        >
-          <div
-            style={
-              Object {
-                "paddingLeft": 18,
-                "paddingRight": 3,
-              }
-            }
-          >
-            <span
-              style={
-                Object {
-                  "color": "#777",
-                }
-              }
-            >
-              &lt;
-              Counter
-            </span>
-            <span>
-              <span>
-                 
-                <span
-                  style={Object {}}
-                >
-                  count
-                </span>
-                <span>
-                  =
-                  <span
-                    style={Object {}}
-                  >
-                    <span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#a11",
-                          }
-                        }
-                      >
-                        1
-                      </span>
-                    </span>
-                  </span>
-                </span>
-                 
-              </span>
-            </span>
-            <span
-              style={
-                Object {
-                  "color": "#777",
-                }
-              }
-            >
-              /&gt;
-            </span>
-          </div>
-        </pre>
-      </div>
-      <div>
-        <h1
-          style={
-            Object {
-              "borderBottom": "1px solid #EEE",
-              "fontSize": "25px",
-              "margin": "20px 0 0 0",
-              "padding": "0 0 5px 0",
-            }
-          }
-        >
-          Prop Types
-        </h1>
-        <div>
-          <h2
-            style={
-              Object {
-                "margin": "20px 0 0 0",
-              }
-            }
-          >
-            "
-            Counter
-            " Component
-          </h2>
-          <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
-          >
-            <thead>
-              <tr>
-                <th>
-                  property
-                </th>
-                <th>
-                  propType
-                </th>
-                <th>
-                  required
-                </th>
-                <th>
-                  default
-                </th>
-                <th>
-                  description
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  count
-                </td>
-                <td>
-                  number
-                </td>
-                <td>
-                  yes
-                </td>
-                <td>
-                  -
-                </td>
-                <td />
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots RenderCounter RenderCounter 1`] = `
-<div>
-  <div
-    style={undefined}
-  >
-    <div
-      style={
-        Object {
-          "WebkitFontSmoothing": "antialiased",
-          "backgroundColor": "#fff",
-          "border": "1px solid #eee",
-          "borderRadius": "2px",
-          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-          "color": "#444",
-          "fontFamily": "
-            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-          ",
-          "fontSize": "15px",
-          "fontWeight": 300,
-          "lineHeight": 1.45,
-          "marginTop": "50px",
-          "padding": "20px 40px 40px",
-        }
-      }
+      style={undefined}
     >
       <div
         style={
           Object {
-            "borderBottom": "1px solid #eee",
-            "marginBottom": 10,
-            "paddingTop": 10,
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "
+              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+            ",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginTop": "50px",
+            "padding": "20px 40px 40px",
           }
         }
       >
-        <h1
+        <div
           style={
             Object {
-              "fontSize": "35px",
-              "margin": 0,
-              "padding": 0,
+              "borderBottom": "1px solid #eee",
+              "marginBottom": 10,
+              "paddingTop": 10,
             }
           }
         >
-          RenderCounter
-        </h1>
-        <h2
-          style={
-            Object {
-              "fontSize": "22px",
-              "fontWeight": 400,
-              "margin": "0 0 10px 0",
-              "padding": 0,
-            }
-          }
-        >
-          RenderCounter
-        </h2>
-      </div>
-    </div>
-  </div>
-  <div>
-    <div>
-      <div
-        style={
-          Object {
-            "backgroundColor": "#f95",
-            "borderRadius": "8px",
-            "color": "white",
-            "display": "inline-block",
-            "float": "right",
-            "fontSize": "8pt",
-            "fontWeight": "bold",
-            "padding": "1px 5px",
-            "textAlign": "center",
-            "top": "2px",
-          }
-        }
-      >
-        0
-      </div>
-    </div>
-  </div>
-  <div
-    style={undefined}
-  >
-    <div
-      style={
-        Object {
-          "WebkitFontSmoothing": "antialiased",
-          "backgroundColor": "#fff",
-          "border": "1px solid #eee",
-          "borderRadius": "2px",
-          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-          "color": "#444",
-          "fontFamily": "
-            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-          ",
-          "fontSize": "15px",
-          "fontWeight": 300,
-          "lineHeight": 1.45,
-          "marginTop": "50px",
-          "padding": "20px 40px 40px",
-        }
-      }
-    >
-      <div
-        style={
-          Object {
-            "marginBottom": 0,
-          }
-        }
-      >
-        <p
-          style={
-            Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "
-                -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-              ",
-              "fontSize": "15px",
-            }
-          }
-        >
-          This is the basic usage inside any component.
-        </p>
-        <p
-          style={
-            Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "
-                -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-              ",
-              "fontSize": "15px",
-            }
-          }
-        >
-          NOTICE: You may see them render some extra times. That’s a bug of storybook when you enter this page directly.
-          Click another menu and re-enter this page to see real render times.
-        </p>
-      </div>
-      <div>
-        <h1
-          style={
-            Object {
-              "borderBottom": "1px solid #EEE",
-              "fontSize": "25px",
-              "margin": "20px 0 0 0",
-              "padding": "0 0 5px 0",
-            }
-          }
-        >
-          Story Source
-        </h1>
-        <pre
-          style={
-            Object {
-              "backgroundColor": "#fafafa",
-              "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
-              "fontSize": ".88em",
-              "lineHeight": 1.5,
-              "overflowX": "scroll",
-              "padding": ".5rem",
-            }
-          }
-        >
-          <div
+          <h1
             style={
               Object {
-                "paddingLeft": 18,
-                "paddingRight": 3,
+                "fontSize": "35px",
+                "margin": 0,
+                "padding": 0,
               }
             }
           >
-            <span
-              style={
-                Object {
-                  "color": "#777",
-                }
-              }
-            >
-              &lt;
-              RenderCounter
-            </span>
-            <span>
-              <span>
-                 
-                <span
-                  style={Object {}}
-                >
-                  initialCount
-                </span>
-                <span>
-                  =
-                  <span
-                    style={Object {}}
-                  >
-                    <span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#a11",
-                          }
-                        }
-                      >
-                        0
-                      </span>
-                    </span>
-                  </span>
-                </span>
-                 
-              </span>
-            </span>
-            <span
-              style={
-                Object {
-                  "color": "#777",
-                }
-              }
-            >
-              /&gt;
-            </span>
-          </div>
-        </pre>
-      </div>
-      <div>
-        <h1
-          style={
-            Object {
-              "borderBottom": "1px solid #EEE",
-              "fontSize": "25px",
-              "margin": "20px 0 0 0",
-              "padding": "0 0 5px 0",
-            }
-          }
-        >
-          Prop Types
-        </h1>
-        <div>
-          <h2
-            style={
-              Object {
-                "margin": "20px 0 0 0",
-              }
-            }
-          >
-            "
             RenderCounter
-            " Component
-          </h2>
-          <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
-          >
-            <thead>
-              <tr>
-                <th>
-                  property
-                </th>
-                <th>
-                  propType
-                </th>
-                <th>
-                  required
-                </th>
-                <th>
-                  default
-                </th>
-                <th>
-                  description
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  initialCount
-                </td>
-                <td>
-                  number
-                </td>
-                <td>
-                  no
-                </td>
-                <td>
-                  <span>
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
-                      1
-                    </span>
-                  </span>
-                </td>
-                <td />
-              </tr>
-              <tr>
-                <td>
-                  onRerender
-                </td>
-                <td>
-                  func
-                </td>
-                <td>
-                  no
-                </td>
-                <td>
-                  -
-                </td>
-                <td />
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
-<div>
-  <div
-    style={undefined}
-  >
-    <div
-      style={
-        Object {
-          "WebkitFontSmoothing": "antialiased",
-          "backgroundColor": "#fff",
-          "border": "1px solid #eee",
-          "borderRadius": "2px",
-          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-          "color": "#444",
-          "fontFamily": "
-            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-          ",
-          "fontSize": "15px",
-          "fontWeight": 300,
-          "lineHeight": 1.45,
-          "marginTop": "50px",
-          "padding": "20px 40px 40px",
-        }
-      }
-    >
-      <div
-        style={
-          Object {
-            "borderBottom": "1px solid #eee",
-            "marginBottom": 10,
-            "paddingTop": 10,
-          }
-        }
-      >
-        <h1
-          style={
-            Object {
-              "fontSize": "35px",
-              "margin": 0,
-              "padding": 0,
-            }
-          }
-        >
-          RenderCounter
-        </h1>
-        <h2
-          style={
-            Object {
-              "fontSize": "22px",
-              "fontWeight": 400,
-              "margin": "0 0 10px 0",
-              "padding": 0,
-            }
-          }
-        >
-          StatelessRenderCounter
-        </h2>
-      </div>
-    </div>
-  </div>
-  <div>
-    <div>
-      <div
-        style={
-          Object {
-            "backgroundColor": "#f95",
-            "borderRadius": "8px",
-            "color": "white",
-            "display": "inline-block",
-            "float": "right",
-            "fontSize": "8pt",
-            "fontWeight": "bold",
-            "padding": "1px 5px",
-            "textAlign": "center",
-            "top": "2px",
-          }
-        }
-      >
-        1
-      </div>
-    </div>
-  </div>
-  <div
-    style={undefined}
-  >
-    <div
-      style={
-        Object {
-          "WebkitFontSmoothing": "antialiased",
-          "backgroundColor": "#fff",
-          "border": "1px solid #eee",
-          "borderRadius": "2px",
-          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-          "color": "#444",
-          "fontFamily": "
-            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-          ",
-          "fontSize": "15px",
-          "fontWeight": 300,
-          "lineHeight": 1.45,
-          "marginTop": "50px",
-          "padding": "20px 40px 40px",
-        }
-      }
-    >
-      <div
-        style={
-          Object {
-            "marginBottom": 0,
-          }
-        }
-      >
-        <p
-          style={
-            Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "
-                -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-              ",
-              "fontSize": "15px",
-            }
-          }
-        >
-          This is another implement of RenderCounter
-        </p>
-      </div>
-      <div>
-        <h1
-          style={
-            Object {
-              "borderBottom": "1px solid #EEE",
-              "fontSize": "25px",
-              "margin": "20px 0 0 0",
-              "padding": "0 0 5px 0",
-            }
-          }
-        >
-          Story Source
-        </h1>
-        <pre
-          style={
-            Object {
-              "backgroundColor": "#fafafa",
-              "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
-              "fontSize": ".88em",
-              "lineHeight": 1.5,
-              "overflowX": "scroll",
-              "padding": ".5rem",
-            }
-          }
-        >
-          <div
-            style={
-              Object {
-                "paddingLeft": 18,
-                "paddingRight": 3,
-              }
-            }
-          >
-            <span
-              style={
-                Object {
-                  "color": "#777",
-                }
-              }
-            >
-              &lt;
-              withRenderCount(Counter)
-            </span>
-            <span />
-            <span
-              style={
-                Object {
-                  "color": "#777",
-                }
-              }
-            >
-              /&gt;
-            </span>
-          </div>
-        </pre>
-      </div>
-      <div>
-        <h1
-          style={
-            Object {
-              "borderBottom": "1px solid #EEE",
-              "fontSize": "25px",
-              "margin": "20px 0 0 0",
-              "padding": "0 0 5px 0",
-            }
-          }
-        >
-          Prop Types
-        </h1>
-        <div>
+          </h1>
           <h2
             style={
               Object {
-                "margin": "20px 0 0 0",
+                "fontSize": "22px",
+                "fontWeight": 400,
+                "margin": "0 0 10px 0",
+                "padding": 0,
               }
             }
           >
-            "
-            withRenderCount(Counter)
-            " Component
+            Counter
           </h2>
-          <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
-          >
-            <thead>
-              <tr>
-                <th>
-                  property
-                </th>
-                <th>
-                  propType
-                </th>
-                <th>
-                  required
-                </th>
-                <th>
-                  default
-                </th>
-                <th>
-                  description
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  initialCount
-                </td>
-                <td>
-                  number
-                </td>
-                <td>
-                  no
-                </td>
-                <td>
-                  <span>
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
-                      1
-                    </span>
-                  </span>
-                </td>
-                <td />
-              </tr>
-              <tr>
-                <td>
-                  onRerender
-                </td>
-                <td>
-                  func
-                </td>
-                <td>
-                  no
-                </td>
-                <td>
-                  -
-                </td>
-                <td />
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
-<div>
-  <div
-    style={undefined}
-  >
-    <div
-      style={
-        Object {
-          "WebkitFontSmoothing": "antialiased",
-          "backgroundColor": "#fff",
-          "border": "1px solid #eee",
-          "borderRadius": "2px",
-          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-          "color": "#444",
-          "fontFamily": "
-            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-          ",
-          "fontSize": "15px",
-          "fontWeight": 300,
-          "lineHeight": 1.45,
-          "marginTop": "50px",
-          "padding": "20px 40px 40px",
-        }
-      }
-    >
-      <div
-        style={
-          Object {
-            "borderBottom": "1px solid #eee",
-            "marginBottom": 10,
-            "paddingTop": 10,
-          }
-        }
-      >
-        <h1
-          style={
-            Object {
-              "fontSize": "35px",
-              "margin": 0,
-              "padding": 0,
-            }
-          }
-        >
-          RenderCounter
-        </h1>
-        <h2
-          style={
-            Object {
-              "fontSize": "22px",
-              "fontWeight": 400,
-              "margin": "0 0 10px 0",
-              "padding": 0,
-            }
-          }
-        >
-          inside DivRefreshable
-        </h2>
-      </div>
-    </div>
-  </div>
-  <div>
     <div>
       <div>
-        <button
-          onClick={[Function]}
-        >
-          Counter re-rendered in 50% possibility
-        </button>
         <div
           style={
             Object {
@@ -981,80 +86,56 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
         </div>
       </div>
     </div>
-  </div>
-  <div
-    style={undefined}
-  >
     <div
-      style={
-        Object {
-          "WebkitFontSmoothing": "antialiased",
-          "backgroundColor": "#fff",
-          "border": "1px solid #eee",
-          "borderRadius": "2px",
-          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-          "color": "#444",
-          "fontFamily": "
-            -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-            \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-          ",
-          "fontSize": "15px",
-          "fontWeight": 300,
-          "lineHeight": 1.45,
-          "marginTop": "50px",
-          "padding": "20px 40px 40px",
-        }
-      }
+      style={undefined}
     >
       <div
         style={
           Object {
-            "borderTop": "1px solid #eee",
-            "margin": "20px 0 0 0",
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "
+              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+            ",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginTop": "50px",
+            "padding": "20px 40px 40px",
           }
         }
       >
+        
         <div>
-          <h2>
-            DivRefreshable
-          </h2>
-          <p>
-            <strong>
-              DivRefreshable
-            </strong>
-             is a div with a button that can refresh itself
-          </p>
-          <p>
-            It will update its only child if cloneChild prop is set to true
-          </p>
-        </div>
-      </div>
-      <div>
-        <h1
-          style={
-            Object {
-              "borderBottom": "1px solid #EEE",
-              "fontSize": "25px",
-              "margin": "20px 0 0 0",
-              "padding": "0 0 5px 0",
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
             }
-          }
-        >
-          Story Source
-        </h1>
-        <pre
-          style={
-            Object {
-              "backgroundColor": "#fafafa",
-              "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
-              "fontSize": ".88em",
-              "lineHeight": 1.5,
-              "overflowX": "scroll",
-              "padding": ".5rem",
+          >
+            Story Source
+          </h1>
+          <pre
+            style={
+              Object {
+                "backgroundColor": "#fafafa",
+                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+                "fontSize": ".88em",
+                "lineHeight": 1.5,
+                "overflowX": "scroll",
+                "padding": ".5rem",
+              }
             }
-          }
-        >
-          <div>
+          >
             <div
               style={
                 Object {
@@ -1071,7 +152,7 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                 }
               >
                 &lt;
-                DivRefreshable
+                Counter
               </span>
               <span>
                 <span>
@@ -1079,28 +160,27 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                   <span
                     style={Object {}}
                   >
-                    label
+                    count
                   </span>
                   <span>
                     =
                     <span
                       style={Object {}}
                     >
-                      <span
-                        style={
-                          Object {
-                            "color": "#22a",
-                            "wordBreak": "break-word",
+                      <span>
+                        <span
+                          style={
+                            Object {
+                              "color": "#a11",
+                            }
                           }
-                        }
-                      >
-                        "
-                        Counter re-rendered in 50% possibility
-                        "
+                        >
+                          1
+                        </span>
                       </span>
                     </span>
                   </span>
-                  
+                   
                 </span>
               </span>
               <span
@@ -1110,13 +190,268 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                   }
                 }
               >
-                &gt;
+                /&gt;
               </span>
             </div>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style={
+                Object {
+                  "margin": "20px 0 0 0",
+                }
+              }
+            >
+              "
+              Counter
+              " Component
+            </h2>
+            <table
+              style={
+                Object {
+                  "borderCollapse": "separate",
+                  "borderSpacing": "10px 5px",
+                  "marginLeft": -10,
+                }
+              }
+            >
+              <thead>
+                <tr>
+                  <th>
+                    property
+                  </th>
+                  <th>
+                    propType
+                  </th>
+                  <th>
+                    required
+                  </th>
+                  <th>
+                    default
+                  </th>
+                  <th>
+                    description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    count
+                  </td>
+                  <td>
+                    number
+                  </td>
+                  <td>
+                    yes
+                  </td>
+                  <td>
+                    -
+                  </td>
+                  <td />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots RenderCounter RenderCounter 1`] = `
+<div
+  className="root"
+>
+  <div>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "
+              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+            ",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginTop": "50px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "borderBottom": "1px solid #eee",
+              "marginBottom": 10,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <h1
+            style={
+              Object {
+                "fontSize": "35px",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            RenderCounter
+          </h1>
+          <h2
+            style={
+              Object {
+                "fontSize": "22px",
+                "fontWeight": 400,
+                "margin": "0 0 10px 0",
+                "padding": 0,
+              }
+            }
+          >
+            RenderCounter
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div
+          style={
+            Object {
+              "backgroundColor": "#f95",
+              "borderRadius": "8px",
+              "color": "white",
+              "display": "inline-block",
+              "float": "right",
+              "fontSize": "8pt",
+              "fontWeight": "bold",
+              "padding": "1px 5px",
+              "textAlign": "center",
+              "top": "2px",
+            }
+          }
+        >
+          0
+        </div>
+      </div>
+    </div>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "
+              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+            ",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginTop": "50px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <p
+            style={
+              Object {
+                "WebkitFontSmoothing": "antialiased",
+                "color": "#444",
+                "fontFamily": "
+                  -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+                  \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+                ",
+                "fontSize": "15px",
+              }
+            }
+          >
+            This is the basic usage inside any component.
+          </p>
+          <p
+            style={
+              Object {
+                "WebkitFontSmoothing": "antialiased",
+                "color": "#444",
+                "fontFamily": "
+                  -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+                  \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+                ",
+                "fontSize": "15px",
+              }
+            }
+          >
+            NOTICE: You may see them render some extra times. That’s a bug of storybook when you enter this page directly.
+            Click another menu and re-enter this page to see real render times.
+          </p>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Story Source
+          </h1>
+          <pre
+            style={
+              Object {
+                "backgroundColor": "#fafafa",
+                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+                "fontSize": ".88em",
+                "lineHeight": 1.5,
+                "overflowX": "scroll",
+                "padding": ".5rem",
+              }
+            }
+          >
             <div
               style={
                 Object {
-                  "paddingLeft": 33,
+                  "paddingLeft": 18,
                   "paddingRight": 3,
                 }
               }
@@ -1137,7 +472,7 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                   <span
                     style={Object {}}
                   >
-                    onRerender
+                    initialCount
                   </span>
                   <span>
                     =
@@ -1148,18 +483,11 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                         <span
                           style={
                             Object {
-                              "color": "#170",
+                              "color": "#a11",
                             }
                           }
                         >
-                          function handler(props, next) {return function (count) {
-                                if (Math.random() &lt; possibility) {
-                                  next();
-                                  log('hit', possibility, props, count);
-                                } else {
-                                  log('miss', possibility, props, count);
-                                }
-                              };}()
+                          0
                         </span>
                       </span>
                     </span>
@@ -1177,6 +505,270 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                 /&gt;
               </span>
             </div>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style={
+                Object {
+                  "margin": "20px 0 0 0",
+                }
+              }
+            >
+              "
+              RenderCounter
+              " Component
+            </h2>
+            <table
+              style={
+                Object {
+                  "borderCollapse": "separate",
+                  "borderSpacing": "10px 5px",
+                  "marginLeft": -10,
+                }
+              }
+            >
+              <thead>
+                <tr>
+                  <th>
+                    property
+                  </th>
+                  <th>
+                    propType
+                  </th>
+                  <th>
+                    required
+                  </th>
+                  <th>
+                    default
+                  </th>
+                  <th>
+                    description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    initialCount
+                  </td>
+                  <td>
+                    number
+                  </td>
+                  <td>
+                    no
+                  </td>
+                  <td>
+                    <span>
+                      <span
+                        style={
+                          Object {
+                            "color": "#a11",
+                          }
+                        }
+                      >
+                        1
+                      </span>
+                    </span>
+                  </td>
+                  <td />
+                </tr>
+                <tr>
+                  <td>
+                    onRerender
+                  </td>
+                  <td>
+                    func
+                  </td>
+                  <td>
+                    no
+                  </td>
+                  <td>
+                    -
+                  </td>
+                  <td />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
+<div
+  className="root"
+>
+  <div>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "
+              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+            ",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginTop": "50px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "borderBottom": "1px solid #eee",
+              "marginBottom": 10,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <h1
+            style={
+              Object {
+                "fontSize": "35px",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            RenderCounter
+          </h1>
+          <h2
+            style={
+              Object {
+                "fontSize": "22px",
+                "fontWeight": 400,
+                "margin": "0 0 10px 0",
+                "padding": 0,
+              }
+            }
+          >
+            StatelessRenderCounter
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div
+          style={
+            Object {
+              "backgroundColor": "#f95",
+              "borderRadius": "8px",
+              "color": "white",
+              "display": "inline-block",
+              "float": "right",
+              "fontSize": "8pt",
+              "fontWeight": "bold",
+              "padding": "1px 5px",
+              "textAlign": "center",
+              "top": "2px",
+            }
+          }
+        >
+          1
+        </div>
+      </div>
+    </div>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "
+              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+            ",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginTop": "50px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <p
+            style={
+              Object {
+                "WebkitFontSmoothing": "antialiased",
+                "color": "#444",
+                "fontFamily": "
+                  -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+                  \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+                ",
+                "fontSize": "15px",
+              }
+            }
+          >
+            This is another implement of RenderCounter
+          </p>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Story Source
+          </h1>
+          <pre
+            style={
+              Object {
+                "backgroundColor": "#fafafa",
+                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+                "fontSize": ".88em",
+                "lineHeight": 1.5,
+                "overflowX": "scroll",
+                "padding": ".5rem",
+              }
+            }
+          >
             <div
               style={
                 Object {
@@ -1192,111 +784,535 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                   }
                 }
               >
-                &lt;/
-                DivRefreshable
-                &gt;
+                &lt;
+                withRenderCount(Counter)
+              </span>
+              <span />
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
               </span>
             </div>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style={
+                Object {
+                  "margin": "20px 0 0 0",
+                }
+              }
+            >
+              "
+              withRenderCount(Counter)
+              " Component
+            </h2>
+            <table
+              style={
+                Object {
+                  "borderCollapse": "separate",
+                  "borderSpacing": "10px 5px",
+                  "marginLeft": -10,
+                }
+              }
+            >
+              <thead>
+                <tr>
+                  <th>
+                    property
+                  </th>
+                  <th>
+                    propType
+                  </th>
+                  <th>
+                    required
+                  </th>
+                  <th>
+                    default
+                  </th>
+                  <th>
+                    description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    initialCount
+                  </td>
+                  <td>
+                    number
+                  </td>
+                  <td>
+                    no
+                  </td>
+                  <td>
+                    <span>
+                      <span
+                        style={
+                          Object {
+                            "color": "#a11",
+                          }
+                        }
+                      >
+                        1
+                      </span>
+                    </span>
+                  </td>
+                  <td />
+                </tr>
+                <tr>
+                  <td>
+                    onRerender
+                  </td>
+                  <td>
+                    func
+                  </td>
+                  <td>
+                    no
+                  </td>
+                  <td>
+                    -
+                  </td>
+                  <td />
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </pre>
+        </div>
       </div>
-      <div>
-        <h1
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
+<div
+  className="root"
+>
+  <div>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "
+              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+            ",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginTop": "50px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
           style={
             Object {
-              "borderBottom": "1px solid #EEE",
-              "fontSize": "25px",
-              "margin": "20px 0 0 0",
-              "padding": "0 0 5px 0",
+              "borderBottom": "1px solid #eee",
+              "marginBottom": 10,
+              "paddingTop": 10,
             }
           }
         >
-          Prop Types
-        </h1>
-        <div>
+          <h1
+            style={
+              Object {
+                "fontSize": "35px",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            RenderCounter
+          </h1>
           <h2
             style={
               Object {
-                "margin": "20px 0 0 0",
+                "fontSize": "22px",
+                "fontWeight": 400,
+                "margin": "0 0 10px 0",
+                "padding": 0,
               }
             }
           >
-            "
-            DivRefreshable
-            " Component
+            inside DivRefreshable
           </h2>
-          <table
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <button
+            onClick={[Function]}
+          >
+            Counter re-rendered in 50% possibility
+          </button>
+          <div
             style={
               Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
+                "backgroundColor": "#f95",
+                "borderRadius": "8px",
+                "color": "white",
+                "display": "inline-block",
+                "float": "right",
+                "fontSize": "8pt",
+                "fontWeight": "bold",
+                "padding": "1px 5px",
+                "textAlign": "center",
+                "top": "2px",
               }
             }
           >
-            <thead>
-              <tr>
-                <th>
-                  property
-                </th>
-                <th>
-                  propType
-                </th>
-                <th>
-                  required
-                </th>
-                <th>
-                  default
-                </th>
-                <th>
-                  description
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  children
-                </td>
-                <td>
-                  element
-                </td>
-                <td>
-                  no
-                </td>
-                <td>
-                  -
-                </td>
-                <td />
-              </tr>
-              <tr>
-                <td>
-                  label
-                </td>
-                <td>
-                  string
-                </td>
-                <td>
-                  no
-                </td>
-                <td>
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
+            1
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "
+              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+            ",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginTop": "50px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "borderTop": "1px solid #eee",
+              "margin": "20px 0 0 0",
+            }
+          }
+        >
+          <div>
+            <h2>
+              DivRefreshable
+            </h2>
+            <p>
+              <strong>
+                DivRefreshable
+              </strong>
+               is a div with a button that can refresh itself
+            </p>
+            <p>
+              It will update its only child if cloneChild prop is set to true
+            </p>
+          </div>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Story Source
+          </h1>
+          <pre
+            style={
+              Object {
+                "backgroundColor": "#fafafa",
+                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+                "fontSize": ".88em",
+                "lineHeight": 1.5,
+                "overflowX": "scroll",
+                "padding": ".5rem",
+              }
+            }
+          >
+            <div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 18,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
                     }
-                  >
-                    "
-                    Refresh
-                    "
+                  }
+                >
+                  &lt;
+                  DivRefreshable
+                </span>
+                <span>
+                  <span>
+                     
+                    <span
+                      style={Object {}}
+                    >
+                      label
+                    </span>
+                    <span>
+                      =
+                      <span
+                        style={Object {}}
+                      >
+                        <span
+                          style={
+                            Object {
+                              "color": "#22a",
+                              "wordBreak": "break-word",
+                            }
+                          }
+                        >
+                          "
+                          Counter re-rendered in 50% possibility
+                          "
+                        </span>
+                      </span>
+                    </span>
+                    
                   </span>
-                </td>
-                <td />
-              </tr>
-            </tbody>
-          </table>
+                </span>
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &gt;
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 33,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;
+                  RenderCounter
+                </span>
+                <span>
+                  <span>
+                     
+                    <span
+                      style={Object {}}
+                    >
+                      onRerender
+                    </span>
+                    <span>
+                      =
+                      <span
+                        style={Object {}}
+                      >
+                        <span>
+                          <span
+                            style={
+                              Object {
+                                "color": "#170",
+                              }
+                            }
+                          >
+                            function handler(props, next) {return function (count) {
+                                  if (Math.random() &lt; possibility) {
+                                    next();
+                                    log('hit', possibility, props, count);
+                                  } else {
+                                    log('miss', possibility, props, count);
+                                  }
+                                };}()
+                          </span>
+                        </span>
+                      </span>
+                    </span>
+                     
+                  </span>
+                </span>
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  /&gt;
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "paddingLeft": 18,
+                    "paddingRight": 3,
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#777",
+                    }
+                  }
+                >
+                  &lt;/
+                  DivRefreshable
+                  &gt;
+                </span>
+              </div>
+            </div>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style={
+                Object {
+                  "margin": "20px 0 0 0",
+                }
+              }
+            >
+              "
+              DivRefreshable
+              " Component
+            </h2>
+            <table
+              style={
+                Object {
+                  "borderCollapse": "separate",
+                  "borderSpacing": "10px 5px",
+                  "marginLeft": -10,
+                }
+              }
+            >
+              <thead>
+                <tr>
+                  <th>
+                    property
+                  </th>
+                  <th>
+                    propType
+                  </th>
+                  <th>
+                    required
+                  </th>
+                  <th>
+                    default
+                  </th>
+                  <th>
+                    description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    children
+                  </td>
+                  <td>
+                    element
+                  </td>
+                  <td>
+                    no
+                  </td>
+                  <td>
+                    -
+                  </td>
+                  <td />
+                </tr>
+                <tr>
+                  <td>
+                    label
+                  </td>
+                  <td>
+                    string
+                  </td>
+                  <td>
+                    no
+                  </td>
+                  <td>
+                    <span
+                      style={
+                        Object {
+                          "color": "#22a",
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      "
+                      Refresh
+                      "
+                    </span>
+                  </td>
+                  <td />
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
