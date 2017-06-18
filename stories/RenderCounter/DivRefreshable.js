@@ -1,13 +1,12 @@
 import React from 'react';
 import T from 'prop-types';
-import _ from 'lodash';
 import { compose, withState, withHandlers } from 'recompose';
 
 import copyStatics from '../../src/hocs/copyStatics';
 import omitPropTypes from '../../src/hocs/omitPropTypes';
 
-const DivRefreshable = ({ label, onRefresh, children, ...rest }) => (
-  <div {..._.pick(rest, ['style'])}>
+const DivRefreshable = ({ label, onRefresh, children }) => (
+  <div>
     <button onClick={onRefresh}>{label}</button>
     {children && React.cloneElement(children)}
   </div>

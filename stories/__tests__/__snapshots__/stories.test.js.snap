@@ -66,31 +66,20 @@ exports[`Storyshots RenderCounter Counter 1`] = `
       <div
         style={
           Object {
-            "border": "solid 1px grey",
-            "minHeight": 100,
-            "padding": 10,
-            "width": "50%",
+            "backgroundColor": "#f95",
+            "borderRadius": "8px",
+            "color": "white",
+            "display": "inline-block",
+            "float": "right",
+            "fontSize": "8pt",
+            "fontWeight": "bold",
+            "padding": "1px 5px",
+            "textAlign": "center",
+            "top": "2px",
           }
         }
       >
-        <div
-          style={
-            Object {
-              "backgroundColor": "#f95",
-              "borderRadius": "8px",
-              "color": "white",
-              "display": "inline-block",
-              "float": "right",
-              "fontSize": "8pt",
-              "fontWeight": "bold",
-              "padding": "1px 5px",
-              "textAlign": "center",
-              "top": "2px",
-            }
-          }
-        >
-          1
-        </div>
+        1
       </div>
     </div>
   </div>
@@ -144,231 +133,62 @@ exports[`Storyshots RenderCounter Counter 1`] = `
             }
           }
         >
-          <div>
-            <div
+          <div
+            style={
+              Object {
+                "paddingLeft": 18,
+                "paddingRight": 3,
+              }
+            }
+          >
+            <span
               style={
                 Object {
-                  "paddingLeft": 18,
-                  "paddingRight": 3,
+                  "color": "#777",
                 }
               }
             >
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &lt;
-                div
-              </span>
+              &lt;
+              Counter
+            </span>
+            <span>
               <span>
+                 
+                <span
+                  style={Object {}}
+                >
+                  count
+                </span>
                 <span>
-                   
+                  =
                   <span
                     style={Object {}}
                   >
-                    style
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span>
-                        <span
-                          style={
-                            Object {
-                              "color": "#666",
-                            }
+                    <span>
+                      <span
+                        style={
+                          Object {
+                            "color": "#a11",
                           }
-                        >
-                          {
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            width
-                          </span>
-                          : 
-                          <span
-                            style={
-                              Object {
-                                "color": "#22a",
-                                "wordBreak": "break-word",
-                              }
-                            }
-                          >
-                            "
-                            50%
-                            "
-                          </span>
-                          , 
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            minHeight
-                          </span>
-                          : 
-                          <span>
-                            <span
-                              style={
-                                Object {
-                                  "color": "#a11",
-                                }
-                              }
-                            >
-                              100
-                            </span>
-                          </span>
-                          , 
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            border
-                          </span>
-                          : 
-                          <span
-                            style={
-                              Object {
-                                "color": "#22a",
-                                "wordBreak": "break-word",
-                              }
-                            }
-                          >
-                            "
-                            solid 1px grey
-                            "
-                          </span>
-                          , 
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            padding
-                          </span>
-                          : 
-                          <span>
-                            <span
-                              style={
-                                Object {
-                                  "color": "#a11",
-                                }
-                              }
-                            >
-                              10
-                            </span>
-                          </span>
-                          }
-                        </span>
+                        }
+                      >
+                        1
                       </span>
                     </span>
                   </span>
-                  
                 </span>
+                 
               </span>
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &gt;
-              </span>
-            </div>
-            <div
+            </span>
+            <span
               style={
                 Object {
-                  "paddingLeft": 33,
-                  "paddingRight": 3,
+                  "color": "#777",
                 }
               }
             >
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &lt;
-                Counter
-              </span>
-              <span>
-                <span>
-                   
-                  <span
-                    style={Object {}}
-                  >
-                    count
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span>
-                        <span
-                          style={
-                            Object {
-                              "color": "#a11",
-                            }
-                          }
-                        >
-                          1
-                        </span>
-                      </span>
-                    </span>
-                  </span>
-                   
-                </span>
-              </span>
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                /&gt;
-              </span>
-            </div>
-            <div
-              style={
-                Object {
-                  "paddingLeft": 18,
-                  "paddingRight": 3,
-                }
-              }
-            >
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &lt;/
-                div
-                &gt;
-              </span>
-            </div>
+              /&gt;
+            </span>
           </div>
         </pre>
       </div>
@@ -516,31 +336,20 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
       <div
         style={
           Object {
-            "border": "solid 1px grey",
-            "minHeight": 100,
-            "padding": 10,
-            "width": "50%",
+            "backgroundColor": "#f95",
+            "borderRadius": "8px",
+            "color": "white",
+            "display": "inline-block",
+            "float": "right",
+            "fontSize": "8pt",
+            "fontWeight": "bold",
+            "padding": "1px 5px",
+            "textAlign": "center",
+            "top": "2px",
           }
         }
       >
-        <div
-          style={
-            Object {
-              "backgroundColor": "#f95",
-              "borderRadius": "8px",
-              "color": "white",
-              "display": "inline-block",
-              "float": "right",
-              "fontSize": "8pt",
-              "fontWeight": "bold",
-              "padding": "1px 5px",
-              "textAlign": "center",
-              "top": "2px",
-            }
-          }
-        >
-          1
-        </div>
+        0
       </div>
     </div>
   </div>
@@ -632,203 +441,62 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
             }
           }
         >
-          <div>
-            <div
+          <div
+            style={
+              Object {
+                "paddingLeft": 18,
+                "paddingRight": 3,
+              }
+            }
+          >
+            <span
               style={
                 Object {
-                  "paddingLeft": 18,
-                  "paddingRight": 3,
+                  "color": "#777",
                 }
               }
             >
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &lt;
-                div
-              </span>
+              &lt;
+              RenderCounter
+            </span>
+            <span>
               <span>
+                 
+                <span
+                  style={Object {}}
+                >
+                  initialCount
+                </span>
                 <span>
-                   
+                  =
                   <span
                     style={Object {}}
                   >
-                    style
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span>
-                        <span
-                          style={
-                            Object {
-                              "color": "#666",
-                            }
+                    <span>
+                      <span
+                        style={
+                          Object {
+                            "color": "#a11",
                           }
-                        >
-                          {
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            width
-                          </span>
-                          : 
-                          <span
-                            style={
-                              Object {
-                                "color": "#22a",
-                                "wordBreak": "break-word",
-                              }
-                            }
-                          >
-                            "
-                            50%
-                            "
-                          </span>
-                          , 
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            minHeight
-                          </span>
-                          : 
-                          <span>
-                            <span
-                              style={
-                                Object {
-                                  "color": "#a11",
-                                }
-                              }
-                            >
-                              100
-                            </span>
-                          </span>
-                          , 
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            border
-                          </span>
-                          : 
-                          <span
-                            style={
-                              Object {
-                                "color": "#22a",
-                                "wordBreak": "break-word",
-                              }
-                            }
-                          >
-                            "
-                            solid 1px grey
-                            "
-                          </span>
-                          , 
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            padding
-                          </span>
-                          : 
-                          <span>
-                            <span
-                              style={
-                                Object {
-                                  "color": "#a11",
-                                }
-                              }
-                            >
-                              10
-                            </span>
-                          </span>
-                          }
-                        </span>
+                        }
+                      >
+                        0
                       </span>
                     </span>
                   </span>
-                  
                 </span>
+                 
               </span>
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &gt;
-              </span>
-            </div>
-            <div
+            </span>
+            <span
               style={
                 Object {
-                  "paddingLeft": 33,
-                  "paddingRight": 3,
+                  "color": "#777",
                 }
               }
             >
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &lt;
-                RenderCounter
-              </span>
-              <span />
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                /&gt;
-              </span>
-            </div>
-            <div
-              style={
-                Object {
-                  "paddingLeft": 18,
-                  "paddingRight": 3,
-                }
-              }
-            >
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &lt;/
-                div
-                &gt;
-              </span>
-            </div>
+              /&gt;
+            </span>
           </div>
         </pre>
       </div>
@@ -1001,31 +669,20 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
       <div
         style={
           Object {
-            "border": "solid 1px grey",
-            "minHeight": 100,
-            "padding": 10,
-            "width": "50%",
+            "backgroundColor": "#f95",
+            "borderRadius": "8px",
+            "color": "white",
+            "display": "inline-block",
+            "float": "right",
+            "fontSize": "8pt",
+            "fontWeight": "bold",
+            "padding": "1px 5px",
+            "textAlign": "center",
+            "top": "2px",
           }
         }
       >
-        <div
-          style={
-            Object {
-              "backgroundColor": "#f95",
-              "borderRadius": "8px",
-              "color": "white",
-              "display": "inline-block",
-              "float": "right",
-              "fontSize": "8pt",
-              "fontWeight": "bold",
-              "padding": "1px 5px",
-              "textAlign": "center",
-              "top": "2px",
-            }
-          }
-        >
-          1
-        </div>
+        1
       </div>
     </div>
   </div>
@@ -1101,203 +758,34 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
             }
           }
         >
-          <div>
-            <div
+          <div
+            style={
+              Object {
+                "paddingLeft": 18,
+                "paddingRight": 3,
+              }
+            }
+          >
+            <span
               style={
                 Object {
-                  "paddingLeft": 18,
-                  "paddingRight": 3,
+                  "color": "#777",
                 }
               }
             >
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &lt;
-                div
-              </span>
-              <span>
-                <span>
-                   
-                  <span
-                    style={Object {}}
-                  >
-                    style
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span>
-                        <span
-                          style={
-                            Object {
-                              "color": "#666",
-                            }
-                          }
-                        >
-                          {
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            width
-                          </span>
-                          : 
-                          <span
-                            style={
-                              Object {
-                                "color": "#22a",
-                                "wordBreak": "break-word",
-                              }
-                            }
-                          >
-                            "
-                            50%
-                            "
-                          </span>
-                          , 
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            minHeight
-                          </span>
-                          : 
-                          <span>
-                            <span
-                              style={
-                                Object {
-                                  "color": "#a11",
-                                }
-                              }
-                            >
-                              100
-                            </span>
-                          </span>
-                          , 
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            border
-                          </span>
-                          : 
-                          <span
-                            style={
-                              Object {
-                                "color": "#22a",
-                                "wordBreak": "break-word",
-                              }
-                            }
-                          >
-                            "
-                            solid 1px grey
-                            "
-                          </span>
-                          , 
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            padding
-                          </span>
-                          : 
-                          <span>
-                            <span
-                              style={
-                                Object {
-                                  "color": "#a11",
-                                }
-                              }
-                            >
-                              10
-                            </span>
-                          </span>
-                          }
-                        </span>
-                      </span>
-                    </span>
-                  </span>
-                  
-                </span>
-              </span>
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &gt;
-              </span>
-            </div>
-            <div
+              &lt;
+              withRenderCount(Counter)
+            </span>
+            <span />
+            <span
               style={
                 Object {
-                  "paddingLeft": 33,
-                  "paddingRight": 3,
+                  "color": "#777",
                 }
               }
             >
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &lt;
-                withRenderCount(Counter)
-              </span>
-              <span />
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                /&gt;
-              </span>
-            </div>
-            <div
-              style={
-                Object {
-                  "paddingLeft": 18,
-                  "paddingRight": 3,
-                }
-              }
-            >
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &lt;/
-                div
-                &gt;
-              </span>
-            </div>
+              /&gt;
+            </span>
           </div>
         </pre>
       </div>
@@ -1467,16 +955,7 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
   </div>
   <div>
     <div>
-      <div
-        style={
-          Object {
-            "border": "solid 1px grey",
-            "minHeight": 100,
-            "padding": 10,
-            "width": "50%",
-          }
-        }
-      >
+      <div>
         <button
           onClick={[Function]}
         >
@@ -1596,10 +1075,7 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
               </span>
               <span>
                 <span>
-                  <span>
-                    <br />
-                      
-                  </span>
+                   
                   <span
                     style={Object {}}
                   >
@@ -1624,126 +1100,7 @@ exports[`Storyshots RenderCounter inside DivRefreshable 1`] = `
                       </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                  <span>
-                    <br />
-                      
-                  </span>
-                  <span
-                    style={Object {}}
-                  >
-                    style
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span>
-                        <span
-                          style={
-                            Object {
-                              "color": "#666",
-                            }
-                          }
-                        >
-                          {
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            width
-                          </span>
-                          : 
-                          <span
-                            style={
-                              Object {
-                                "color": "#22a",
-                                "wordBreak": "break-word",
-                              }
-                            }
-                          >
-                            "
-                            50%
-                            "
-                          </span>
-                          , 
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            minHeight
-                          </span>
-                          : 
-                          <span>
-                            <span
-                              style={
-                                Object {
-                                  "color": "#a11",
-                                }
-                              }
-                            >
-                              100
-                            </span>
-                          </span>
-                          , 
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            border
-                          </span>
-                          : 
-                          <span
-                            style={
-                              Object {
-                                "color": "#22a",
-                                "wordBreak": "break-word",
-                              }
-                            }
-                          >
-                            "
-                            solid 1px grey
-                            "
-                          </span>
-                          , 
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            padding
-                          </span>
-                          : 
-                          <span>
-                            <span
-                              style={
-                                Object {
-                                  "color": "#a11",
-                                }
-                              }
-                            >
-                              10
-                            </span>
-                          </span>
-                          }
-                        </span>
-                      </span>
-                    </span>
-                  </span>
-                  <br />
+                  
                 </span>
               </span>
               <span
