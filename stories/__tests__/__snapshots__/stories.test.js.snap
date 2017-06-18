@@ -568,7 +568,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
                                 }
                               }
                             >
-                              function handler(props) {return function (count) {return log('handler blocked', props, count);};}()
+                              function handler(props) {return function (count) {return log('handler called', props, count);};}()
                             </span>
                           </span>
                         </span>
