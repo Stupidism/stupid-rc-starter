@@ -30,7 +30,6 @@
     "publish:modules": "npm run build:modules && (cd dist-modules && npm publish) && npm run postpublish",
     "prepublish": "npm run dist && npm run dist:min && npm run dist:modules",
     "postpublish": "npm run gh-pages && npm run gh-pages:deploy",
-    "postinstall": "node starter/scripts/post_install.js",
     "git:commitable": "git status | grep 'Changes to be committed:'",
     "git:stash-pop": "git stash pop >> /dev/null",
     "git:stash-rebase": "git read-tree stash && git stash drop",
