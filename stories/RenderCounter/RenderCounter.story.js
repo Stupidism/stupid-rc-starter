@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import { number } from '@storybook/addon-knobs';
 import { Story } from '@storybook/addon-info';
 
 import RenderCounter, { Counter, StatelessRenderCounter } from '../../src/RenderCounter';
 import DivRefreshable from './DivRefreshable';
+import createUnstableHandler from './createUnstableHandler';
 import './RenderCounter.story.css';
 
 const stories = storiesOf('RenderCounter', module)
@@ -17,20 +17,6 @@ const stories = storiesOf('RenderCounter', module)
     }
     return element;
   });
-
-const createUnstableHandler = (possibility = 0.5, log = action('onRerender')) => {
-  const handler = (props, next) => (count) => {
-    if (Math.random() < possibility) {
-      next();
-      log('hit', possibility, props, count);
-    } else {
-      log('miss', possibility, props, count);
-    }
-  };
-
-  Object.defineProperty(handler, 'name', { value: handler.toString() });
-  return handler;
-};
 
 stories.addWithInfo(
   'RenderCounter',
