@@ -3,20 +3,20 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { number } from '@storybook/addon-knobs';
+import { Story } from '@storybook/addon-info';
 
 import RenderCounter, { Counter, StatelessRenderCounter } from '../../src/RenderCounter';
 import DivRefreshable from './DivRefreshable';
+import './RenderCounter.story.css';
 
-const stories = storiesOf('RenderCounter', module);
-
-const styles = {
-  container: {
-    width: '50%',
-    minHeight: 100,
-    border: 'solid 1px grey',
-    padding: 10,
-  },
-};
+const stories = storiesOf('RenderCounter', module)
+  .addDecorator((getStory) => {
+    const element = getStory();
+    if (element.type === Story) {
+      return <div className="root">{element}</div>;
+    }
+    return element;
+  });
 
 stories.addWithInfo(
   'RenderCounter',
@@ -25,12 +25,7 @@ stories.addWithInfo(
     NOTICE: You may see them render some extra times. That's a bug of storybook when you enter this page directly.
     Click another menu and re-enter this page to see real render times.
   `,
-  () => (
-    <div style={styles.container}>
-      <RenderCounter initialCount={number('initialCount', 1)} />
-    </div>
-  ),
-  { inline: true },
+  () => <RenderCounter initialCount={number('initialCount', 0)} />,
 );
 
 const description = (
@@ -61,26 +56,16 @@ stories.addWithInfo('inside DivRefreshable', description, () => {
   return (
     <DivRefreshable
       label={`Counter re-rendered in ${possibility * 100}% possibility`}
-      style={styles.container}
     >
       <RenderCounter onRerender={onRerender} />
     </DivRefreshable>
   );
-}, { inline: true, propTablesExclude: [RenderCounter] });
+}, { propTablesExclude: [RenderCounter] });
 
-stories.addWithInfo('Counter', () => (
-  <div style={styles.container}>
-    <Counter count={number('count', 1)} />
-  </div>
-), { inline: true });
+stories.addWithInfo('Counter', () => <Counter count={number('count', 1)} />);
 
 stories.addWithInfo(
   'StatelessRenderCounter',
   'This is another implement of RenderCounter',
-  () => (
-    <div style={styles.container}>
-      <StatelessRenderCounter initialCount={number('initialCount', 1)} />
-    </div>
-  ),
-  { inline: true },
+  () => <StatelessRenderCounter initialCount={number('initialCount', 1)} />,
 );
