@@ -341,7 +341,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
     <div>
       <div>
         <div>
-          Counter re-rendered in 50% possibility
+          blockOnRerender: false
           <div
             style={
               Object {
@@ -468,38 +468,9 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
                   }
                 >
                   &lt;
-                  DivRefreshable
+                  div
                 </span>
-                <span>
-                  <span>
-                     
-                    <span
-                      style={Object {}}
-                    >
-                      label
-                    </span>
-                    <span>
-                      =
-                      <span
-                        style={Object {}}
-                      >
-                        <span
-                          style={
-                            Object {
-                              "color": "#22a",
-                              "wordBreak": "break-word",
-                            }
-                          }
-                        >
-                          "
-                          Counter re-rendered in 50% possibility
-                          "
-                        </span>
-                      </span>
-                    </span>
-                    
-                  </span>
-                </span>
+                <span />
                 <span
                   style={
                     Object {
@@ -513,7 +484,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
               <div
                 style={
                   Object {
-                    "paddingLeft": 33,
+                    "paddingLeft": 48,
                     "paddingRight": 3,
                   }
                 }
@@ -525,54 +496,123 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
                     }
                   }
                 >
-                  &lt;
-                  RenderCounter
+                  blockOnRerender: false
                 </span>
-                <span>
-                  <span>
-                     
-                    <span
-                      style={Object {}}
-                    >
-                      onRerender
-                    </span>
-                    <span>
-                      =
-                      <span
-                        style={Object {}}
-                      >
-                        <span>
-                          <span
-                            style={
-                              Object {
-                                "color": "#170",
-                              }
-                            }
-                          >
-                            function handler(props, next) {return function (count) {
-                                  if (Math.random() &lt; possibility) {
-                                    next();
-                                    log('hit', possibility, props, count);
-                                  } else {
-                                    log('miss', possibility, props, count);
-                                  }
-                                };}()
-                          </span>
-                        </span>
-                      </span>
-                    </span>
-                     
-                  </span>
-                </span>
-                <span
+              </div>
+              <div>
+                <div
                   style={
                     Object {
-                      "color": "#777",
+                      "paddingLeft": 33,
+                      "paddingRight": 3,
                     }
                   }
                 >
-                  /&gt;
-                </span>
+                  <span
+                    style={
+                      Object {
+                        "color": "#777",
+                      }
+                    }
+                  >
+                    &lt;
+                    DivRefreshable
+                  </span>
+                  <span />
+                  <span
+                    style={
+                      Object {
+                        "color": "#777",
+                      }
+                    }
+                  >
+                    &gt;
+                  </span>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "paddingLeft": 48,
+                      "paddingRight": 3,
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#777",
+                      }
+                    }
+                  >
+                    &lt;
+                    RenderCounter
+                  </span>
+                  <span>
+                    <span>
+                       
+                      <span
+                        style={Object {}}
+                      >
+                        onRerender
+                      </span>
+                      <span>
+                        =
+                        <span
+                          style={Object {}}
+                        >
+                          <span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#170",
+                                }
+                              }
+                            >
+                              function handler(props, next) {return function (count) {
+                                    if (block) {
+                                      log('handler blocked', props, count);
+                                    } else {
+                                      next();
+                                      log('handler called', props, count);
+                                    }
+                                  };}()
+                            </span>
+                          </span>
+                        </span>
+                      </span>
+                       
+                    </span>
+                  </span>
+                  <span
+                    style={
+                      Object {
+                        "color": "#777",
+                      }
+                    }
+                  >
+                    /&gt;
+                  </span>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "paddingLeft": 33,
+                      "paddingRight": 3,
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#777",
+                      }
+                    }
+                  >
+                    &lt;/
+                    DivRefreshable
+                    &gt;
+                  </span>
+                </div>
               </div>
               <div
                 style={
@@ -590,7 +630,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
                   }
                 >
                   &lt;/
-                  DivRefreshable
+                  div
                   &gt;
                 </span>
               </div>

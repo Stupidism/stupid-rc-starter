@@ -14,23 +14,18 @@ const WithRefreshEvent = defaultProps({
   }],
 })(WithEvents);
 
-const DivRefreshable = ({ label, onRefresh, children }) => (
+const DivRefreshable = ({ onRefresh, children }) => (
   <WithRefreshEvent emit={onRefresh}>
-    <div>
-      {label}
-      {children && React.cloneElement(children)}
-    </div>
+    {children && React.cloneElement(children)}
   </WithRefreshEvent>
 );
 
 DivRefreshable.propTypes = {
   children: T.element,
-  label: T.string,
   onRefresh: T.func.isRequired,
 };
 DivRefreshable.defaultProps = {
   children: undefined,
-  label: 'Refresh',
 };
 
 const onRefresh = ({ setState }) => (/* event */) => setState();

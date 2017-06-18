@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { number } from '@storybook/addon-knobs';
+import { number, boolean } from '@storybook/addon-knobs';
 import { Story } from '@storybook/addon-info';
 
 import RenderCounter, { Counter, StatelessRenderCounter } from '../../src/RenderCounter';
 import DivRefreshable from './DivRefreshable';
-import createUnstableHandler from './createUnstableHandler';
+import createOuterHandler from './createOuterHandler';
 import './RenderCounter.story.css';
 
 const stories = storiesOf('RenderCounter', module)
@@ -26,14 +26,15 @@ stories.addWithInfo(
     Click another menu and re-enter this page to see real render times.
   `,
   () => {
-    const possibility = number('possibility', 0.5);
-    const onRerender = createUnstableHandler(possibility);
+    const blockOnRerender = boolean('blockOnRerender', false);
+    const onRerender = createOuterHandler({ name: 'onRerender', block: blockOnRerender });
     return (
-      <DivRefreshable
-        label={`Counter re-rendered in ${possibility * 100}% possibility`}
-      >
-        <RenderCounter onRerender={onRerender} />
-      </DivRefreshable>
+      <div>
+        {`blockOnRerender: ${JSON.stringify(blockOnRerender)}`}
+        <DivRefreshable>
+          <RenderCounter onRerender={onRerender} />
+        </DivRefreshable>
+      </div>
     );
   },
   { propTablesExclude: [DivRefreshable] },
