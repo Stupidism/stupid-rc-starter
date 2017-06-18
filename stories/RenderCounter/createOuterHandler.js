@@ -2,14 +2,13 @@ import { action } from '@storybook/addon-actions';
 
 const createOuterHandler = ({ name, block }) => {
   const log = action(name);
-  const handler = (props, next) => (count) => {
-    if (block) {
-      log('handler blocked', props, count);
-    } else {
-      next();
-      log('handler called', props, count);
-    }
-  };
+  let handler;
+  if (block) {
+    // eslint-disable-next-line no-unused-vars
+    handler = (props, next) => count => log('handler blocked', props, count);
+  } else {
+    handler = props => count => log('handler blocked', props, count);
+  }
 
   Object.defineProperty(handler, 'name', { value: handler.toString() });
   return handler;
