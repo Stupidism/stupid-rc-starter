@@ -86,7 +86,7 @@ The test setup is based on Jest. Code coverage report is generated to `coverage/
 * Multiple modules - **npm run build:modules**
 
 ### Publishing
-* Whole repo - **npm publish**
+* Whole repo - **npm publish:repo**
   - NOT RECOMMENDED: Pushes whole repo as a new version to npm and updates the project site.
 * Single module - **npm publish:single**
   - Runs `npm run build:single`
