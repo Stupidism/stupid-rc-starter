@@ -4,8 +4,9 @@ import { storiesOf } from '@storybook/react';
 import { number, boolean } from '@storybook/addon-knobs';
 import { Story } from '@storybook/addon-info';
 
-import RenderCounter, { Counter, StatelessRenderCounter } from '../../src/RenderCounter';
+import RenderCounter, { Counter, StatelessRenderCounter, withRenderCount } from '../../src/RenderCounter';
 import DivRefreshable from './DivRefreshable';
+import MyCounter from './MyCounter';
 import createOuterHandler from './createOuterHandler';
 import './RenderCounter.story.css';
 
@@ -47,5 +48,13 @@ addRenderCounter('RenderCounter', RenderCounter);
 addRenderCounter('StatelessRenderCounter', StatelessRenderCounter, {
   options: {
     propTables: [StatelessRenderCounter, Counter],
+  },
+});
+
+const MyRenderCounter = withRenderCount(MyCounter);
+
+addRenderCounter('withRenderCount', MyRenderCounter, {
+  options: {
+    propTables: [MyRenderCounter, MyCounter],
   },
 });
