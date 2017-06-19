@@ -23,12 +23,16 @@ export const propTypes = {
   onRerender: T.func,
 };
 
+const getOverridedDefaultProps = ({ count } = {}) => ({
+  initialCount: typeof count === 'undefined' ? 1 : count,
+});
+
 export default Component => compose(
   omitPropTypes('count'),
   extendStatics({
     displayName: 'withRenderCount',
     propTypes,
-    defaultProps: { initialCount: 1 },
+    defaultProps: getOverridedDefaultProps(Component.defaultProps),
   }),
   copyStatics(Component),
   withThis(getInitialSelf),
