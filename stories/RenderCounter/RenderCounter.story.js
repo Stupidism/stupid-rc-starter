@@ -18,32 +18,34 @@ const stories = storiesOf('RenderCounter', module)
     return element;
   });
 
-stories.addWithInfo(
-  'RenderCounter',
-  `
-    This is the basic usage inside any component.\n
-    NOTICE: You may see them render some extra times. That's a bug of storybook when you enter this page directly.
-    Click another menu and re-enter this page to see real render times.
-  `,
-  () => {
-    const blockOnRerender = boolean('blockOnRerender', false);
+const defaultDesc = `
+  NOTICE: You may see some extra times.\n
+  That's a bug of storybook happens when you enter this page directly.\n
+  You can click another menu and re-enter this route to see real render times.
+`;
+
+const defaultOptions = {
+  propTablesExclude: [DivRefreshable],
+};
+const addRenderCounter = (name, Component, { desc = defaultDesc, options } = {}) =>
+  stories.addWithInfo(name, desc, () => {
+    const blockOnRerender = boolean('blockOnRerender', true);
     const onRerender = createOuterHandler({ name: 'onRerender', block: blockOnRerender });
+    const initialCount = number('initialCount', 1);
     return (
       <div>
         {`blockOnRerender: ${JSON.stringify(blockOnRerender)}`}
         <DivRefreshable>
-          <RenderCounter onRerender={onRerender} />
+          <Component initialCount={initialCount} onRerender={onRerender} />
         </DivRefreshable>
       </div>
     );
   },
-  { propTablesExclude: [DivRefreshable] },
-);
+  { ...defaultOptions, ...options });
 
-stories.addWithInfo('Counter', () => <Counter count={number('count', 1)} />);
-
-stories.addWithInfo(
-  'StatelessRenderCounter',
-  'This is another implement of RenderCounter',
-  () => <StatelessRenderCounter initialCount={number('initialCount', 1)} />,
-);
+addRenderCounter('RenderCounter', RenderCounter);
+addRenderCounter('StatelessRenderCounter', StatelessRenderCounter, {
+  options: {
+    propTables: [StatelessRenderCounter, Counter],
+  },
+});
