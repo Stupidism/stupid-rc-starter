@@ -8,3 +8,4 @@ gh-pages/
 node_modules/
 npm-debug.log
 stats.json
+*.log
