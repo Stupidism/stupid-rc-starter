@@ -1,8 +1,97 @@
 /* eslint-env jest */
 import React from 'react';
+import _ from 'lodash';
 import { shallow } from 'enzyme';
-import embedHandler from '../embedHandler';
+import embedHandler, { createEmbeddedFunction } from '../embedHandler';
 import withPropsPeeker from '../withPropsPeeker';
+
+describe('createEmbeddedFunction(innerFunc, outerFunc, ...outerArgs) => (...innerArgs)', () => {
+  const innerResult = _.stubObject();
+  const outerResult = _.stubObject();
+  const innerArgs = _.times(2, _.stubObject);
+  const innerFunc = jest.fn(() => innerResult);
+  const outerHandler = jest.fn(() => outerResult);
+  let result;
+
+  beforeEach(() => {
+    innerFunc.mockClear();
+    outerHandler.mockClear();
+    result = null;
+  });
+
+  afterEach(() => {
+    expect(result).toBe(outerResult);
+  });
+
+  describe('when there is no outer args', () => {
+    test('with innerFunc uncontrolled', () => {
+      const outerFunc = () => outerHandler;
+      const embededFunc = createEmbeddedFunction(innerFunc, outerFunc);
+      result = embededFunc(...innerArgs);
+
+      expect(innerFunc).toHaveBeenCalledTimes(1);
+      expect(innerFunc).toHaveBeenCalledWith(...innerArgs);
+      expect(outerHandler).toHaveBeenCalledTimes(1);
+      expect(outerHandler).toHaveBeenCalledWith(...innerArgs);
+    });
+
+    test('with innerFunc controlled not to be called', () => {
+      const outerFunc = next => outerHandler; // eslint-disable-line no-unused-vars
+      const embededFunc = createEmbeddedFunction(innerFunc, outerFunc);
+      result = embededFunc(...innerArgs);
+
+      expect(innerFunc).not.toHaveBeenCalled();
+      expect(outerHandler).toHaveBeenCalledTimes(1);
+      expect(outerHandler).toHaveBeenCalledWith(...innerArgs);
+    });
+
+    test('with innerFunc controlled to be called', () => {
+      const outerFunc = next => (...args) => outerHandler(...args, next(), next());
+      const embededFunc = createEmbeddedFunction(innerFunc, outerFunc);
+      result = embededFunc(...innerArgs);
+
+      expect(innerFunc).toHaveBeenCalledTimes(2);
+      expect(innerFunc).toHaveBeenCalledWith(...innerArgs);
+      expect(outerHandler).toHaveBeenCalledTimes(1);
+      expect(outerHandler).toHaveBeenCalledWith(...innerArgs, innerResult, innerResult);
+    });
+  });
+
+  describe('with 2 outer args and innerFunc controlled', () => {
+    const outerArgs = _.times(2, _.stubObject);
+    test('with innerFunc uncontrolled', () => {
+      const outerFunc = foo => outerHandler; // eslint-disable-line no-unused-vars
+      const embededFunc = createEmbeddedFunction(innerFunc, outerFunc, ...outerArgs);
+      result = embededFunc(...innerArgs);
+
+      expect(innerFunc).toHaveBeenCalledTimes(1);
+      expect(innerFunc).toHaveBeenCalledWith(...innerArgs);
+      expect(outerHandler).toHaveBeenCalledTimes(1);
+      expect(outerHandler).toHaveBeenCalledWith(...innerArgs);
+    });
+
+    test('not to be called', () => {
+      const outerFunc = (foo, bar, next) => outerHandler; // eslint-disable-line no-unused-vars
+      const embededFunc = createEmbeddedFunction(innerFunc, outerFunc, ...outerArgs);
+      result = embededFunc(...innerArgs);
+
+      expect(innerFunc).not.toHaveBeenCalled();
+      expect(outerHandler).toHaveBeenCalledTimes(1);
+      expect(outerHandler).toHaveBeenCalledWith(...innerArgs);
+    });
+
+    test('to be called', () => {
+      const outerFunc = (foo, bar, next) => (...args) => outerHandler(next(), ...args);
+      const embededFunc = createEmbeddedFunction(innerFunc, outerFunc, ...outerArgs);
+      result = embededFunc(...innerArgs);
+
+      expect(innerFunc).toHaveBeenCalledTimes(1);
+      expect(innerFunc).toHaveBeenCalledWith(...innerArgs);
+      expect(outerHandler).toHaveBeenCalledTimes(1);
+      expect(outerHandler).toHaveBeenCalledWith(innerResult, ...innerArgs);
+    });
+  });
+});
 
 describe('embedHandler(innerName | innerHandler, outerName)', () => {
   let peekedProps;
