@@ -1,4 +1,4 @@
 import mapProps from 'recompose/mapProps';
-import omit from 'lodash.omit';
+import _ from 'lodash';
 
-export default paths => mapProps(props => omit(props, paths));
+export default paths => mapProps(props => _.omit(props, paths));
