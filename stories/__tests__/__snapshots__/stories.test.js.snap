@@ -1796,6 +1796,23 @@ exports[`Storyshots Welcome to react-render-counter 1`] = `
 </div>
 `;
 
+exports[`Storyshots Welcome to react-render-counter/hocs 1`] = `
+<div>
+  <h1
+    className={undefined}
+    data-sourcepos={undefined}
+  >
+    hhh
+  </h1>
+  <h2
+    className={undefined}
+    data-sourcepos={undefined}
+  >
+    h2
+  </h2>
+</div>
+`;
+
 exports[`Storyshots Welcome to stupid-rc-starter 1`] = `
 <div>
   <h1

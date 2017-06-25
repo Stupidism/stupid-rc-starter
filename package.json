@@ -57,9 +57,7 @@
   "module": "src",
   "jsnext:main": "src",
   "dependencies": {
-    "lodash.clonedeep": "^4.5.0",
-    "lodash.mapvalues": "^4.6.0",
-    "lodash.omit": "^4.5.0",
+    "lodash": "^4.17.4",
     "prop-types": "^15.5.10",
     "recompose": "^0.23.4"
   },
@@ -100,7 +98,6 @@
     "jest": "^20.0.0",
     "json-loader": "^0.5.4",
     "lint-staged": "^4.0.0",
-    "lodash": "^4.17.4",
     "opn-cli": "^3.1.0",
     "pre-commit": "^1.2.2",
     "purecss": "^1.0.0",

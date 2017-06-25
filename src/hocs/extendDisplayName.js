@@ -1,8 +1,4 @@
-import setDisplayName from 'recompose/setDisplayName';
-
-// utils
-import getDisplayName from 'recompose/getDisplayName';
-import wrapDisplayName from 'recompose/wrapDisplayName';
+import { setDisplayName, getDisplayName, wrapDisplayName } from 'recompose';
 
 export default nameOrOptions => (Component) => {
   const options = typeof nameOrOptions !== 'object' ? { name: nameOrOptions } : nameOrOptions;

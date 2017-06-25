@@ -1,8 +1,7 @@
-import omit from 'lodash.omit';
-import compose from 'recompose/compose';
-import setStatic from 'recompose/setStatic';
+import _ from 'lodash';
+import { compose, setStatic } from 'recompose';
 
 export default paths => Component => compose(
-  setStatic('propTypes', omit(Component.propTypes, paths)),
-  setStatic('defaultProps', omit(Component.defaultProps, paths)),
+  setStatic('propTypes', _.omit(Component.propTypes, paths)),
+  setStatic('defaultProps', _.omit(Component.defaultProps, paths)),
 )(Component);

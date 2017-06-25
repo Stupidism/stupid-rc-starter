@@ -7,6 +7,7 @@ import Markdown from './Markdown';
 
 import readme from '../README.md';
 import starter from '../starter/README.md';
+import api from '../docs/API.md';
 
 /* eslint-disable max-len */
 const styles = {
@@ -86,8 +87,9 @@ Welcome.propTypes = {
 
 storiesOf('Welcome', module)
   .add('to stupid-rc-starter', () => <Markdown source={starter} />)
-  // Set skipHtml to hide the link to starter/README.md in docs
-  .add('to react-render-counter', () => <Markdown source={readme} skipHtml />)
+  // Set skipHtml to hide the link to starter/README.md
+  .add('to react-render-counter', () => <Markdown source={readme} />)
+  .add('to react-render-counter/hocs', () => <Markdown source={api} />)
   .add('to Storybook', () => (
     <Welcome showApp={linkTo('RenderCounter')} />
   ));

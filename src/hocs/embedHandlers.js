@@ -1,5 +1,10 @@
-import mapValues from 'lodash.mapvalues';
-import withHandlers from 'recompose/withHandlers';
+import _ from 'lodash';
 import { createEmbeddedHandler } from './embedHandler';
+import withHandlers from './withHandlers';
 
-export default handlers => withHandlers(mapValues(handlers, createEmbeddedHandler));
+const createEmbeddedHandlers = handlers => _.mapValues(handlers, createEmbeddedHandler);
+
+export default (handlers) => {
+  const handlersArray = Array.isArray(handlers) ? handlers : [handlers];
+  return withHandlers(handlersArray.map(createEmbeddedHandlers));
+};
