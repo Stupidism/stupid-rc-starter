@@ -1,12 +1,7 @@
 import T from 'prop-types';
 import { compose, lifecycle, flattenProp } from 'recompose';
 
-import withThis from '../hocs/withThis';
-import copyStatics from '../hocs/copyStatics';
-import extendStatics from '../hocs/extendStatics';
-import omitPropTypes from '../hocs/omitPropTypes';
-import omitProps from '../hocs/omitProps';
-import embedHandlers from '../hocs/embedHandlers';
+import { withThis, copyStatics, extendStatics, omitPropTypes, omitProps, embedHandlers } from '../hocs';
 
 const componentWillUpdate = ({ self, onRerender }) => onRerender(self.count + 1);
 
