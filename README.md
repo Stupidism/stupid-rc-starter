@@ -1,5 +1,5 @@
 <blockquote>
-  <!-- This <blockquote> will be hidden in gh-pages, because it's no gonna work there and there's better menue -->
+  <!-- This <blockquote> will be hidden in gh-pages, because it's no gonna work there and there's a better menu -->
   <a href="https://github.com/Stupidism/stupid-rc-starter/tree/master/starter">README of starter</a> 
   <p>
     If you are here for the <strong>starter</strong> click above link</br>
@@ -29,33 +29,59 @@ npm install --save-dev react-render-counter
 ## Usage
 1. `RenderCounter` - withRenderCount(Counter)
 
-  ```js
-  import RenderCounter from 'react-render-counter';
-  
-  <AnyComponent>
-    <RenderCounter initialCount={0} />
-  </AnyComponent>
-  ```
+```js
+import RenderCounter from 'react-render-counter';
+
+<AnyComponent>
+  <RenderCounter initialCount={0} />
+</AnyComponent>
+```
 
 2. `withRenderCount` - High order component to provide data and logic
 
-  ```js
-  import { withRenderCount } from 'react-render-counter';
-  
-  const MyCounter = ({ count }) => <div>{count + 1}</div>;
-  
-  export default withRenderCount(MyCounter);
-  ```
+```js
+import { withRenderCount } from 'react-render-counter';
+
+const MyCounter = ({ count }) => <div>{count + 1}</div>;
+
+export default withRenderCount(MyCounter);
+```
   
 3. `Counter` - Pure component to render count
 
-  ```js
-  import { Counter } from 'react-render-counter';
+```js
+import { Counter } from 'react-render-counter';
+
+<div>
+  <Counter count={1} /> 
+</div>
+```
   
-  <div>
-    <Counter count={1} /> 
-  </div>
-  ```
+4. `hocs` - Some handy higher-order components.
+<blockquote>
+  <!-- This <blockquote> will be hidden in gh-pages, because it's no gonna work there and there's a better menu -->
+  <a href="https://github.com/Stupidism/stupid-rc-starter/tree/master/docs/API.md">API of hocs</a> 
+</blockquote>
+
+```js
+// MyComponent.js
+import withFoo from 'react-render-counter/hocs/withFoo';
+
+const MyComponent = () => <div />;
+
+export default withFoo(MyComponent);
+```
+```js
+// MyHoc.js
+import compose from 'recompose/compose';
+import withFoo from 'react-render-counter/hocs/withFoo';
+import withBar from 'react-render-counter/hocs/withBar';
+
+export default (fooOptions, barOptions) => compose(
+  withFoo(fooOptions),
+  withBar(barOptions),
+);
+```
 
 ## [Documentation](https://stupidism.github.io/stupid-rc-starter/)
 
