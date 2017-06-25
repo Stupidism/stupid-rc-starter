@@ -4,14 +4,17 @@ import _ from 'lodash';
 import { mount } from 'enzyme';
 import withPropsPeeker from '../withPropsPeeker';
 
-jest.mock('recompose/withHandlers', () => {
-  const recomposeWithHandlers = require.requireActual('recompose/withHandlers').default;
-  return jest.fn(recomposeWithHandlers);
+jest.mock('recompose', () => {
+  const { withHandlers, compose } = require.requireActual('recompose');
+  return {
+    compose,
+    withHandlers: jest.fn(withHandlers),
+  };
 });
 
 /* eslint-disable global-require */
 const withHandlers = require('../withHandlers').default;
-const recomposeWithHandlers = require('recompose/withHandlers');
+const originalWithHandlers = require('recompose').withHandlers;
 /* eslint-enable global-require */
 
 describe('withHandlers calls recompose/withHandlers', () => {
@@ -20,25 +23,25 @@ describe('withHandlers calls recompose/withHandlers', () => {
     bar: _.stubObject(),
   };
 
-  beforeEach(() => recomposeWithHandlers.mockClear());
+  beforeEach(() => originalWithHandlers.mockClear());
 
   it('should call withHandlers normally when handler is not array', () => {
     withHandlers(handlers);
-    expect(recomposeWithHandlers).toHaveBeenCalledTimes(1);
-    expect(recomposeWithHandlers).toHaveBeenCalledWith(handlers);
+    expect(originalWithHandlers).toHaveBeenCalledTimes(1);
+    expect(originalWithHandlers).toHaveBeenCalledWith(handlers);
   });
 
   it('should call withHandlers normally when handler is array with length 1', () => {
     withHandlers([handlers]);
-    expect(recomposeWithHandlers).toHaveBeenCalledTimes(1);
-    expect(recomposeWithHandlers).toHaveBeenCalledWith(handlers);
+    expect(originalWithHandlers).toHaveBeenCalledTimes(1);
+    expect(originalWithHandlers).toHaveBeenCalledWith(handlers);
   });
 
   it('should call withHandlers normally when handler is array with length > 1', () => {
     withHandlers([handlers.foo, handlers.bar]);
-    expect(recomposeWithHandlers).toHaveBeenCalledTimes(2);
-    expect(recomposeWithHandlers).toHaveBeenCalledWith(handlers.foo);
-    expect(recomposeWithHandlers).toHaveBeenCalledWith(handlers.bar);
+    expect(originalWithHandlers).toHaveBeenCalledTimes(2);
+    expect(originalWithHandlers).toHaveBeenCalledWith(handlers.foo);
+    expect(originalWithHandlers).toHaveBeenCalledWith(handlers.bar);
   });
 });
 

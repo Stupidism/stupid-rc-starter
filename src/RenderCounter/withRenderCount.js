@@ -1,7 +1,5 @@
 import T from 'prop-types';
-import compose from 'recompose/compose';
-import lifecycle from 'recompose/lifecycle';
-import flattenProp from 'recompose/flattenProp';
+import { compose, lifecycle, flattenProp } from 'recompose';
 
 import withThis from '../hocs/withThis';
 import copyStatics from '../hocs/copyStatics';

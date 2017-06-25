@@ -1,5 +1,4 @@
-import compose from 'recompose/compose';
-import withHandlers from 'recompose/withHandlers';
+import { compose, withHandlers } from 'recompose';
 
 export default (handlersArray) => {
   if (Array.isArray(handlersArray)) {

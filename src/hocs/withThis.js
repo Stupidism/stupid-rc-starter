@@ -1,6 +1,5 @@
 import _ from 'lodash';
-import compose from 'recompose/compose';
-import withState from 'recompose/withState';
+import { compose, withState } from 'recompose';
 import omitProps from './omitProps';
 
 const SET_THIS = 'setThis';
