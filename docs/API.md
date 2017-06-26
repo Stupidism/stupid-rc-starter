@@ -55,8 +55,8 @@ embedHandlers(
   }>
 ): HigherOrderComponent
 ```
-Plural version of [embedHandler](#embedHandler).
-Also combines [withHandlers](#withHandlers)
+Plural version of [embedHandler](#embedhandler).
+Also combines [withHandlers](#withhandlers)
 
 ### `omitProps()`
 ```js
@@ -150,7 +150,7 @@ extendPropTypes(
 
 HigherOrderComponent(BaseComponent): BaseComponent
 ```
-Combination of above three HOCs, [extendPropTypes](#extendPropTypes),[extendDisplayName](#extendDisplayName) and [extendPropTypes](#extendPropTypes)
+Combination of above three HOCs, [extendPropTypes](#extendproptypes),[extendDisplayName](#extenddisplayname) and [extendPropTypes](#extendproptypes)
 
 ### `omitPropTypes()`
 ```js
