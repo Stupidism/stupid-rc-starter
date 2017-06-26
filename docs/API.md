@@ -31,17 +31,17 @@ HigherOrderComponent(BaseComponent): NewComponent
 NewComponent(
   props: {
     [innerHandlerName]: InnerHandler: Function,
-    [outerHandlerName]: (props: Object[, next: Function]) => OuterHandler: Function,
+    [outerHandlerName]: (...args: Array [, next: Function]) => {...},
   }
 ): BaseComponent(
   props: {
-    [outerHandlerName]: FinalHandler: Function
+    [outerHandlerName]: EmbeddedHandler: Function
   }
 )
 ```
-Embed InnerHandler inside OuterHandler, which means when FinalHandler is called, 
+Embed InnerHandler inside OuterHandler, which means when EmbeddedHandler is called, 
 both OuterHandler and InnerHandler will be called.  
-In exception: when `OuterHandler.length === 2`, 
+In exception: when `OuterHandler.length > InnerHandler.length`, 
 InnerHandler won't be called until you call `next()`.
 
 ### `embedHandlers()`
@@ -169,6 +169,32 @@ HigherOrderComponent(
   })
 ```
 Omit some keys to keep propTypes and defaultProps clean.
+
+## Utils
+### `createEmbeddedFunction()`
+```js
+createEmbeddedFunction(
+  innerFunc: Function,
+  outerFunc: Function,
+): embeddedFunc
+```
+Embed innerFunc inside outerFunc, which means when embeddedFunc is called, both innerFunc and outerFunc will be called.  
+In exception: when `outerFunc.length > innerFunc.length`, innerFunc won't be called until you call `next()`.
+
+### `createEmbeddedHandler()`
+
+```js
+createEmbeddedHandler(
+  innerHandlerName: string |
+    innerHandler: (props: Object) => InnerHandler: Function,
+  outerHandlerName: string,
+): embeddedHandler
+
+```
+Embed innerHandler inside outerHandler, which means when embeddedHandler is called, 
+both outerHandler and innerHandler will be called.  
+In exception: when `outerHandler.length > innerHandler.length`, 
+innerHandler won't be called until you call `next()`.
 
 ## Test helpers
 
