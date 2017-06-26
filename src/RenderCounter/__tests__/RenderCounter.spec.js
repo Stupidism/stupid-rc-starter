@@ -29,52 +29,44 @@ const testWrapper = (RenderCounter, name = 'RenderCounter') => describe(name, ()
     expect(wrapper2.text()).toEqual('1');
   });
 
-  describe('when onRerender is not undefined', () => {
-    let onRerender;
-    let onRerenderHandler;
+  describe('when onRerender is defined', () => {
+    const onRerenderHandler = jest.fn();
 
     beforeEach(() => {
-      onRerender = jest.fn();
-      onRerenderHandler = jest.fn(() => onRerender);
+      onRerenderHandler.mockClear();
     });
 
     afterEach(() => {
       expect(onRerenderHandler).toHaveBeenCalledTimes(1);
-      expect(onRerender).toHaveBeenCalledTimes(1);
-      expect(onRerender).toHaveBeenCalledWith(2);
     });
 
-    describe('when onRenderer(props)', () => {
-      it('should call onRerender handler with props and update the text', () => {
-        const wrapper = mount(<RenderCounter onRerender={onRerenderHandler} />);
+    describe('when onRenderer(count)', () => {
+      it('should call onRerender handler with count and update the text', () => {
+        const onRerender = count => onRerenderHandler(count);
+        const wrapper = mount(<RenderCounter onRerender={onRerender} />);
         wrapper.update();
-
-        expect(onRerenderHandler).toHaveBeenCalledWith(
-          expect.objectContaining({
-            onRerender: onRerenderHandler,
-            initialCount: 1,
-          }),
-        );
+        expect(onRerenderHandler).toHaveBeenCalledWith(2);
         expect(wrapper.text()).toEqual('2');
       });
     });
 
-    describe('when onRenderer(props, next) and next is not called', () => {
-      it('should call onRerender handler with props and next, but not update the text', () => {
-        // eslint-disable-next-line no-unused-vars
-        onRerenderHandler = jest.fn((props, next) => onRerender);
-        Object.defineProperty(onRerenderHandler, 'length', { value: 2 });
+    describe('when onRenderer(count, next)', () => {
+      it('should call onRerender handler with count and update the text', () => {
+        const onRerender = (count, next) => onRerenderHandler(count, next(), next());
+        const wrapper = mount(<RenderCounter onRerender={onRerender} />);
+        wrapper.update();
+        expect(onRerenderHandler).toHaveBeenCalledWith(2, undefined, undefined);
+        expect(wrapper.text()).toEqual('2');
+      });
+    });
 
-        const wrapper = mount(<RenderCounter onRerender={onRerenderHandler} />);
+    describe('when onRenderer(count, next) and next is not called', () => {
+      it('should call onRerender handler with count and next, but not update the text', () => {
+        const onRerender = (count, next) => onRerenderHandler(count, next);
+        const wrapper = mount(<RenderCounter onRerender={onRerender} />);
         wrapper.update();
 
-        expect(onRerenderHandler).toHaveBeenCalledWith(
-          expect.objectContaining({
-            onRerender: onRerenderHandler,
-            initialCount: 1,
-          }),
-          expect.any(Function),
-        );
+        expect(onRerenderHandler).toHaveBeenCalledWith(2, expect.any(Function));
         expect(wrapper.text()).toEqual('1');
       });
     });
