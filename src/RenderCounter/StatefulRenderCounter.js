@@ -9,14 +9,16 @@ class RenderCounter extends React.Component {
   constructor(props) {
     super(props);
     this.count = props.initialCount;
+    this.onRerender = this.onRerender.bind(this);
   }
 
   componentWillReceiveProps(props) {
-    let onRerender = count => this.onRerender(count);
+    const newCount = this.count + 1;
     if (props.onRerender) {
-      onRerender = createEmbeddedFunction(onRerender, props.onRerender, props);
+      createEmbeddedFunction(this.onRerender, props.onRerender)(newCount);
+    } else {
+      this.onRerender(newCount);
     }
-    onRerender(this.count + 1);
   }
 
   onRerender(count) {
@@ -34,8 +36,7 @@ RenderCounter.propTypes = {
    */
   initialCount: T.number,
   /**
-   * (props[, next]) => (...args) => {...}
-   * get full props of inner onRerender can get \n
+   * (count[, next]) => {...}
    * if next is specified, inner onRerender will not be called until next is called
    */
   onRerender: T.func,

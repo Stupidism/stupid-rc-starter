@@ -5,16 +5,17 @@ import { shallow } from 'enzyme';
 import embedHandler, { createEmbeddedFunction } from '../embedHandler';
 import withPropsPeeker from '../withPropsPeeker';
 
-describe('createEmbeddedFunction(innerFunc, outerFunc, ...outerArgs) => (...innerArgs)', () => {
+describe('createEmbeddedFunction(innerFunc, outerFunc) => embeddedFunc', () => {
   const innerResult = _.stubObject();
   const outerResult = _.stubObject();
-  const innerArgs = _.times(2, _.stubObject);
-  const innerFunc = jest.fn(() => innerResult);
+  const args = _.times(2, _.stubObject);
+  const innerHandler = jest.fn(() => innerResult);
   const outerHandler = jest.fn(() => outerResult);
+  const innerFunc = (foo, bar) => innerHandler(foo, bar);
   let result;
 
   beforeEach(() => {
-    innerFunc.mockClear();
+    innerHandler.mockClear();
     outerHandler.mockClear();
     result = null;
   });
@@ -23,90 +24,52 @@ describe('createEmbeddedFunction(innerFunc, outerFunc, ...outerArgs) => (...inne
     expect(result).toBe(outerResult);
   });
 
-  describe('when there is no outer args', () => {
-    test('with innerFunc uncontrolled', () => {
-      const outerFunc = () => outerHandler;
-      const embededFunc = createEmbeddedFunction(innerFunc, outerFunc);
-      result = embededFunc(...innerArgs);
+  test('with innerFunc uncontrolled', () => {
+    const outerFunc = (foo, bar) => outerHandler(foo, bar);
+    const embeddedFunc = createEmbeddedFunction(innerFunc, outerFunc);
+    result = embeddedFunc(...args);
 
-      expect(innerFunc).toHaveBeenCalledTimes(1);
-      expect(innerFunc).toHaveBeenCalledWith(...innerArgs);
-      expect(outerHandler).toHaveBeenCalledTimes(1);
-      expect(outerHandler).toHaveBeenCalledWith(...innerArgs);
-    });
-
-    test('with innerFunc controlled not to be called', () => {
-      const outerFunc = next => outerHandler; // eslint-disable-line no-unused-vars
-      const embededFunc = createEmbeddedFunction(innerFunc, outerFunc);
-      result = embededFunc(...innerArgs);
-
-      expect(innerFunc).not.toHaveBeenCalled();
-      expect(outerHandler).toHaveBeenCalledTimes(1);
-      expect(outerHandler).toHaveBeenCalledWith(...innerArgs);
-    });
-
-    test('with innerFunc controlled to be called', () => {
-      const outerFunc = next => (...args) => outerHandler(...args, next(), next());
-      const embededFunc = createEmbeddedFunction(innerFunc, outerFunc);
-      result = embededFunc(...innerArgs);
-
-      expect(innerFunc).toHaveBeenCalledTimes(2);
-      expect(innerFunc).toHaveBeenCalledWith(...innerArgs);
-      expect(outerHandler).toHaveBeenCalledTimes(1);
-      expect(outerHandler).toHaveBeenCalledWith(...innerArgs, innerResult, innerResult);
-    });
+    expect(innerHandler).toHaveBeenCalledTimes(1);
+    expect(innerHandler).toHaveBeenCalledWith(...args);
+    expect(outerHandler).toHaveBeenCalledTimes(1);
+    expect(outerHandler).toHaveBeenCalledWith(...args);
   });
 
-  describe('with 2 outer args and innerFunc controlled', () => {
-    const outerArgs = _.times(2, _.stubObject);
-    test('with innerFunc uncontrolled', () => {
-      const outerFunc = foo => outerHandler; // eslint-disable-line no-unused-vars
-      const embededFunc = createEmbeddedFunction(innerFunc, outerFunc, ...outerArgs);
-      result = embededFunc(...innerArgs);
+  test('with innerFunc controlled not to be called', () => {
+    const outerFunc = (foo, bar, next) => outerHandler(foo, bar, next);
+    const embeddedFunc = createEmbeddedFunction(innerFunc, outerFunc);
+    result = embeddedFunc(...args);
 
-      expect(innerFunc).toHaveBeenCalledTimes(1);
-      expect(innerFunc).toHaveBeenCalledWith(...innerArgs);
-      expect(outerHandler).toHaveBeenCalledTimes(1);
-      expect(outerHandler).toHaveBeenCalledWith(...innerArgs);
-    });
+    expect(innerHandler).not.toHaveBeenCalled();
+    expect(outerHandler).toHaveBeenCalledTimes(1);
+    expect(outerHandler).toHaveBeenCalledWith(...args, expect.any(Function));
+  });
 
-    test('not to be called', () => {
-      const outerFunc = (foo, bar, next) => outerHandler; // eslint-disable-line no-unused-vars
-      const embededFunc = createEmbeddedFunction(innerFunc, outerFunc, ...outerArgs);
-      result = embededFunc(...innerArgs);
+  test('with innerFunc controlled to be called', () => {
+    const outerFunc = (foo, bar, next) => outerHandler(foo, bar, next(), next());
+    const embeddedFunc = createEmbeddedFunction(innerFunc, outerFunc);
+    result = embeddedFunc(...args);
 
-      expect(innerFunc).not.toHaveBeenCalled();
-      expect(outerHandler).toHaveBeenCalledTimes(1);
-      expect(outerHandler).toHaveBeenCalledWith(...innerArgs);
-    });
-
-    test('to be called', () => {
-      const outerFunc = (foo, bar, next) => (...args) => outerHandler(next(), ...args);
-      const embededFunc = createEmbeddedFunction(innerFunc, outerFunc, ...outerArgs);
-      result = embededFunc(...innerArgs);
-
-      expect(innerFunc).toHaveBeenCalledTimes(1);
-      expect(innerFunc).toHaveBeenCalledWith(...innerArgs);
-      expect(outerHandler).toHaveBeenCalledTimes(1);
-      expect(outerHandler).toHaveBeenCalledWith(innerResult, ...innerArgs);
-    });
+    expect(innerHandler).toHaveBeenCalledTimes(2);
+    expect(innerHandler).toHaveBeenCalledWith(...args);
+    expect(outerHandler).toHaveBeenCalledTimes(1);
+    expect(outerHandler).toHaveBeenCalledWith(...args, innerResult, innerResult);
   });
 });
 
 describe('embedHandler(innerName | innerHandler, outerName)', () => {
   let peekedProps;
   let BaseComponent;
-  let onClick;
-  let innerOnClick;
+  const onClick = jest.fn();
+  const innerOnClick = jest.fn();
   const outerName = 'onClick';
-  let outerHandler = props => onClick; // eslint-disable-line no-unused-vars
-  const innerHandler = props => innerOnClick; // eslint-disable-line no-unused-vars
-  const argsForOnClick = [1, 2];
+  const innerHandler = () => (foo, bar) => innerOnClick(foo, bar);
+  const argsForOnClick = _.times(2, _.stubObject);
   beforeEach(() => {
     peekedProps = {};
     BaseComponent = withPropsPeeker(peekedProps)(() => <div />);
-    onClick = jest.fn();
-    innerOnClick = jest.fn();
+    onClick.mockClear();
+    innerOnClick.mockClear();
   });
 
   afterEach(() => {
@@ -124,18 +87,18 @@ describe('embedHandler(innerName | innerHandler, outerName)', () => {
 
     test('embedHandler(innerHandler, outerName)(Component)({ outerHandler })', () => {
       const NewComponent = embedHandler(innerHandler, outerName)(BaseComponent);
-      shallow(<NewComponent onClick={outerHandler} />);
+      shallow(<NewComponent onClick={onClick} />);
     });
 
     test('embedHandler(innerName, outerName)(Component)({ outerHandler, innerHandler })', () => {
       const NewComponent = embedHandler('innerOnClick', outerName)(BaseComponent);
-      shallow(<NewComponent innerOnClick={innerOnClick} onClick={outerHandler} />);
+      shallow(<NewComponent innerOnClick={innerOnClick} onClick={onClick} />);
     });
 
     test('embedHandler(innerHandler, outerName)(Component)({ outerHandler(props, next) })', () => {
-      outerHandler = (props, next) => (...args) => {
-        onClick(...args);
-        next(...args);
+      const outerHandler = (foo, bar, next) => {
+        onClick(foo, bar);
+        next();
       };
       const NewComponent = embedHandler(innerHandler, 'onClick')(BaseComponent);
       shallow(<NewComponent onClick={outerHandler} />);
@@ -155,12 +118,12 @@ describe('embedHandler(innerName | innerHandler, outerName)', () => {
 
   describe('only outerHandler got called', () => {
     test('embedHandler(innerHandler, outerName)(Component)({ outerHandler(props, next) })', () => {
-      outerHandler = (props, next) => onClick; // eslint-disable-line no-unused-vars
+      const outerHandler = (foo, bar, next) => onClick(foo, bar, next);
       const NewComponent = embedHandler(innerHandler, 'onClick')(BaseComponent);
       shallow(<NewComponent onClick={outerHandler} />);
       peekedProps.onClick(...argsForOnClick);
       expect(onClick).toHaveBeenCalledTimes(1);
-      expect(onClick).toHaveBeenCalledWith(...argsForOnClick);
+      expect(onClick).toHaveBeenCalledWith(...argsForOnClick, expect.any(Function));
       expect(innerOnClick).toHaveBeenCalledTimes(0);
     });
   });

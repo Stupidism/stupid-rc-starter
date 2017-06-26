@@ -1,15 +1,14 @@
 import withHandlers from 'recompose/withHandlers';
 
-export const createEmbeddedFunction = (innerFunc, outerFunc, ...outerArgs) => (...innerArgs) => {
-  const next = () => innerFunc(...innerArgs);
-  let handler;
-  if (outerFunc.length > outerArgs.length) {
-    handler = outerFunc(...outerArgs, next);
-  } else {
-    next();
-    handler = outerFunc(...outerArgs);
+export const createEmbeddedFunction = (innerFunc, outerFunc) => (...innerArgs) => {
+  if (outerFunc.length <= innerFunc.length) {
+    innerFunc(...innerArgs);
+    return outerFunc(...innerArgs);
   }
-  return handler(...innerArgs);
+  const next = () => innerFunc(...innerArgs);
+  const outerArgs = [...innerArgs];
+  outerArgs.length = innerFunc.length;
+  return outerFunc(...outerArgs, next);
 };
 
 export const createEmbeddedHandler = (innerName, outerName) => (props) => {
