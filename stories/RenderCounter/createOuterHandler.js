@@ -5,9 +5,9 @@ const createOuterHandler = ({ name, block }) => {
   let handler;
   if (block) {
     // eslint-disable-next-line no-unused-vars
-    handler = (props, next) => count => log('handler blocked', props, count);
+    handler = (count, next) => log('handler blocked', count);
   } else {
-    handler = props => count => log('handler called', props, count);
+    handler = count => log('handler called', count);
   }
 
   Object.defineProperty(handler, 'name', { value: handler.toString() });
