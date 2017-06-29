@@ -2,32 +2,26 @@
 import React from 'react';
 import T from 'prop-types';
 import { mount } from 'enzyme';
-import renderer from 'react-test-renderer';
-import enzymeToJson from 'enzyme-to-json';
 
 import withRenderCount from '../withRenderCount';
+import snapshotHocProps from '../../utils/testHelpers/snapshotHocProps';
 
 describe('withRenderCount(BaseComponent): NewComponent', () => {
   describe('modifies props', () => {
-    let BaseComponent;
-    let NewComponent;
-
-    beforeEach(() => {
-      BaseComponent = props => <div data-props={props} />;
-
-      NewComponent = withRenderCount(BaseComponent);
-    });
-
     it('should transfer initialCount as initial value of prop count', () => {
-      const instance = renderer.create(<NewComponent initialCount={2} />);
-      expect(instance).toMatchSnapshot();
+      snapshotHocProps(withRenderCount, { initialCount: 2 });
     });
 
     it('should +1 count prop after component update', () => {
+      const BaseComponent = props => <div>{props.count}</div>;
+      BaseComponent.propTypes = {
+        count: T.number.isRequired,
+      };
+      const NewComponent = withRenderCount(BaseComponent);
       const wrapper = mount(<NewComponent />);
-      expect(enzymeToJson(wrapper)).toMatchSnapshot();
+      expect(wrapper.text()).toBe('1');
       wrapper.update();
-      expect(enzymeToJson(wrapper)).toMatchSnapshot();
+      expect(wrapper.text()).toBe('2');
     });
   });
 
@@ -35,7 +29,7 @@ describe('withRenderCount(BaseComponent): NewComponent', () => {
     const BaseComponent = () => <div />;
     BaseComponent.propTypes = {
       count: T.number,
-      foo: T.string,
+      foo: T.string.isRequired,
     };
     BaseComponent.defaultProps = { count: 1 };
 

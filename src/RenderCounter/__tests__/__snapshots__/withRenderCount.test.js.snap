@@ -14,78 +14,15 @@ Object {
 }
 `;
 
-exports[`withRenderCount(BaseComponent): NewComponent modifies props should +1 count prop after component update 1`] = `
-<withRenderCount(BaseComponent)
-  initialCount={1}
->
-  <withHandlers(lifecycle(flattenProp(mapProps(BaseComponent))))
-    initialCount={1}
-    self={
-      Object {
-        "count": 1,
-      }
-    }
-  >
-    <lifecycle(flattenProp(mapProps(BaseComponent)))
-      initialCount={1}
-      onRerender={[Function]}
-      self={
-        Object {
-          "count": 1,
-        }
-      }
-    >
-      <div
-        data-props={
-          Object {
-            "count": 1,
-          }
-        }
-      />
-    </lifecycle(flattenProp(mapProps(BaseComponent)))>
-  </withHandlers(lifecycle(flattenProp(mapProps(BaseComponent))))>
-</withRenderCount(BaseComponent)>
-`;
-
-exports[`withRenderCount(BaseComponent): NewComponent modifies props should +1 count prop after component update 2`] = `
-<withRenderCount(BaseComponent)
-  initialCount={1}
->
-  <withHandlers(lifecycle(flattenProp(mapProps(BaseComponent))))
-    initialCount={1}
-    self={
-      Object {
-        "count": 2,
-      }
-    }
-  >
-    <lifecycle(flattenProp(mapProps(BaseComponent)))
-      initialCount={1}
-      onRerender={[Function]}
-      self={
-        Object {
-          "count": 2,
-        }
-      }
-    >
-      <div
-        data-props={
-          Object {
-            "count": 2,
-          }
-        }
-      />
-    </lifecycle(flattenProp(mapProps(BaseComponent)))>
-  </withHandlers(lifecycle(flattenProp(mapProps(BaseComponent))))>
-</withRenderCount(BaseComponent)>
-`;
-
 exports[`withRenderCount(BaseComponent): NewComponent modifies props should transfer initialCount as initial value of prop count 1`] = `
 <div
-  data-props={
-    Object {
-      "count": 2,
-    }
-  }
-/>
+  name="props-displayer"
+>
+  <input-props
+    initialCount={2}
+  />
+  <output-props
+    count={2}
+  />
+</div>
 `;
