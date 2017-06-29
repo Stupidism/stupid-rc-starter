@@ -94,9 +94,9 @@ describe('embedHandler(innerName | innerHandler, outerName)', () => {
     });
 
     test('embedHandler(innerName, outerName)(Component)({ outerHandler, innerHandler })', () => {
-      innerName = 'innerOnClick';
+      outerName = 'outerOnClick';
       const NewComponent = embedHandler(innerName, outerName)(BaseComponent);
-      shallow(<NewComponent innerOnClick={innerOnClick} onClick={outerOnClick} />);
+      shallow(<NewComponent onClick={innerOnClick} outerOnClick={outerOnClick} />);
     });
 
     test('embedHandler(innerHandler, outerName)(Component)({ outerHandler(props, next) })', () => {
@@ -141,7 +141,7 @@ describe('embedHandler(innerName | innerHandler, outerName)', () => {
     });
 
     test('embedHandler(innerName, outerName)(Component)({ outerHandler, innerHandler:undefined })', () => {
-      innerName = 'innerOnClick';
+      outerName = 'outerOnClick';
       const NewComponent = embedHandler(innerName, outerName)(BaseComponent);
       shallow(<NewComponent />);
       expect(peekedProps.onClick).toThrow('innerName must be a handler or the name of it');
