@@ -60,15 +60,18 @@ describe('createEmbeddedFunction(innerFunc, outerFunc) => embeddedFunc', () => {
 describe('embedHandler(innerName | innerHandler, outerName)', () => {
   let peekedProps;
   let BaseComponent;
-  const onClick = jest.fn();
+  let innerName;
+  let outerName;
+  const outerOnClick = jest.fn();
   const innerOnClick = jest.fn();
-  const outerName = 'onClick';
   const innerHandler = () => (foo, bar) => innerOnClick(foo, bar);
   const argsForOnClick = _.times(2, _.stubObject);
   beforeEach(() => {
+    innerName = 'onClick';
+    outerName = innerName;
     peekedProps = {};
     BaseComponent = withPropsPeeker(peekedProps)(() => <div />);
-    onClick.mockClear();
+    outerOnClick.mockClear();
     innerOnClick.mockClear();
   });
 
@@ -79,38 +82,39 @@ describe('embedHandler(innerName | innerHandler, outerName)', () => {
   describe('both handlers got called', () => {
     afterEach(() => {
       peekedProps.onClick(...argsForOnClick);
-      expect(onClick).toHaveBeenCalledTimes(1);
-      expect(onClick).toHaveBeenCalledWith(...argsForOnClick);
+      expect(outerOnClick).toHaveBeenCalledTimes(1);
+      expect(outerOnClick).toHaveBeenCalledWith(...argsForOnClick);
       expect(innerOnClick).toHaveBeenCalledTimes(1);
       expect(innerOnClick).toHaveBeenCalledWith(...argsForOnClick);
     });
 
     test('embedHandler(innerHandler, outerName)(Component)({ outerHandler })', () => {
       const NewComponent = embedHandler(innerHandler, outerName)(BaseComponent);
-      shallow(<NewComponent onClick={onClick} />);
+      shallow(<NewComponent onClick={outerOnClick} />);
     });
 
     test('embedHandler(innerName, outerName)(Component)({ outerHandler, innerHandler })', () => {
-      const NewComponent = embedHandler('innerOnClick', outerName)(BaseComponent);
-      shallow(<NewComponent innerOnClick={innerOnClick} onClick={onClick} />);
+      innerName = 'innerOnClick';
+      const NewComponent = embedHandler(innerName, outerName)(BaseComponent);
+      shallow(<NewComponent innerOnClick={innerOnClick} onClick={outerOnClick} />);
     });
 
     test('embedHandler(innerHandler, outerName)(Component)({ outerHandler(props, next) })', () => {
       const outerHandler = (foo, bar, next) => {
-        onClick(foo, bar);
+        outerOnClick(foo, bar);
         next();
       };
-      const NewComponent = embedHandler(innerHandler, 'onClick')(BaseComponent);
+      const NewComponent = embedHandler(innerHandler, outerName)(BaseComponent);
       shallow(<NewComponent onClick={outerHandler} />);
     });
   });
 
   describe('only innerHandler got called', () => {
     test('embedHandler(innerHandler, outerName)(Component)({ outerHandler: undefined })', () => {
-      const NewComponent = embedHandler(innerHandler, outerName)(BaseComponent);
+      const NewComponent = embedHandler(innerHandler, innerName)(BaseComponent);
       shallow(<NewComponent />);
       peekedProps.onClick(...argsForOnClick);
-      expect(onClick).toHaveBeenCalledTimes(0);
+      expect(outerOnClick).toHaveBeenCalledTimes(0);
       expect(innerOnClick).toHaveBeenCalledTimes(1);
       expect(innerOnClick).toHaveBeenCalledWith(...argsForOnClick);
     });
@@ -118,25 +122,27 @@ describe('embedHandler(innerName | innerHandler, outerName)', () => {
 
   describe('only outerHandler got called', () => {
     test('embedHandler(innerHandler, outerName)(Component)({ outerHandler(props, next) })', () => {
-      const outerHandler = (foo, bar, next) => onClick(foo, bar, next);
-      const NewComponent = embedHandler(innerHandler, 'onClick')(BaseComponent);
+      const outerHandler = (foo, bar, next) => outerOnClick(foo, bar, next);
+      const NewComponent = embedHandler(innerHandler, outerName)(BaseComponent);
       shallow(<NewComponent onClick={outerHandler} />);
       peekedProps.onClick(...argsForOnClick);
-      expect(onClick).toHaveBeenCalledTimes(1);
-      expect(onClick).toHaveBeenCalledWith(...argsForOnClick, expect.any(Function));
+      expect(outerOnClick).toHaveBeenCalledTimes(1);
+      expect(outerOnClick).toHaveBeenCalledWith(...argsForOnClick, expect.any(Function));
       expect(innerOnClick).toHaveBeenCalledTimes(0);
     });
   });
 
   describe('error happens', () => {
     test('embedHandler(innerHandler:undefined, outerName)', () => {
-      const NewComponent = embedHandler(undefined, outerName)(BaseComponent);
+      innerName = undefined;
+      const NewComponent = embedHandler(innerName, outerName)(BaseComponent);
       shallow(<NewComponent />);
       expect(peekedProps.onClick).toThrow('innerName must be a handler or the name of it');
     });
 
     test('embedHandler(innerName, outerName)(Component)({ outerHandler, innerHandler:undefined })', () => {
-      const NewComponent = embedHandler('innerOnClick', outerName)(BaseComponent);
+      innerName = 'innerOnClick';
+      const NewComponent = embedHandler(innerName, outerName)(BaseComponent);
       shallow(<NewComponent />);
       expect(peekedProps.onClick).toThrow('innerName must be a handler or the name of it');
     });
