@@ -1,40 +1,46 @@
 /* eslint-env jest */
-import _ from 'lodash';
-import { createEmbeddedHandler } from '../embedHandler';
 
 describe('embedHandlers(handlers):HOC', () => {
-  jest.mock('lodash', () => ({
-    mapValues: jest.fn(),
-  }));
   jest.mock('../withHandlers', () => jest.fn());
+  jest.mock('../embedHandler', () => ({
+    createEmbeddedHandler: jest.fn(),
+  }));
 
   /* eslint-disable global-require */
-  const mapValues = require('lodash').mapValues;
   const withHandlers = require('../withHandlers');
-
   const embedHandlers = require('../embedHandlers').default;
+  const createEmbeddedHandler = require('../embedHandler').createEmbeddedHandler;
   /* eslint-enable global-require */
 
   beforeEach(() => {
-    mapValues.mockClear();
     withHandlers.mockClear();
+    createEmbeddedHandler.mockClear();
   });
 
   test('embedHandlers(Object<handler>)', () => {
-    const handlers = _.stubObject();
+    const innerBar = jest.fn();
+    const handlers = {
+      outerFoo: 'innerFoo',
+      outerBar: innerBar, // [outerBar = 'innerBar']: innerBar
+    };
     embedHandlers(handlers);
-    expect(mapValues).toHaveBeenCalledTimes(1);
-    expect(mapValues).toHaveBeenCalledWith(handlers, createEmbeddedHandler);
     expect(withHandlers).toHaveBeenCalledTimes(1);
+    expect(createEmbeddedHandler).toHaveBeenCalledTimes(2);
+    expect(createEmbeddedHandler).toHaveBeenCalledWith('innerFoo', 'outerFoo');
+    expect(createEmbeddedHandler).toHaveBeenCalledWith(innerBar, 'outerBar');
   });
 
   it('embedHandlers(Array<Object<handler>>)', () => {
-    const handlers = [_.stubObject(), _.stubObject()];
+    const handlers = [{
+      outerFoo: 'innerFoo',
+    }, {
+      outerBar: 'innerBar',
+    }];
     embedHandlers(handlers);
-    expect(mapValues).toHaveBeenCalledTimes(2);
-    expect(mapValues).toHaveBeenCalledWith(handlers[0], createEmbeddedHandler);
-    expect(mapValues).toHaveBeenCalledWith(handlers[1], createEmbeddedHandler);
     expect(withHandlers).toHaveBeenCalledTimes(1);
+    expect(createEmbeddedHandler).toHaveBeenCalledTimes(2);
+    expect(createEmbeddedHandler).toHaveBeenCalledWith('innerFoo', 'outerFoo');
+    expect(createEmbeddedHandler).toHaveBeenCalledWith('innerBar', 'outerBar');
   });
 });
 
