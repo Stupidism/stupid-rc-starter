@@ -29,8 +29,11 @@ export const createEmbeddedHandler = (innerName, outerName) => (props) => {
   return createEmbeddedFunction(innerHandler, outerHandler, props);
 };
 
+export const createEmbeddedName = (innerName, outerName) =>
+  (typeof innerName === 'string' ? innerName : outerName);
+
 export default (innerName, outerName) => {
-  const name = typeof innerName === 'string' ? innerName : outerName;
+  const name = createEmbeddedName(innerName, outerName);
   const handler = createEmbeddedHandler(innerName, outerName);
 
   return withHandlers({ [name]: handler });
