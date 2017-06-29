@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withStates(initialKeysOrState, options): PropsMapperHoc output props have some meta handlers with options.names to rename them 1`] = `
+<div
+  name="props-displayer"
+>
+  <input-props />
+  <output-props
+    bar={2}
+    dispatch={[Function]}
+    finalState={
+      Object {
+        "bar": 2,
+        "foo": 1,
+      }
+    }
+    foo={1}
+    merge={[Function]}
+    reset={[Function]}
+    setBar={[Function]}
+    setFoo={[Function]}
+  />
+</div>
+`;
+
+exports[`withStates(initialKeysOrState, options): PropsMapperHoc output props have some meta handlers with options.omit to hide them 1`] = `
+<div
+  name="props-displayer"
+>
+  <input-props />
+  <output-props
+    bar={2}
+    foo={1}
+    setBar={[Function]}
+    setFoo={[Function]}
+  />
+</div>
+`;
+
+exports[`withStates(initialKeysOrState, options): PropsMapperHoc output props have some meta handlers with options.omit to show them 1`] = `
+<div
+  name="props-displayer"
+>
+  <input-props />
+  <output-props
+    bar={2}
+    dispatchState={[Function]}
+    foo={1}
+    resetState={[Function]}
+    setBar={[Function]}
+    setFoo={[Function]}
+    setState={[Function]}
+    state={
+      Object {
+        "bar": 2,
+        "foo": 1,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`withStates(initialKeysOrState, options): PropsMapperHoc when initialKeysOrState is a function to create initialState with options.stateKeys 1`] = `
+<div
+  name="props-displayer"
+>
+  <input-props />
+  <output-props
+    bar={2}
+    foo={1}
+    resetState={[Function]}
+    setBar={[Function]}
+    setFoo={[Function]}
+    setState={[Function]}
+  />
+</div>
+`;
+
+exports[`withStates(initialKeysOrState, options): PropsMapperHoc when initialKeysOrState is an array of keys of initialState with default options 1`] = `
+<div
+  name="props-displayer"
+>
+  <input-props />
+  <output-props
+    resetState={[Function]}
+    setBar={[Function]}
+    setFoo={[Function]}
+    setState={[Function]}
+  />
+</div>
+`;
+
+exports[`withStates(initialKeysOrState, options): PropsMapperHoc when initialKeysOrState is an object as initialState with default options 1`] = `
+<div
+  name="props-displayer"
+>
+  <input-props />
+  <output-props
+    bar={2}
+    foo={1}
+    resetState={[Function]}
+    setBar={[Function]}
+    setFoo={[Function]}
+    setState={[Function]}
+  />
+</div>
+`;
+
+exports[`withStates(initialKeysOrState, options): PropsMapperHoc when initialKeysOrState is an object as initialState with options.stateKeys 1`] = `
+<div
+  name="props-displayer"
+>
+  <input-props />
+  <output-props
+    bar={2}
+    foo={1}
+    resetState={[Function]}
+    setBar={[Function]}
+    setBaz={[Function]}
+    setFoo={[Function]}
+    setState={[Function]}
+  />
+</div>
+`;
+
+exports[`withStates(initialKeysOrState, options): PropsMapperHoc when initialKeysOrState is an object as initialState with options.stateKeys 2`] = `
+<div
+  name="props-displayer"
+>
+  <input-props />
+  <output-props
+    bar={2}
+    foo={1}
+    resetState={[Function]}
+    setFoo={[Function]}
+    setState={[Function]}
+  />
+</div>
+`;
