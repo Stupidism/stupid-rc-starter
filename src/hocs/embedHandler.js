@@ -1,13 +1,14 @@
 import withHandlers from 'recompose/withHandlers';
 
 export const createEmbeddedFunction = (innerFunc, outerFunc) => (...innerArgs) => {
-  if (outerFunc.length <= innerFunc.length) {
+  const deducedMaxLength = Math.max(innerFunc.length, innerArgs.length);
+  if (outerFunc.length <= deducedMaxLength) {
     innerFunc(...innerArgs);
     return outerFunc(...innerArgs);
   }
   const next = () => innerFunc(...innerArgs);
   const outerArgs = [...innerArgs];
-  outerArgs.length = innerFunc.length;
+  outerArgs.length = deducedMaxLength;
   return outerFunc(...outerArgs, next);
 };
 
