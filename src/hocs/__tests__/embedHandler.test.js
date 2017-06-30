@@ -8,10 +8,8 @@ import withPropsPeeker from '../withPropsPeeker';
 describe('createEmbeddedFunction(innerFunc, outerFunc) => embeddedFunc', () => {
   const innerResult = _.stubObject();
   const outerResult = _.stubObject();
-  const args = _.times(2, _.stubObject);
   const innerHandler = jest.fn(() => innerResult);
   const outerHandler = jest.fn(() => outerResult);
-  const innerFunc = (foo, bar) => innerHandler(foo, bar);
   let result;
 
   beforeEach(() => {
@@ -24,36 +22,45 @@ describe('createEmbeddedFunction(innerFunc, outerFunc) => embeddedFunc', () => {
     expect(result).toBe(outerResult);
   });
 
-  test('with innerFunc uncontrolled', () => {
-    const outerFunc = (foo, bar) => outerHandler(foo, bar);
-    const embeddedFunc = createEmbeddedFunction(innerFunc, outerFunc);
-    result = embeddedFunc(...args);
+  describe('with innerFunc uncontrolled', () => {
+    test('outerFunc.length <= innerFunc.length', () => {
+      const outerFunc = (foo, bar) => outerHandler(foo, bar);
+      const innerFunc = (foo, bar) => innerHandler(foo, bar);
+      const args = _.times(2, _.stubObject);
 
-    expect(innerHandler).toHaveBeenCalledTimes(1);
-    expect(innerHandler).toHaveBeenCalledWith(...args);
-    expect(outerHandler).toHaveBeenCalledTimes(1);
-    expect(outerHandler).toHaveBeenCalledWith(...args);
+      const embeddedFunc = createEmbeddedFunction(innerFunc, outerFunc);
+      result = embeddedFunc(...args);
+      expect(innerHandler).toHaveBeenCalledTimes(1);
+      expect(outerHandler).toHaveBeenCalledTimes(1);
+      expect(innerHandler).toHaveBeenCalledWith(...args);
+      expect(outerHandler).toHaveBeenCalledWith(...args);
+    });
   });
 
-  test('with innerFunc controlled not to be called', () => {
-    const outerFunc = (foo, bar, next) => outerHandler(foo, bar, next);
-    const embeddedFunc = createEmbeddedFunction(innerFunc, outerFunc);
-    result = embeddedFunc(...args);
+  describe('with innerFunc controlled', () => {
+    const innerFunc = (foo, bar) => innerHandler(foo, bar);
+    const args = _.times(2, _.stubObject);
 
-    expect(innerHandler).not.toHaveBeenCalled();
-    expect(outerHandler).toHaveBeenCalledTimes(1);
-    expect(outerHandler).toHaveBeenCalledWith(...args, expect.any(Function));
-  });
+    test('skip next inside outerFunc', () => {
+      const outerFunc = (foo, bar, next) => outerHandler(foo, bar, next);
+      const embeddedFunc = createEmbeddedFunction(innerFunc, outerFunc);
+      result = embeddedFunc(...args);
 
-  test('with innerFunc controlled to be called', () => {
-    const outerFunc = (foo, bar, next) => outerHandler(foo, bar, next(), next());
-    const embeddedFunc = createEmbeddedFunction(innerFunc, outerFunc);
-    result = embeddedFunc(...args);
+      expect(innerHandler).not.toHaveBeenCalled();
+      expect(outerHandler).toHaveBeenCalledTimes(1);
+      expect(outerHandler).toHaveBeenCalledWith(...args, expect.any(Function));
+    });
 
-    expect(innerHandler).toHaveBeenCalledTimes(2);
-    expect(innerHandler).toHaveBeenCalledWith(...args);
-    expect(outerHandler).toHaveBeenCalledTimes(1);
-    expect(outerHandler).toHaveBeenCalledWith(...args, innerResult, innerResult);
+    test('call next inside outerFunc', () => {
+      const outerFunc = (foo, bar, next) => outerHandler(foo, bar, next(), next());
+      const embeddedFunc = createEmbeddedFunction(innerFunc, outerFunc);
+      result = embeddedFunc(...args);
+
+      expect(innerHandler).toHaveBeenCalledTimes(2);
+      expect(innerHandler).toHaveBeenCalledWith(...args);
+      expect(outerHandler).toHaveBeenCalledTimes(1);
+      expect(outerHandler).toHaveBeenCalledWith(...args, innerResult, innerResult);
+    });
   });
 });
 
