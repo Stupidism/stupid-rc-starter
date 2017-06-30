@@ -9,6 +9,7 @@ import omitProps from './omitProps';
 import omitPropTypes from './omitPropTypes';
 import withHandlers from './withHandlers';
 import withPropsPeeker from './withPropsPeeker';
+import withStates from './withStates';
 import withThis from './withThis';
 
 export {
@@ -25,5 +26,6 @@ export {
   omitPropTypes,
   withHandlers,
   withPropsPeeker,
+  withStates,
   withThis,
 };
