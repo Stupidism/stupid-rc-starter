@@ -110,7 +110,7 @@
     "rimraf": "^2.6.1",
     "style-loader": "^0.18.1",
     "stylefmt": "^6.0.0",
-    "stylelint": "^7.10.1",
+    "stylelint": "^8.0.0",
     "stylelint-config-standard": "^17.0.0",
     "sync-exec": "^0.6.2",
     "system-bell-webpack-plugin": "^1.0.0",
