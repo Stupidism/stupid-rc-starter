@@ -95,7 +95,7 @@
     "fs-extra": "^4.0.0",
     "gh-pages": "^1.0.0",
     "git-prepush-hook": "^1.0.2",
-    "jest": "^20.0.0",
+    "jest": "^21.0.1",
     "json-loader": "^0.5.4",
     "lint-staged": "^4.0.0",
     "opn-cli": "^3.1.0",
