@@ -1,7 +1,6 @@
 /* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
-import withPropsPeeker from '../withPropsPeeker';
 import snapshotHocProps from '../../utils/testHelpers/snapshotHocProps';
 import withStates, { MERGE_STATE, RESET_STATE } from '../withStates';
 
@@ -75,27 +74,27 @@ describe('withStates(initialKeysOrState, options): PropsMapperHoc', () => {
 
     describe('meta handlers can change states', () => {
       const newState = { foo: 3 };
-      let props;
+      let getProps;
 
       beforeEach(() => {
-        props = {};
-        const BaseComponent = withPropsPeeker(props)(() => <div />);
+        const BaseComponent = jest.fn(() => null);
         const NewComponent = withStates(initialState, { omit: showAll })(BaseComponent);
         mount(<NewComponent />);
+        getProps = () => BaseComponent.mock.calls[BaseComponent.mock.calls.length - 1][0];
       });
 
       test('dispatchState(action: { type, payload })', () => {
-        expect(props.dispatchState).not.toBeUndefined();
+        expect(getProps().dispatchState).not.toBeUndefined();
 
-        let [curState, lastState] = [props.state, undefined];
+        let [curState, lastState] = [getProps().state, undefined];
         expect(curState).toBe(initialState);
         expect(curState).not.toBe(lastState);
 
-        props.dispatchState({
+        getProps().dispatchState({
           type: MERGE_STATE,
           payload: newState,
         });
-        [curState, lastState] = [props.state, curState];
+        [curState, lastState] = [getProps().state, curState];
         expect(curState).not.toBe(initialState);
         expect(curState).not.toBe(lastState);
         expect(curState).toEqual({
@@ -103,45 +102,45 @@ describe('withStates(initialKeysOrState, options): PropsMapperHoc', () => {
           bar: 2,
         });
 
-        props.dispatchState(undefined);
-        [curState, lastState] = [props.state, curState];
+        getProps().dispatchState(undefined);
+        [curState, lastState] = [getProps().state, curState];
         expect(curState).toBe(lastState);
 
-        props.dispatchState({
+        getProps().dispatchState({
           type: RESET_STATE,
           payload: newState,
         });
-        [curState, lastState] = [props.state, curState];
+        [curState, lastState] = [getProps().state, curState];
         expect(curState).not.toBe(lastState);
         expect(curState).toEqual(newState);
       });
 
       test('resetState(newState)', () => {
-        expect(props.resetState).not.toBeUndefined();
+        expect(getProps().resetState).not.toBeUndefined();
 
-        expect(props.state).toEqual(initialState);
-        props.resetState(newState);
-        expect(props.state).toEqual(newState);
-        props.resetState();
-        expect(props.state).toEqual(initialState);
-        props.resetState(() => newState);
-        expect(props.state).toEqual(newState);
+        expect(getProps().state).toEqual(initialState);
+        getProps().resetState(newState);
+        expect(getProps().state).toEqual(newState);
+        getProps().resetState();
+        expect(getProps().state).toEqual(initialState);
+        getProps().resetState(() => newState);
+        expect(getProps().state).toEqual(newState);
       });
 
       test('setState(newState)', () => {
-        expect(props.setState).not.toBeUndefined();
+        expect(getProps().setState).not.toBeUndefined();
 
-        expect(props.state).toEqual(initialState);
-        props.setState(newState);
-        expect(props.state).toEqual({ foo: 3, bar: 2 });
+        expect(getProps().state).toEqual(initialState);
+        getProps().setState(newState);
+        expect(getProps().state).toEqual({ foo: 3, bar: 2 });
       });
 
       test('[setStateKey](newStateValue)', () => {
-        expect(props.setFoo).not.toBeUndefined();
+        expect(getProps().setFoo).not.toBeUndefined();
 
-        expect(props.foo).toBe(1);
-        props.setFoo(newState.foo);
-        expect(props.foo).toBe(newState.foo);
+        expect(getProps().foo).toBe(1);
+        getProps().setFoo(newState.foo);
+        expect(getProps().foo).toBe(newState.foo);
       });
     });
   });

@@ -1,13 +1,11 @@
 /* eslint-env jest */
 import React from 'react';
+import { mount } from 'enzyme';
 import omitProps from '../omitProps';
-import withPropsPeeker from '../withPropsPeeker';
 
 test('omitProps removes the some props of the new component', () => {
-  const props = {};
-  const BaseComponent = withPropsPeeker(props)(() => <div />);
+  const BaseComponent = jest.fn(() => null);
   const NewComponent = omitProps(['foo'])(BaseComponent);
-
-  NewComponent({ foo: 1, bar: 1 });
-  expect(props).toEqual({ bar: 1 });
+  mount(<NewComponent foo={1} bar={1} />);
+  expect(BaseComponent.mock.calls[0][0]).toEqual({ bar: 1 });
 });

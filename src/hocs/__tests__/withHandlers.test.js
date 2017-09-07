@@ -2,7 +2,6 @@
 import React from 'react';
 import _ from 'lodash';
 import { mount } from 'enzyme';
-import withPropsPeeker from '../withPropsPeeker';
 
 jest.mock('recompose', () => {
   const { withHandlers, compose } = require.requireActual('recompose');
@@ -52,10 +51,11 @@ test('withHandlers makes handlers depend on each other hierarchically', () => {
   }, {
     fooLevel2: ({ fooLevel1 }) => fooLevel1,
   }];
-  const props = {};
-  const BaseComponent = withPropsPeeker(props)(() => <div />);
+  const BaseComponent = jest.fn(() => null);
   const NewCompoent = withHandlers(handlers)(BaseComponent);
   mount(<NewCompoent />);
+  const props = BaseComponent.mock.calls[0][0];
+
   expect(props.fooLevel1).not.toBeUndefined();
   expect(props.fooLevel2).not.toBeUndefined();
 
