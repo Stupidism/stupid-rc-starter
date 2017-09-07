@@ -1,4 +1,5 @@
 /* eslint-env jest */
+/* eslint-disable react/no-unused-prop-types */
 import React from 'react';
 import T from 'prop-types';
 import omitPropTypes from '../omitPropTypes';
