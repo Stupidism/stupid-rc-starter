@@ -17,10 +17,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
             "borderRadius": "2px",
             "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
             "color": "#444",
-            "fontFamily": "
-              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-            ",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
             "fontSize": "15px",
             "fontWeight": 300,
             "lineHeight": 1.45,
@@ -64,28 +61,28 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
         </div>
       </div>
     </div>
-    <div>
+    <div
+      style={Object {}}
+    >
       <div>
-        <div>
-          blockOnRerender: true
-          <div
-            style={
-              Object {
-                "backgroundColor": "#f95",
-                "borderRadius": "8px",
-                "color": "white",
-                "display": "inline-block",
-                "float": "right",
-                "fontSize": "8pt",
-                "fontWeight": "bold",
-                "padding": "1px 5px",
-                "textAlign": "center",
-                "top": "2px",
-              }
+        blockOnRerender: true
+        <div
+          style={
+            Object {
+              "backgroundColor": "#f95",
+              "borderRadius": "8px",
+              "color": "white",
+              "display": "inline-block",
+              "float": "right",
+              "fontSize": "8pt",
+              "fontWeight": "bold",
+              "padding": "1px 5px",
+              "textAlign": "center",
+              "top": "2px",
             }
-          >
-            1
-          </div>
+          }
+        >
+          1
         </div>
       </div>
     </div>
@@ -101,10 +98,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
             "borderRadius": "2px",
             "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
             "color": "#444",
-            "fontFamily": "
-              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-            ",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
             "fontSize": "15px",
             "fontWeight": 300,
             "lineHeight": 1.45,
@@ -125,10 +119,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
               Object {
                 "WebkitFontSmoothing": "antialiased",
                 "color": "#444",
-                "fontFamily": "
-                  -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                  \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-                ",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
                 "fontSize": "15px",
               }
             }
@@ -140,10 +131,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
               Object {
                 "WebkitFontSmoothing": "antialiased",
                 "color": "#444",
-                "fontFamily": "
-                  -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                  \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-                ",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
                 "fontSize": "15px",
               }
             }
@@ -155,10 +143,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
               Object {
                 "WebkitFontSmoothing": "antialiased",
                 "color": "#444",
-                "fontFamily": "
-                  -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                  \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-                ",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
                 "fontSize": "15px",
               }
             }
@@ -491,10 +476,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
             "borderRadius": "2px",
             "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
             "color": "#444",
-            "fontFamily": "
-              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-            ",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
             "fontSize": "15px",
             "fontWeight": 300,
             "lineHeight": 1.45,
@@ -538,28 +520,28 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
         </div>
       </div>
     </div>
-    <div>
+    <div
+      style={Object {}}
+    >
       <div>
-        <div>
-          blockOnRerender: true
-          <div
-            style={
-              Object {
-                "backgroundColor": "#f95",
-                "borderRadius": "8px",
-                "color": "white",
-                "display": "inline-block",
-                "float": "right",
-                "fontSize": "8pt",
-                "fontWeight": "bold",
-                "padding": "1px 5px",
-                "textAlign": "center",
-                "top": "2px",
-              }
+        blockOnRerender: true
+        <div
+          style={
+            Object {
+              "backgroundColor": "#f95",
+              "borderRadius": "8px",
+              "color": "white",
+              "display": "inline-block",
+              "float": "right",
+              "fontSize": "8pt",
+              "fontWeight": "bold",
+              "padding": "1px 5px",
+              "textAlign": "center",
+              "top": "2px",
             }
-          >
-            1
-          </div>
+          }
+        >
+          1
         </div>
       </div>
     </div>
@@ -575,10 +557,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
             "borderRadius": "2px",
             "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
             "color": "#444",
-            "fontFamily": "
-              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-            ",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
             "fontSize": "15px",
             "fontWeight": 300,
             "lineHeight": 1.45,
@@ -599,10 +578,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
               Object {
                 "WebkitFontSmoothing": "antialiased",
                 "color": "#444",
-                "fontFamily": "
-                  -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                  \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-                ",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
                 "fontSize": "15px",
               }
             }
@@ -614,10 +590,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
               Object {
                 "WebkitFontSmoothing": "antialiased",
                 "color": "#444",
-                "fontFamily": "
-                  -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                  \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-                ",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
                 "fontSize": "15px",
               }
             }
@@ -629,10 +602,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
               Object {
                 "WebkitFontSmoothing": "antialiased",
                 "color": "#444",
-                "fontFamily": "
-                  -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                  \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-                ",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
                 "fontSize": "15px",
               }
             }
@@ -1024,10 +994,7 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
             "borderRadius": "2px",
             "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
             "color": "#444",
-            "fontFamily": "
-              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-            ",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
             "fontSize": "15px",
             "fontWeight": 300,
             "lineHeight": 1.45,
@@ -1071,29 +1038,29 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
         </div>
       </div>
     </div>
-    <div>
+    <div
+      style={Object {}}
+    >
       <div>
-        <div>
-          blockOnRerender: true
-          <div
-            style={
-              Object {
-                "backgroundColor": "#f95",
-                "borderRadius": "8px",
-                "color": "white",
-                "display": "inline-block",
-                "float": "right",
-                "fontSize": "8pt",
-                "fontWeight": "bold",
-                "padding": "1px 5px",
-                "style": undefined,
-                "textAlign": "center",
-                "top": "2px",
-              }
+        blockOnRerender: true
+        <div
+          style={
+            Object {
+              "backgroundColor": "#f95",
+              "borderRadius": "8px",
+              "color": "white",
+              "display": "inline-block",
+              "float": "right",
+              "fontSize": "8pt",
+              "fontWeight": "bold",
+              "padding": "1px 5px",
+              "style": undefined,
+              "textAlign": "center",
+              "top": "2px",
             }
-          >
-            1
-          </div>
+          }
+        >
+          1
         </div>
       </div>
     </div>
@@ -1109,10 +1076,7 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
             "borderRadius": "2px",
             "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
             "color": "#444",
-            "fontFamily": "
-              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-            ",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
             "fontSize": "15px",
             "fontWeight": 300,
             "lineHeight": 1.45,
@@ -1133,10 +1097,7 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
               Object {
                 "WebkitFontSmoothing": "antialiased",
                 "color": "#444",
-                "fontFamily": "
-                  -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                  \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-                ",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
                 "fontSize": "15px",
               }
             }
@@ -1148,10 +1109,7 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
               Object {
                 "WebkitFontSmoothing": "antialiased",
                 "color": "#444",
-                "fontFamily": "
-                  -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                  \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-                ",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
                 "fontSize": "15px",
               }
             }
@@ -1163,10 +1121,7 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
               Object {
                 "WebkitFontSmoothing": "antialiased",
                 "color": "#444",
-                "fontFamily": "
-                  -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
-                  \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
-                ",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
                 "fontSize": "15px",
               }
             }
@@ -1550,6 +1505,21 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
               <tbody>
                 <tr>
                   <td>
+                    style
+                  </td>
+                  <td>
+                    other
+                  </td>
+                  <td>
+                    no
+                  </td>
+                  <td>
+                    -
+                  </td>
+                  <td />
+                </tr>
+                <tr>
+                  <td>
                     initialCount
                   </td>
                   <td>
@@ -1579,21 +1549,6 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
                   </td>
                   <td>
                     func
-                  </td>
-                  <td>
-                    no
-                  </td>
-                  <td>
-                    -
-                  </td>
-                  <td />
-                </tr>
-                <tr>
-                  <td>
-                    style
-                  </td>
-                  <td>
-                    other
                   </td>
                   <td>
                     no
