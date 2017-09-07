@@ -3287,6 +3287,12 @@ file-loader@^0.11.1:
   dependencies:
     loader-utils "^1.0.2"
 
+file-loader@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/file-loader/-/file-loader-1.0.0.tgz#08accf9631a0875e4ab7f209fc4db338604b3190"
+  dependencies:
+    loader-utils "^1.0.2"
+
 file-type@^3.6.0:
   version "3.9.0"
   resolved "https://registry.npmjs.org/file-type/-/file-type-3.9.0.tgz#257a078384d1db8087bc449d107d52a52672b9e9"
