@@ -2,7 +2,7 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { number, boolean } from '@storybook/addon-knobs';
-import { Story } from '@storybook/addon-info';
+import { Story, withInfo } from '@storybook/addon-info';
 
 import RenderCounter, { Counter, StatelessRenderCounter, withRenderCount } from '../../src/RenderCounter';
 import DivRefreshable from './DivRefreshable';
@@ -29,7 +29,11 @@ const defaultOptions = {
   propTablesExclude: [DivRefreshable],
 };
 const addRenderCounter = (name, Component, { desc = defaultDesc, options } = {}) =>
-  stories.addWithInfo(name, desc, () => {
+  stories.add(name, withInfo({
+    text: desc,
+    ...defaultOptions,
+    ...options,
+  })(() => {
     const blockOnRerender = boolean('blockOnRerender', true);
     const onRerender = createOuterHandler({ name: 'onRerender', block: blockOnRerender });
     const initialCount = number('initialCount', 1);
@@ -41,8 +45,7 @@ const addRenderCounter = (name, Component, { desc = defaultDesc, options } = {})
         </DivRefreshable>
       </div>
     );
-  },
-  { ...defaultOptions, ...options });
+  }));
 
 addRenderCounter('RenderCounter', RenderCounter);
 addRenderCounter('StatelessRenderCounter', StatelessRenderCounter, {
