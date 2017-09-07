@@ -16,7 +16,7 @@
     "lint:css": "stylelint \"src/**/*.{css,less,scss,sss}\" --allow-empty-input",
     "lint:staged": "lint-staged",
     "lint": "npm run lint:js && npm run lint:css",
-    "gh-pages": "NODE_ENV=development build-storybook -o gh-pages",
+    "gh-pages": "build-storybook -o gh-pages",
     "gh-pages:opn": "opn gh-pages/index.html",
     "gh-pages:deploy": "gh-pages -d gh-pages",
     "dist": "webpack --env dist",
