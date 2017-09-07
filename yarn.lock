@@ -6,7 +6,7 @@
   version "3.0.9"
   resolved "https://registry.npmjs.org/@hypnosphi/fuse.js/-/fuse.js-3.0.9.tgz#ea99f6121b4a8f065b4c71f85595db2714498807"
 
-"@storybook/addon-actions@^3.1.9", "@storybook/addon-actions@^3.2.6":
+"@storybook/addon-actions@^3.2.6":
   version "3.2.6"
   resolved "https://registry.npmjs.org/@storybook/addon-actions/-/addon-actions-3.2.6.tgz#d8e476188a288f49f36a8482175bc2c1898dfc28"
   dependencies:
@@ -17,7 +17,7 @@
     react-inspector "^2.1.1"
     uuid "^3.1.0"
 
-"@storybook/addon-events@^3.1.9":
+"@storybook/addon-events@^3.2.6":
   version "3.2.6"
   resolved "https://registry.npmjs.org/@storybook/addon-events/-/addon-events-3.2.6.tgz#b7fd0bae6b681b185f54ed78145699f94fd71e2b"
   dependencies:
@@ -28,7 +28,7 @@
     react-textarea-autosize "^4.3.0"
     uuid "^3.1.0"
 
-"@storybook/addon-info@^3.1.9":
+"@storybook/addon-info@^3.2.9":
   version "3.2.9"
   resolved "https://registry.npmjs.org/@storybook/addon-info/-/addon-info-3.2.9.tgz#50daca12d216f8338843023f13030cd92ab9789e"
   dependencies:
@@ -41,7 +41,7 @@
     react-addons-create-fragment "^15.5.3"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-knobs@^3.1.9":
+"@storybook/addon-knobs@^3.2.8":
   version "3.2.8"
   resolved "https://registry.npmjs.org/@storybook/addon-knobs/-/addon-knobs-3.2.8.tgz#eb4821409e62f2f886d7ae9333bcc95e4b0714eb"
   dependencies:
@@ -58,19 +58,19 @@
     react-textarea-autosize "^4.3.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-links@^3.1.6", "@storybook/addon-links@^3.2.6":
+"@storybook/addon-links@^3.2.6":
   version "3.2.6"
   resolved "https://registry.npmjs.org/@storybook/addon-links/-/addon-links-3.2.6.tgz#93029ecee8a1a1939f01381c06ed19327acd746b"
   dependencies:
     "@storybook/addons" "^3.2.6"
 
-"@storybook/addon-options@^3.1.6":
+"@storybook/addon-options@^3.2.6":
   version "3.2.6"
   resolved "https://registry.npmjs.org/@storybook/addon-options/-/addon-options-3.2.6.tgz#8fbcd7858ff4ab8a047ce0ac6e275b866d1bef84"
   dependencies:
     "@storybook/addons" "^3.2.6"
 
-"@storybook/addon-storyshots@^3.1.9":
+"@storybook/addon-storyshots@^3.2.8":
   version "3.2.8"
   resolved "https://registry.npmjs.org/@storybook/addon-storyshots/-/addon-storyshots-3.2.8.tgz#f6e9aa6c99a9f437042da49123c0dc75fe51b90f"
   dependencies:
@@ -112,7 +112,7 @@
     fuse.js "^3.0.1"
     prop-types "^15.5.9"
 
-"@storybook/react@^3.1.9":
+"@storybook/react@^3.2.8":
   version "3.2.8"
   resolved "https://registry.npmjs.org/@storybook/react/-/react-3.2.8.tgz#7d43ef450559b7cf3b3ecc17cc54d5a09d5ea402"
   dependencies:
