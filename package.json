@@ -59,7 +59,7 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "prop-types": "^15.5.10",
-    "recompose": "^0.25.0"
+    "recompose": "^0.26.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.12",
