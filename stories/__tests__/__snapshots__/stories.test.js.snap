@@ -209,7 +209,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
               <div
                 style={
                   Object {
-                    "paddingLeft": 48,
+                    "paddingLeft": 33,
                     "paddingRight": 3,
                   }
                 }
@@ -286,6 +286,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
                           style={Object {}}
                         >
                           <span>
+                            {
                             <span
                               style={
                                 Object {
@@ -295,6 +296,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
                             >
                               function handler(count, next) {return log('handler blocked', count);}()
                             </span>
+                            }
                           </span>
                         </span>
                       </span>
@@ -414,13 +416,14 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
                     initialCount
                   </td>
                   <td>
-                    number
+                    other
                   </td>
                   <td>
                     no
                   </td>
                   <td>
                     <span>
+                      {
                       <span
                         style={
                           Object {
@@ -430,6 +433,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
                       >
                         1
                       </span>
+                      }
                     </span>
                   </td>
                   <td />
@@ -439,7 +443,7 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
                     onRerender
                   </td>
                   <td>
-                    func
+                    other
                   </td>
                   <td>
                     no
@@ -668,7 +672,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
               <div
                 style={
                   Object {
-                    "paddingLeft": 48,
+                    "paddingLeft": 33,
                     "paddingRight": 3,
                   }
                 }
@@ -745,6 +749,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
                           style={Object {}}
                         >
                           <span>
+                            {
                             <span
                               style={
                                 Object {
@@ -754,6 +759,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
                             >
                               function handler(count, next) {return log('handler blocked', count);}()
                             </span>
+                            }
                           </span>
                         </span>
                       </span>
@@ -873,7 +879,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
                     count
                   </td>
                   <td>
-                    number
+                    other
                   </td>
                   <td>
                     yes
@@ -932,13 +938,14 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
                     initialCount
                   </td>
                   <td>
-                    number
+                    other
                   </td>
                   <td>
                     no
                   </td>
                   <td>
                     <span>
+                      {
                       <span
                         style={
                           Object {
@@ -948,6 +955,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
                       >
                         1
                       </span>
+                      }
                     </span>
                   </td>
                   <td />
@@ -957,7 +965,7 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
                     onRerender
                   </td>
                   <td>
-                    func
+                    other
                   </td>
                   <td>
                     no
@@ -1187,7 +1195,7 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
               <div
                 style={
                   Object {
-                    "paddingLeft": 48,
+                    "paddingLeft": 33,
                     "paddingRight": 3,
                   }
                 }
@@ -1267,6 +1275,7 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
                           style={Object {}}
                         >
                           <span>
+                            {
                             <span
                               style={
                                 Object {
@@ -1276,6 +1285,7 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
                             >
                               1
                             </span>
+                            }
                           </span>
                         </span>
                       </span>
@@ -1296,6 +1306,7 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
                           style={Object {}}
                         >
                           <span>
+                            {
                             <span
                               style={
                                 Object {
@@ -1305,6 +1316,7 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
                             >
                               function handler(count, next) {return log('handler blocked', count);}()
                             </span>
+                            }
                           </span>
                         </span>
                       </span>
@@ -1424,13 +1436,14 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
                     count
                   </td>
                   <td>
-                    number
+                    other
                   </td>
                   <td>
                     no
                   </td>
                   <td>
                     <span>
+                      {
                       <span
                         style={
                           Object {
@@ -1440,6 +1453,7 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
                       >
                         0
                       </span>
+                      }
                     </span>
                   </td>
                   <td />
@@ -1523,13 +1537,14 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
                     initialCount
                   </td>
                   <td>
-                    number
+                    other
                   </td>
                   <td>
                     no
                   </td>
                   <td>
                     <span>
+                      {
                       <span
                         style={
                           Object {
@@ -1539,6 +1554,7 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
                       >
                         0
                       </span>
+                      }
                     </span>
                   </td>
                   <td />
@@ -1548,7 +1564,7 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
                     onRerender
                   </td>
                   <td>
-                    func
+                    other
                   </td>
                   <td>
                     no

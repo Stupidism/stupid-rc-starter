@@ -1,4 +1,5 @@
 /* eslint-env jest */
+/* eslint-disable react/default-props-match-prop-types */
 import React from 'react';
 import copyStatics from '../copyStatics';
 

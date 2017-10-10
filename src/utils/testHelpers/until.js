@@ -1,30 +1,17 @@
-import { shallow } from 'enzyme';
-
 // Copied from gist
 // https://gist.github.com/matthieuprat/5fd37abbd4a4002e6cfe0c73ae54cda8
-export default function until(selector, options = this.options) {
-  if (this.isEmptyRender() || typeof this.node.type === 'string') { return this; }
+function shallowRecursively(wrapper, selector) {
+  // Do not try to shallow render empty nodes and host elements
+  // (a.k.a primitives). Simply return the wrapper in that case.
+  if (wrapper.isEmptyRender() || typeof wrapper.getElement().type === 'string') { return wrapper; }
 
-  let context = options.context;
+  const nextWrapper = wrapper.dive();
 
-  const instance = this.instance();
-  if (instance.getChildContext) {
-    context = {
-      ...context,
-      ...instance.getChildContext(),
-    };
-  }
-
-  const wrapper = this.shallow({ context });
-
-  if (!this.is(selector)) {
-    return until.call(wrapper, selector, { context });
-  }
-
-  return wrapper;
+  return selector && wrapper.is(selector)
+    ? nextWrapper
+    : shallowRecursively(nextWrapper, selector);
 }
 
-export const shallowWithUntil = (...args) => {
-  const wrapper = shallow(...args);
-  return Object.assign(wrapper, { until });
-};
+export default function until(selector) {
+  return this.single('until', () => shallowRecursively(this, selector));
+}

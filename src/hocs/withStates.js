@@ -99,7 +99,7 @@ const defaultOptions = {
 };
 
 export const createOptions = (initialState, options = {}) => {
-  let stateKeys = options.stateKeys;
+  let { stateKeys } = options;
 
   if (!stateKeys) {
     if (typeof initialState === 'function') {

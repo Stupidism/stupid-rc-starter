@@ -53,11 +53,15 @@ describe('withStates(initialKeysOrState, options): PropsMapperHoc', () => {
 
   describe('output props have some meta handlers', () => {
     test('with options.omit to hide them', () => {
-      const hideAll = { dispatch: true, merge: true, state: true, reset: true };
+      const hideAll = {
+        dispatch: true, merge: true, state: true, reset: true,
+      };
       snapshotHocProps(withStates(initialState, { omit: hideAll }));
     });
 
-    const showAll = { dispatch: false, merge: false, state: false, reset: false };
+    const showAll = {
+      dispatch: false, merge: false, state: false, reset: false,
+    };
     test('with options.omit to show them', () => {
       snapshotHocProps(withStates(initialState, { omit: showAll }));
     });
