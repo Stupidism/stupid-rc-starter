@@ -6,6 +6,7 @@ function shallowRecursively(wrapper, selector) {
   if (wrapper.isEmptyRender() || typeof wrapper.getElement().type === 'string') { return wrapper; }
 
   const nextWrapper = wrapper.dive();
+  nextWrapper.floatUp = () => wrapper;
 
   return selector && wrapper.is(selector)
     ? nextWrapper
