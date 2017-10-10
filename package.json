@@ -148,6 +148,9 @@
       "\\.(jpg|jpeg|png|gif|css)$": "<rootDir>/__tests__/__mocks__/fileMock.js",
       "\\.md$": "<rootDir>/__tests__/__mocks__/mdMock.js"
     },
+    "setupFiles": [
+      "<rootDir>/__tests__/setup.js"
+    ],
     "testMatch": [
       "**/__tests__/**/(!\\.)*.js?(x)",
       "**/?(*.)(spec|test).js?(x)"
