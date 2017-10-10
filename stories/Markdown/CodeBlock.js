@@ -9,6 +9,8 @@ const CodeBlock = ({ literal, ...rest }) => (
 );
 
 CodeBlock.propTypes = {
+  language: T.string,
+  style: T.objectOf(T.any),
   literal: T.string,
 };
 

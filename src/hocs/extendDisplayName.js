@@ -14,7 +14,7 @@ export default nameOrOptions => (Component) => {
       newDisplayName = name;
       break;
     }
-    default : {
+    default: {
       newDisplayName = getDisplayName(Component);
     }
   }
