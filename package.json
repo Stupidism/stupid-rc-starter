@@ -149,6 +149,7 @@
       "\\.md$": "<rootDir>/__tests__/__mocks__/mdMock.js"
     },
     "setupFiles": [
+      "<rootDir>/__tests__/slim.js",
       "<rootDir>/__tests__/setup.js"
     ],
     "testMatch": [
