@@ -1,7 +1,6 @@
 import React from 'react';
-
+import { shallow } from 'enzyme';
 import enzymeToJson from 'enzyme-to-json';
-import { shallowWithUntil as shallow } from './until';
 
 const snapshotPropsMapperHoc = (hoc, inputProps) => {
   // This Component can't render deeply, must work with shallow renderer.
@@ -12,8 +11,8 @@ const snapshotPropsMapperHoc = (hoc, inputProps) => {
     </div>
   );
   const NewComponent = hoc(PropsDisplayer);
-  const wrapper = shallow(<NewComponent {...inputProps} />).until(PropsDisplayer);
-  expect(enzymeToJson(wrapper)).toMatchSnapshot();
+  const wrapper = shallow(<NewComponent {...inputProps} />);
+  expect(enzymeToJson(wrapper.until(PropsDisplayer))).toMatchSnapshot();
 };
 
 export default snapshotPropsMapperHoc;
