@@ -16,7 +16,7 @@ const testWrapper = (RenderCounter, name = 'RenderCounter') => describe(name, ()
     const wrapper = mount(<RenderCounter />);
 
     expect(wrapper.text()).toEqual('1');
-    wrapper.setProps({});
+    wrapper.update();
     expect(wrapper.text()).toEqual('2');
   });
 
@@ -25,7 +25,7 @@ const testWrapper = (RenderCounter, name = 'RenderCounter') => describe(name, ()
     const wrapper2 = mount(<RenderCounter />);
 
     expect(wrapper2.text()).toEqual('1');
-    wrapper1.setProps({});
+    wrapper1.update();
     expect(wrapper2.text()).toEqual('1');
   });
 
@@ -44,7 +44,7 @@ const testWrapper = (RenderCounter, name = 'RenderCounter') => describe(name, ()
       it('should call onRerender handler with count and update the text', () => {
         const onRerender = count => onRerenderHandler(count);
         const wrapper = mount(<RenderCounter onRerender={onRerender} />);
-        wrapper.setProps({});
+        wrapper.update();
         expect(onRerenderHandler).toHaveBeenCalledWith(2);
         expect(wrapper.text()).toEqual('2');
       });
@@ -54,7 +54,7 @@ const testWrapper = (RenderCounter, name = 'RenderCounter') => describe(name, ()
       it('should call onRerender handler with count and update the text', () => {
         const onRerender = (count, next) => onRerenderHandler(count, next(), next());
         const wrapper = mount(<RenderCounter onRerender={onRerender} />);
-        wrapper.setProps({});
+        wrapper.update();
         expect(onRerenderHandler).toHaveBeenCalledWith(2, undefined, undefined);
         expect(wrapper.text()).toEqual('2');
       });
@@ -64,7 +64,7 @@ const testWrapper = (RenderCounter, name = 'RenderCounter') => describe(name, ()
       it('should call onRerender handler with count and next, but not update the text', () => {
         const onRerender = (count, next) => onRerenderHandler(count, next);
         const wrapper = mount(<RenderCounter onRerender={onRerender} />);
-        wrapper.setProps({});
+        wrapper.update();
 
         expect(onRerenderHandler).toHaveBeenCalledWith(2, expect.any(Function));
         expect(wrapper.text()).toEqual('1');

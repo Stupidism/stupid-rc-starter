@@ -21,7 +21,7 @@ describe('withRenderCount(BaseComponent): NewComponent', () => {
       const NewComponent = withRenderCount(BaseComponent);
       const wrapper = mount(<NewComponent />);
       expect(wrapper.text()).toBe('1');
-      wrapper.setProps({});
+      wrapper.update();
       expect(wrapper.text()).toBe('2');
     });
   });
