@@ -10,10 +10,10 @@ setOptions({
   name: pkg.name,
   url: pkg.repository.url,
   goFullScreen: false,
-  showLeftPanel: true,
-  showDownPanel: true,
+  showStoriesPanel: true,
+  showAddonPanel: true,
   showSearchBox: false,
-  downPanelInRight: true,
+  addonPanelInRight: true,
   sortStoriesByKind: false,
 });
 
