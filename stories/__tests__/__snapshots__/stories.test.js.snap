@@ -296,7 +296,9 @@ exports[`Storyshots RenderCounter RenderCounter 1`] = `
                                 }
                               }
                             >
-                              function handler(count, next) {return log('handler blocked', count);}()
+                              function handler(count, next) {
+      return log('handler blocked', count);
+    }()
                             </span>
                             }
                           </span>
@@ -785,7 +787,9 @@ exports[`Storyshots RenderCounter StatelessRenderCounter 1`] = `
                                 }
                               }
                             >
-                              function handler(count, next) {return log('handler blocked', count);}()
+                              function handler(count, next) {
+      return log('handler blocked', count);
+    }()
                             </span>
                             }
                           </span>
@@ -1382,7 +1386,9 @@ exports[`Storyshots RenderCounter withRenderCount 1`] = `
                                 }
                               }
                             >
-                              function handler(count, next) {return log('handler blocked', count);}()
+                              function handler(count, next) {
+      return log('handler blocked', count);
+    }()
                             </span>
                             }
                           </span>
