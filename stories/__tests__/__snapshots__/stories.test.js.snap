@@ -1883,34 +1883,34 @@ exports[`Storyshots Welcome to Storybook 1`] = `
 `;
 
 exports[`Storyshots Welcome to react-render-counter 1`] = `
-<div>
-  <h1>
-    hhh
-  </h1>
-  <h2>
-    h2
-  </h2>
-</div>
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# hhh 
+ ## h2",
+    }
+  }
+/>
 `;
 
 exports[`Storyshots Welcome to react-render-counter/hocs 1`] = `
-<div>
-  <h1>
-    hhh
-  </h1>
-  <h2>
-    h2
-  </h2>
-</div>
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# hhh 
+ ## h2",
+    }
+  }
+/>
 `;
 
 exports[`Storyshots Welcome to stupid-rc-starter 1`] = `
-<div>
-  <h1>
-    hhh
-  </h1>
-  <h2>
-    h2
-  </h2>
-</div>
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "# hhh 
+ ## h2",
+    }
+  }
+/>
 `;
