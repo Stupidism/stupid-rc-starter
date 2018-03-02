@@ -3,8 +3,6 @@ import T from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import { linkTo } from '@storybook/addon-links';
 
-import Markdown from './Markdown';
-
 import readme from '../README.md';
 import starter from '../starter/README.md';
 import api from '../docs/API.md';
@@ -86,10 +84,10 @@ Welcome.propTypes = {
 };
 
 storiesOf('Welcome', module)
-  .add('to stupid-rc-starter', () => <Markdown source={starter} />)
+  .add('to stupid-rc-starter', () => <div dangerouslySetInnerHTML={{ __html: starter }} />)
   // Set skipHtml to hide the link to starter/README.md
-  .add('to react-render-counter', () => <Markdown source={readme} />)
-  .add('to react-render-counter/hocs', () => <Markdown source={api} />)
+  .add('to react-render-counter', () => <div dangerouslySetInnerHTML={{ __html: readme }} />)
+  .add('to react-render-counter/hocs', () => <div dangerouslySetInnerHTML={{ __html: api }} />)
   .add('to Storybook', () => (
     <Welcome showApp={linkTo('RenderCounter')} />
   ));

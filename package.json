@@ -105,8 +105,6 @@
     "raw-loader": "^0.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-markdown": "^3.2.2",
-    "react-syntax-highlighter": "^7.0.1",
     "react-test-renderer": "^16.2.0",
     "rimraf": "^2.6.2",
     "style-loader": "^0.20.2",
