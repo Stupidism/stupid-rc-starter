@@ -3,7 +3,7 @@
   "description": "Boilerplate for React.js components with storybook",
   "author": "Stupid Sun",
   "user": "stupidism",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "start-storybook -p 6006 && opn localhost:6006",
     "test": "jest",
