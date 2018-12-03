@@ -67,7 +67,7 @@
     "@storybook/addon-info": "^4.0.11",
     "@storybook/addon-knobs": "^4.0.11",
     "@storybook/addon-links": "^4.0.11",
-    "@storybook/addon-options": "^3.3.14",
+    "@storybook/addon-options": "^4.0.11",
     "@storybook/addon-storyshots": "^4.0.11",
     "@storybook/react": "^4.0.11",
     "babel-cli": "^6.24.1",
