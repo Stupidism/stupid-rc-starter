@@ -69,7 +69,7 @@
     "@storybook/addon-links": "^4.1.0",
     "@storybook/addon-options": "^3.3.14",
     "@storybook/addon-storyshots": "^4.1.0",
-    "@storybook/react": "^3.3.14",
+    "@storybook/react": "^4.1.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^8.2.2",
