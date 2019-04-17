@@ -62,7 +62,7 @@
     "recompose": "^0.26.0"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.3.14",
+    "@storybook/addon-actions": "^5.0.9",
     "@storybook/addon-events": "^3.3.14",
     "@storybook/addon-info": "^3.3.14",
     "@storybook/addon-knobs": "^3.3.14",
