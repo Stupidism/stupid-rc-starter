@@ -57,7 +57,7 @@
   "module": "src",
   "jsnext:main": "src",
   "dependencies": {
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.12",
     "prop-types": "^15.6.1",
     "recompose": "^0.26.0"
   },
